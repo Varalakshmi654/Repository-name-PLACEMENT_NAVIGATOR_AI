@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Data Analyst Interview | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        .interview-card {
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+            margin-bottom: 22px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .question-number {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .interview-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .answer-btn {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 16px;
+            padding: 18px;
+            border-radius: 12px;
+            background: #f5f7fb;
+            line-height: 1.7;
+        }
+
+        .tip-card {
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+            margin-top: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .category-title {
+            margin: 35px 0 18px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎯 Placement Navigator <span>AI</span>
+        </div>
+
+        <a href="/data-analysis-topic"
+           class="back-link">
+
+            ← Back to Data Analysis
+
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="roadmap-container">
+
+
+        <!-- HEADER -->
+
+        <section class="page-header">
+
+            <div class="page-badge">
+                🎤 Data Analyst Interview Practice
+            </div>
+
+            <h1>
+                Prepare for Your Data Analyst Interview
+            </h1>
+
+            <p>
+                Practice technical, scenario-based and
+                practical questions and learn how to explain
+                your answers clearly.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             INTERVIEW STRATEGY
+        ========================== -->
+
+        <section class="readiness-card">
+
+            <div class="readiness-left">
+
+                <h2>
+                    🚀 How to Answer
+                </h2>
+
+                <p>
+                    Understand the question → Explain the concept
+                    simply → Give an example → Mention where you
+                    would use it.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TECHNICAL QUESTIONS
+        ========================== -->
+
+        <h2 class="category-title">
+            📚 Technical Questions
+        </h2>
+
+
+        <!-- Q1 -->
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 01
+            </div>
+
+            <h3>
+                What is Data Analysis?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q1')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q1"
+                 class="answer">
+
+                Data Analysis is the process of collecting,
+                cleaning, transforming and examining data to
+                identify useful patterns and insights that
+                support decision making.
+
+            </div>
+
+        </div>
+
+
+        <!-- Q2 -->
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 02
+            </div>
+
+            <h3>
+                What is the difference between Data Analysis
+                and Data Science?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q2')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q2"
+                 class="answer">
+
+                Data Analysis mainly focuses on examining existing
+                data, finding patterns and generating insights.
+                Data Science is broader and can include machine
+                learning, predictive modeling and advanced
+                statistical techniques.
+
+            </div>
+
+        </div>
+
+
+        <!-- Q3 -->
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 03
+            </div>
+
+            <h3>
+                What is EDA?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q3')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q3"
+                 class="answer">
+
+                EDA stands for Exploratory Data Analysis.
+                It is used to understand a dataset, identify
+                patterns, detect outliers and discover relationships
+                between variables before deeper analysis.
+
+            </div>
+
+        </div>
+
+
+        <!-- Q4 -->
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 04
+            </div>
+
+            <h3>
+                What is data cleaning?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q4')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q4"
+                 class="answer">
+
+                Data cleaning is the process of identifying and
+                correcting problems such as missing values,
+                duplicate records, incorrect formats and invalid
+                values in a dataset.
+
+            </div>
+
+        </div>
+
+
+        <!-- Q5 -->
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 05
+            </div>
+
+            <h3>
+                What is the difference between mean, median and mode?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q5')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q5"
+                 class="answer">
+
+                Mean is the average of the values.
+                Median is the middle value after sorting.
+                Mode is the value that occurs most frequently.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             PYTHON QUESTIONS
+        ========================== -->
+
+        <h2 class="category-title">
+            🐍 Python & Pandas Questions
+        </h2>
+
+
+        <!-- Q6 -->
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 06
+            </div>
+
+            <h3>
+                Why is Python used in Data Analysis?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q6')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q6"
+                 class="answer">
+
+                Python is popular for Data Analysis because it has
+                powerful libraries such as Pandas, NumPy and
+                visualization libraries. These libraries make
+                data manipulation, analysis and visualization easier.
+
+            </div>
+
+        </div>
+
+
+        <!-- Q7 -->
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 07
+            </div>
+
+            <h3>
+                What is Pandas?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q7')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q7"
+                 class="answer">
+
+                Pandas is a Python library used for data
+                manipulation and analysis. It provides useful
+                structures such as Series and DataFrame.
+
+            </div>
+
+        </div>
+
+
+        <!-- Q8 -->
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 08
+            </div>
+
+            <h3>
+                What is a DataFrame?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q8')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q8"
+                 class="answer">
+
+                A DataFrame is a two-dimensional tabular data
+                structure in Pandas. It contains rows and columns
+                and can store different types of data.
+
+            </div>
+
+        </div>
+
+
+        <!-- Q9 -->
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 09
+            </div>
+
+            <h3>
+                How do you handle missing values in Pandas?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q9')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q9"
+                 class="answer">
+
+                I first identify the missing values using functions
+                such as isnull(). Depending on the situation, I may
+                remove the rows or fill the missing values using
+                appropriate methods.
+
+            </div>
+
+        </div>
+
+
+        <!-- Q10 -->
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 10
+            </div>
+
+            <h3>
+                How do you remove duplicate records?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q10')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q10"
+                 class="answer">
+
+                In Pandas, duplicate records can be identified and
+                removed using the duplicated() and drop_duplicates()
+                functions.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             SCENARIO QUESTIONS
+        ========================== -->
+
+        <h2 class="category-title">
+            🧠 Scenario-Based Questions
+        </h2>
+
+
+        <!-- Q11 -->
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                SCENARIO 01
+            </div>
+
+            <h3>
+                You receive a dataset with many missing values.
+                What would you do?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q11')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q11"
+                 class="answer">
+
+                First, I would identify the columns and percentage
+                of missing values. Then I would understand why the
+                values are missing. Based on the situation, I could
+                remove records or fill the missing values using a
+                suitable method.
+
+            </div>
+
+        </div>
+
+
+        <!-- Q12 -->
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                SCENARIO 02
+            </div>
+
+            <h3>
+                Your manager asks you to find why sales decreased.
+                How would you approach the problem?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q12')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q12"
+                 class="answer">
+
+                First, I would understand the business problem.
+                Then I would analyze sales by time, product,
+                region and customer segment. I would compare
+                current performance with previous periods, identify
+                the major changes and present the findings with
+                visualizations and recommendations.
+
+            </div>
+
+        </div>
+
+
+        <!-- Q13 -->
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                SCENARIO 03
+            </div>
+
+            <h3>
+                You find an unusual value in your dataset.
+                What would you do?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q13')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q13"
+                 class="answer">
+
+                I would investigate whether the value is a genuine
+                observation or a data-entry error. I would check
+                the source and context before deciding whether the
+                value should be corrected, transformed or retained.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             PRACTICAL QUESTIONS
+        ========================== -->
+
+        <h2 class="category-title">
+            💻 Practical Questions
+        </h2>
+
+
+        <!-- Q14 -->
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                PRACTICAL 01
+            </div>
+
+            <h3>
+                How would you find the average salary using Pandas?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q14')">
+
+                Show Solution
+
+            </button>
+
+            <div id="q14"
+                 class="answer">
+
+                <pre>
+df["salary"].mean()
+                </pre>
+
+                This calculates the average value of the salary
+                column.
+
+            </div>
+
+        </div>
+
+
+        <!-- Q15 -->
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                PRACTICAL 02
+            </div>
+
+            <h3>
+                How would you filter employees whose salary
+                is greater than 50,000?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q15')">
+
+                Show Solution
+
+            </button>
+
+            <div id="q15"
+                 class="answer">
+
+                <pre>
+df[df["salary"] > 50000]
+                </pre>
+
+                This filters the DataFrame and returns employees
+                whose salary is greater than 50,000.
+
+            </div>
+
+        </div>
+
+
+        <!-- Q16 -->
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                PRACTICAL 03
+            </div>
+
+            <h3>
+                How would you count employees in each department?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q16')">
+
+                Show Solution
+
+            </button>
+
+            <div id="q16"
+                 class="answer">
+
+                <pre>
+df.groupby("department").size()
+                </pre>
+
+                This groups the employees by department and
+                counts the number of records in each group.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             FINAL INTERVIEW TIP
+        ========================== -->
+
+        <section class="tip-card">
+
+            <h2>
+                💡 Final Interview Tip
+            </h2>
+
+            <p>
+                When answering Data Analyst questions, don't just
+                give a definition.
+            </p>
+
+            <p>
+                Use this structure:
+            </p>
+
+            <p>
+                <strong>
+                    Concept → Simple Explanation → Example → Usage
+                </strong>
+            </p>
+
+            <p>
+                This makes your answer clearer and shows the
+                interviewer that you understand the concept.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             COMPLETION
+        ========================== -->
+
+        <section class="readiness-card"
+                 style="margin-top:30px;">
+
+            <div class="readiness-left">
+
+                <h2>
+                    🏆 Ready for the Next Step?
+                </h2>
+
+                <p>
+                    Complete your Data Analysis preparation and
+                    continue building your interview readiness.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        function showAnswer(id) {
+
+            const answer =
+                document.getElementById(id);
+
+            if (answer.style.display === "block") {
+
+                answer.style.display = "none";
+
+            } else {
+
+                answer.style.display = "block";
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

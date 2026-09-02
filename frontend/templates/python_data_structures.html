@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Python Data Structures | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        .topic-detail-card {
+            background: white;
+            border-radius: 18px;
+            padding: 28px;
+            margin-bottom: 22px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .concept-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .concept-header h2 {
+            margin: 0;
+        }
+
+        .code-box {
+            background: #111827;
+            color: #f9fafb;
+            padding: 18px;
+            border-radius: 12px;
+            margin-top: 18px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            margin: 0;
+            font-family: Consolas, monospace;
+        }
+
+        .interview-tip {
+            margin-top: 18px;
+            padding: 15px;
+            border-radius: 12px;
+            background: #f3f4f6;
+        }
+
+        .question-card {
+            background: white;
+            padding: 22px;
+            border-radius: 16px;
+            margin-bottom: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+        }
+
+        .question-card h3 {
+            margin-top: 0;
+        }
+
+        .answer-box {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            background: #f3f4f6;
+            line-height: 1.7;
+        }
+
+        .practice-box {
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+            margin-top: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .option-btn {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 13px 16px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: white;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .option-btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .result-box {
+            display: none;
+            margin-top: 18px;
+            padding: 15px;
+            border-radius: 10px;
+            background: #f3f4f6;
+            font-weight: 600;
+        }
+
+        .complete-box {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            margin-top: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .completed-message {
+            display: none;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎯 Placement Navigator <span>AI</span>
+        </div>
+
+        <a href="/python" class="back-link">
+            ← Back to Python
+        </a>
+
+    </nav>
+
+
+    <main class="roadmap-container">
+
+
+        <!-- HEADER -->
+
+        <section class="page-header">
+
+            <div class="page-badge">
+                🧠 Python Data Structures
+            </div>
+
+            <h1>
+                Lists, Tuples, Sets & Dictionaries
+            </h1>
+
+            <p>
+                Learn Python's most important collection data
+                structures and understand how to explain them
+                in technical interviews.
+            </p>
+
+        </section>
+
+
+        <!-- OVERVIEW -->
+
+        <section class="readiness-card">
+
+            <div class="readiness-left">
+
+                <h2>
+                    🎯 What You Will Learn
+                </h2>
+
+                <p>
+                    Understand how each data structure works,
+                    when to use it and how to answer common
+                    interview questions.
+                </p>
+
+            </div>
+
+            <div class="readiness-score">
+
+                <div class="score-number">
+                    0%
+                </div>
+
+                <div class="score-label">
+                    Completed
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             LIST
+        ========================================== -->
+
+        <section class="topic-detail-card">
+
+            <div class="concept-header">
+
+                <div>
+
+                    <div class="round-label">
+                        01 · DATA STRUCTURE
+                    </div>
+
+                    <h2>
+                        📋 List
+                    </h2>
+
+                </div>
+
+            </div>
+
+            <p>
+                A list is an ordered and mutable collection in Python.
+                It can store multiple values and allows duplicate elements.
+            </p>
+
+
+            <div class="topic-list">
+
+                <span class="topic">Ordered</span>
+
+                <span class="topic">Mutable</span>
+
+                <span class="topic">Duplicates Allowed</span>
+
+                <span class="topic">Indexed</span>
+
+            </div>
+
+
+            <div class="code-box">
+
+<pre>
+numbers = [10, 20, 30, 40]
+
+print(numbers[0])
+
+numbers.append(50)
+
+print(numbers)
+</pre>
+
+            </div>
+
+
+            <div class="interview-tip">
+
+                💡 <strong>Interview Tip:</strong>
+
+                If the interviewer asks why you use a list,
+                explain that it is useful when you need an
+                ordered and changeable collection.
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             TUPLE
+        ========================================== -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                02 · DATA STRUCTURE
+            </div>
+
+            <h2>
+                📦 Tuple
+            </h2>
+
+            <p>
+                A tuple is an ordered collection that cannot be
+                changed after it is created.
+            </p>
+
+
+            <div class="topic-list">
+
+                <span class="topic">Ordered</span>
+
+                <span class="topic">Immutable</span>
+
+                <span class="topic">Duplicates Allowed</span>
+
+                <span class="topic">Indexed</span>
+
+            </div>
+
+
+            <div class="code-box">
+
+<pre>
+student = ("Varalakshmi", 21, "Data Science")
+
+print(student[0])
+</pre>
+
+            </div>
+
+
+            <div class="interview-tip">
+
+                💡 <strong>Interview Tip:</strong>
+
+                The key difference to remember is:
+
+                <strong>List → Mutable</strong>
+
+                <strong>Tuple → Immutable</strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             SET
+        ========================================== -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                03 · DATA STRUCTURE
+            </div>
+
+            <h2>
+                🔵 Set
+            </h2>
+
+            <p>
+                A set is an unordered collection of unique elements.
+                Duplicate values are automatically removed.
+            </p>
+
+
+            <div class="topic-list">
+
+                <span class="topic">Unique Values</span>
+
+                <span class="topic">Unordered</span>
+
+                <span class="topic">Mutable</span>
+
+            </div>
+
+
+            <div class="code-box">
+
+<pre>
+numbers = {10, 20, 20, 30}
+
+print(numbers)
+</pre>
+
+            </div>
+
+
+            <div class="interview-tip">
+
+                💡 <strong>Interview Tip:</strong>
+
+                If you need to remove duplicate values from
+                a collection, a set can be useful.
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             DICTIONARY
+        ========================================== -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                04 · DATA STRUCTURE
+            </div>
+
+            <h2>
+                🗂️ Dictionary
+            </h2>
+
+            <p>
+                A dictionary stores data as key-value pairs.
+                It is useful when information needs to be accessed
+                using meaningful keys.
+            </p>
+
+
+            <div class="topic-list">
+
+                <span class="topic">Key-Value</span>
+
+                <span class="topic">Mutable</span>
+
+                <span class="topic">Fast Lookup</span>
+
+            </div>
+
+
+            <div class="code-box">
+
+<pre>
+student = {
+    "name": "Varalakshmi",
+    "course": "Data Science",
+    "year": 3
+}
+
+print(student["name"])
+</pre>
+
+            </div>
+
+
+            <div class="interview-tip">
+
+                💡 <strong>Interview Tip:</strong>
+
+                A common interview question is:
+                <strong>"What is the difference between a list
+                and a dictionary?"</strong>
+
+                Remember:
+                List uses indexes, while dictionary uses keys.
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             INTERVIEW QUESTIONS
+        ========================================== -->
+
+        <section>
+
+            <div class="section-title">
+
+                <h2>
+                    🎤 Interview Questions
+                </h2>
+
+                <p>
+                    Practice explaining the concepts in simple
+                    interview English.
+                </p>
+
+            </div>
+
+
+            <!-- QUESTION 1 -->
+
+            <div class="question-card">
+
+                <h3>
+                    01. What is the difference between a list and a tuple?
+                </h3>
+
+                <button class="action-btn"
+                        onclick="toggleAnswer('answer1')">
+
+                    Show Answer
+
+                </button>
+
+
+                <div id="answer1"
+                     class="answer-box">
+
+                    A list is mutable, which means its elements
+                    can be changed. A tuple is immutable, which
+                    means it cannot be changed after creation.
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 2 -->
+
+            <div class="question-card">
+
+                <h3>
+                    02. What is a set used for?
+                </h3>
+
+                <button class="action-btn"
+                        onclick="toggleAnswer('answer2')">
+
+                    Show Answer
+
+                </button>
+
+
+                <div id="answer2"
+                     class="answer-box">
+
+                    A set is mainly useful when we need a collection
+                    of unique elements and want to remove duplicates.
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 3 -->
+
+            <div class="question-card">
+
+                <h3>
+                    03. What is a dictionary in Python?
+                </h3>
+
+                <button class="action-btn"
+                        onclick="toggleAnswer('answer3')">
+
+                    Show Answer
+
+                </button>
+
+
+                <div id="answer3"
+                     class="answer-box">
+
+                    A dictionary is a mutable collection that stores
+                    information using key-value pairs.
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 4 -->
+
+            <div class="question-card">
+
+                <h3>
+                    04. How can you remove duplicates from a list?
+                </h3>
+
+                <button class="action-btn"
+                        onclick="toggleAnswer('answer4')">
+
+                    Show Answer
+
+                </button>
+
+
+                <div id="answer4"
+                     class="answer-box">
+
+                    One simple approach is to convert the list
+                    into a set. For example:
+                    <br><br>
+
+                    <strong>
+                        unique_values = list(set(values))
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             PRACTICE QUESTION
+        ========================================== -->
+
+        <section class="practice-box">
+
+            <div class="section-title">
+
+                <h2>
+                    🧪 Quick Practice
+                </h2>
+
+                <p>
+                    Test your understanding before moving ahead.
+                </p>
+
+            </div>
+
+
+            <h3>
+                Which Python data structure stores
+                key-value pairs?
+            </h3>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(this, false)">
+
+                A. List
+
+            </button>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(this, false)">
+
+                B. Tuple
+
+            </button>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(this, false)">
+
+                C. Set
+
+            </button>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(this, true)">
+
+                D. Dictionary
+
+            </button>
+
+
+            <div id="practiceResult"
+                 class="result-box">
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             COMPLETE
+        ========================================== -->
+
+        <section class="complete-box">
+
+            <h2>
+                🚀 Finished this topic?
+            </h2>
+
+            <p>
+                Mark this topic as completed and continue
+                your Python preparation journey.
+            </p>
+
+
+            <button class="action-btn"
+                    onclick="markCompleted()">
+
+                ✓ Mark as Completed
+
+            </button>
+
+
+            <div id="completedMessage"
+                 class="completed-message">
+
+                🎉 Great job! Data Structures completed.
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function toggleAnswer(id) {
+
+            const answer =
+                document.getElementById(id);
+
+            if (answer.style.display === "block") {
+
+                answer.style.display = "none";
+
+            } else {
+
+                answer.style.display = "block";
+
+            }
+
+        }
+
+
+        function checkAnswer(button, correct) {
+
+            const result =
+                document.getElementById("practiceResult");
+
+            result.style.display = "block";
+
+            if (correct) {
+
+                result.innerHTML =
+                    "✅ Correct! Dictionary stores data as key-value pairs.";
+
+            } else {
+
+                result.innerHTML =
+                    "❌ Not quite. Try again! Think about key-value pairs.";
+
+            }
+
+        }
+
+
+        function markCompleted() {
+
+            const message =
+                document.getElementById("completedMessage");
+
+            message.style.display = "block";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

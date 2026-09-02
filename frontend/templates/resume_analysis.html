@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Resume Analysis | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        .resume-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .upload-box {
+            border: 2px dashed #cbd5e1;
+            padding: 40px 25px;
+            text-align: center;
+            border-radius: 18px;
+            margin-top: 20px;
+        }
+
+        .upload-box input {
+            margin: 20px auto;
+            padding: 12px;
+            display: block;
+        }
+
+        .analysis-btn {
+            margin-top: 15px;
+            padding: 13px 25px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        .result-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .score {
+            font-size: 52px;
+            font-weight: 800;
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .result-section {
+            padding: 18px;
+            background: #f8fafc;
+            border-radius: 14px;
+            margin-top: 15px;
+            line-height: 1.7;
+        }
+
+        .skill {
+            display: inline-block;
+            padding: 7px 12px;
+            border-radius: 20px;
+            background: #eef2ff;
+            margin: 5px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .error-box {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 12px;
+            background: #fff1f2;
+            color: #b91c1c;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar">
+
+    <div class="logo">
+        🎯 Placement Navigator <span>AI</span>
+    </div>
+
+    <a href="/prepare" class="back-link">
+        ← Back to Roadmap
+    </a>
+
+</nav>
+
+
+<main class="roadmap-container">
+
+
+    <!-- HEADER -->
+
+    <section class="page-header">
+
+        <div class="page-badge">
+            📄 Resume Analysis
+        </div>
+
+        <h1>
+            Analyze Your Resume
+        </h1>
+
+        <p>
+            Upload your PDF resume and get personalized
+            interview preparation insights.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         UPLOAD SECTION
+    ========================== -->
+
+    <section class="resume-card">
+
+        <h2>
+            📤 Upload Your Resume
+        </h2>
+
+        <p>
+            Select your PDF resume and click Analyze.
+        </p>
+
+
+        <form
+            method="POST"
+            action="{{ url_for('resume_analysis') }}"
+            enctype="multipart/form-data">
+
+
+            <div class="upload-box">
+
+                <div style="font-size:45px;">
+                    📄
+                </div>
+
+                <h3>
+                    Choose Your Resume
+                </h3>
+
+                <p>
+                    PDF files only
+                </p>
+
+
+                <input
+                    type="file"
+                    name="resume"
+                    id="resumeFile"
+                    accept=".pdf,application/pdf"
+                    required>
+
+
+                <br>
+
+
+                <button
+                    type="submit"
+                    class="analysis-btn">
+
+                    🤖 Analyze My Resume →
+
+                </button>
+
+            </div>
+
+        </form>
+
+
+        {% if error %}
+
+        <div class="error-box">
+
+            ⚠️ {{ error }}
+
+        </div>
+
+        {% endif %}
+
+
+    </section>
+
+
+    <!-- =========================
+         RESULTS
+    ========================== -->
+
+    {% if analysis %}
+
+    <section class="result-card">
+
+        <div class="page-badge">
+            🤖 AI Resume Analysis
+        </div>
+
+
+        <h1>
+            Resume Analysis Result
+        </h1>
+
+
+        <!-- SCORE -->
+
+        <div class="score">
+
+            {{ analysis.score }}%
+
+        </div>
+
+        <p style="text-align:center;">
+            Resume Readiness Score
+        </p>
+
+
+        <!-- SKILLS -->
+
+        <div class="result-section">
+
+            <h3>
+                🧠 Detected Skills
+            </h3>
+
+
+            {% if analysis.skills %}
+
+                {% for skill in analysis.skills %}
+
+                    <span class="skill">
+                        {{ skill }}
+                    </span>
+
+                {% endfor %}
+
+            {% else %}
+
+                <p>
+                    No major technical skills were detected.
+                </p>
+
+            {% endif %}
+
+        </div>
+
+
+        <!-- STRENGTHS -->
+
+        <div class="result-section">
+
+            <h3>
+                💪 Resume Strengths
+            </h3>
+
+            <ul>
+
+                {% for item in analysis.strengths %}
+
+                    <li>
+                        {{ item }}
+                    </li>
+
+                {% endfor %}
+
+            </ul>
+
+        </div>
+
+
+        <!-- MISSING SKILLS -->
+
+        <div class="result-section">
+
+            <h3>
+                ⚠️ Skills to Improve
+            </h3>
+
+            {% if analysis.missing_skills %}
+
+            <ul>
+
+                {% for skill in analysis.missing_skills %}
+
+                    <li>
+                        {{ skill }}
+                    </li>
+
+                {% endfor %}
+
+            </ul>
+
+            {% else %}
+
+            <p>
+                🎉 No major recommended skills are missing.
+            </p>
+
+            {% endif %}
+
+        </div>
+
+
+        <!-- QUESTIONS -->
+
+        <div class="result-section">
+
+            <h3>
+                🎯 Likely Interview Questions
+            </h3>
+
+            <ol>
+
+                {% for question in analysis.questions %}
+
+                    <li>
+                        {{ question }}
+                    </li>
+
+                {% endfor %}
+
+            </ol>
+
+        </div>
+
+
+        <!-- PREPARATION -->
+
+        <div class="result-section">
+
+            <h3>
+                🚀 Recommended Preparation
+            </h3>
+
+            <ul>
+
+                <li>
+                    Revise Python fundamentals and OOP.
+                </li>
+
+                <li>
+                    Practice SQL joins and subqueries.
+                </li>
+
+                <li>
+                    Revise Excel formulas and Pivot Tables.
+                </li>
+
+                <li>
+                    Practice explaining your projects.
+                </li>
+
+                <li>
+                    Complete a mock interview.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- ACTIONS -->
+
+        <div style="text-align:center; margin-top:30px;">
+            <a href="/complete/resume" class="action-btn">
+                ✓ Mark Resume Analysis Completed
+            </a>
+            <br><br>
+
+            <a href="/mock-interview"
+               class="action-btn">
+
+                🎤 Practice Mock Interview
+
+            </a>
+
+            <br><br>
+
+            <a href="/hr"
+               class="action-btn">
+
+                🗣️ Practice HR Questions
+
+            </a>
+
+        </div>
+
+
+    </section>
+
+    {% endif %}
+
+
+</main>
+
+
+</body>
+
+</html>

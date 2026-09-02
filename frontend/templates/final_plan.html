@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Final Day Preparation | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        .final-card {
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+            margin-bottom: 22px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .check-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            margin: 14px 0;
+            line-height: 1.6;
+        }
+
+        .check-item input {
+            margin-top: 5px;
+            width: 18px;
+            height: 18px;
+        }
+
+        .warning {
+            padding: 18px;
+            border-radius: 12px;
+            background: #fff7ed;
+            margin-top: 15px;
+            line-height: 1.7;
+        }
+
+        .success {
+            padding: 18px;
+            border-radius: 12px;
+            background: #f0fdf4;
+            margin-top: 15px;
+            line-height: 1.7;
+        }
+
+        .count-box {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .count-number {
+            font-size: 40px;
+            font-weight: 800;
+        }
+
+        .action-btn {
+            text-decoration: none;
+            display: inline-block;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎯 Placement Navigator <span>AI</span>
+        </div>
+
+        <a href="/prepare" class="back-link">
+            ← Back to Roadmap
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="roadmap-container">
+
+
+        <!-- HEADER -->
+
+        <section class="page-header">
+
+            <div class="page-badge">
+                🚀 Final Day Preparation
+            </div>
+
+            <h1>
+                Your Last-Minute Interview Plan
+            </h1>
+
+            <p>
+                Revise smartly, stay calm and walk into the interview
+                with confidence.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             FINAL MESSAGE
+        ========================== -->
+
+        <section class="readiness-card">
+
+            <div class="readiness-left">
+
+                <h2>
+                    🎯 You're Interview Ready
+                </h2>
+
+                <p>
+                    Don't try to learn everything at the last minute.
+                    Focus on revision, communication, confidence
+                    and getting enough rest.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             QUICK REVISION
+        ========================== -->
+        <h2 class="section-title">
+            ⚡ 01 · Quick Technical Revision
+        </h2>
+        <div class="count-box">
+            <div class="count-number">
+                <span id="completedCount">0</span>
+        /
+        <span id="totalCount">0</span>
+    </div>
+    <p>
+        Final Checklist Progress
+    </p>
+</div>
+<div class="final-card">
+    <h3>🐍 Python</h3>
+    <div class="check-item">
+        <input type="checkbox">
+        <span>Variables and data types</span>
+    </div>
+
+    <div class="check-item">
+        <input type="checkbox">
+        <span>Lists, tuples, sets and dictionaries</span>
+    </div>
+
+    <div class="check-item">
+        <input type="checkbox">
+        <span>Functions and arguments</span>
+    </div>
+
+    <div class="check-item">
+        <input type="checkbox">
+        <span>OOP concepts</span>
+    </div>
+
+</div>
+
+
+        <div class="final-card">
+
+            <h3>🗄️ SQL</h3>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>SELECT and WHERE</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>GROUP BY and aggregate functions</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Joins</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Subqueries</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>WHERE vs HAVING</span>
+            </div>
+
+        </div>
+
+
+        <div class="final-card">
+
+            <h3>📊 Excel & Data Analysis</h3>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>VLOOKUP / XLOOKUP</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Pivot Tables</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Sorting and Filtering</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Data Cleaning</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>EDA and Data Visualization</span>
+            </div>
+
+        </div>
+
+
+        <div class="final-card">
+
+            <h3>📈 Statistics</h3>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Mean, Median and Mode</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Probability</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Correlation</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Standard Deviation</span>
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             HR REVISION
+        ========================== -->
+
+        <h2 class="section-title">
+            🗣️ 02 · HR Questions to Revise
+        </h2>
+
+
+        <div class="final-card">
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Tell me about yourself.</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>What are your strengths?</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>What is your weakness?</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Why should we hire you?</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Why do you want to join our company?</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Where do you see yourself in five years?</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Tell me about your project.</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>What challenges did you face?</span>
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             PROJECT REVISION
+        ========================== -->
+
+        <h2 class="section-title">
+            🚀 03 · Project Preparation
+        </h2>
+
+
+        <div class="final-card">
+
+            <h3>
+                Be ready to explain these five things:
+            </h3>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>1. What problem does your project solve?</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>2. Why did you choose this project?</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>3. What technologies did you use?</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>4. What challenges did you face?</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>5. What would you improve in the future?</span>
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             INTERVIEW ETIQUETTE
+        ========================== -->
+
+        <h2 class="section-title">
+            👔 04 · Interview Etiquette
+        </h2>
+
+
+        <div class="final-card">
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Dress professionally.</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Reach the interview location early.</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Maintain comfortable eye contact.</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Sit straight and maintain confident body language.</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Listen carefully before answering.</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Speak clearly and avoid rushing.</span>
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             WHAT NOT TO DO
+        ========================== -->
+
+        <h2 class="section-title">
+            🚫 05 · What NOT To Do
+        </h2>
+
+
+        <div class="final-card">
+
+            <div class="warning">
+
+                ❌ Don't memorize every answer word-for-word.
+
+                <br><br>
+
+                ❌ Don't interrupt the interviewer.
+
+                <br><br>
+
+                ❌ Don't give extremely long answers.
+
+                <br><br>
+
+                ❌ Don't speak negatively about previous experiences.
+
+                <br><br>
+
+                ❌ Don't pretend to know something you don't know.
+
+                <br><br>
+
+                ❌ Don't panic if you don't know one question.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             COMMUNICATION
+        ========================== -->
+
+        <h2 class="section-title">
+            🗣️ 06 · Communication Checklist
+        </h2>
+
+
+        <div class="final-card">
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>I can introduce myself in 60–90 seconds.</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>I can explain my project clearly.</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>I can explain my technical concepts in simple English.</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>I can answer why I want this job.</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>I can talk about my strengths and weakness.</span>
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             ONE DAY BEFORE
+        ========================== -->
+
+        <h2 class="section-title">
+            🌙 07 · One Day Before Interview
+        </h2>
+
+
+        <div class="final-card">
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Complete a final revision instead of learning completely new topics.</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Keep your resume ready.</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Check interview time and location.</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Keep required documents ready.</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Prepare your clothes and essentials.</span>
+            </div>
+
+            <div class="check-item">
+                <input type="checkbox">
+                <span>Get enough sleep.</span>
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             INTERVIEW DAY
+        ========================== -->
+
+        <h2 class="section-title">
+            ☀️ 08 · Interview Day
+        </h2>
+
+
+        <div class="final-card">
+
+            <div class="success">
+
+                🌟 Stay calm.
+
+                <br><br>
+
+                🌟 Listen carefully.
+
+                <br><br>
+
+                🌟 Take a few seconds to think before answering.
+
+                <br><br>
+
+                🌟 If you don't know an answer, be honest.
+
+                <br><br>
+
+                🌟 Focus on communicating what you know.
+
+                <br><br>
+
+                🌟 Remember: one difficult question does not
+                define your entire interview.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             FINAL CONFIDENCE
+        ========================== -->
+
+        <section class="readiness-card">
+
+            <div class="readiness-left">
+
+                <h2>
+                    🏆 Final Confidence Reminder
+                </h2>
+
+                <p>
+                    You don't need to know everything to perform
+                    well in an interview.
+                </p>
+
+                <p>
+                    Show your willingness to learn, communicate
+                    clearly and explain what you genuinely know.
+                </p>
+
+                <p>
+                    <strong>
+                        Prepare well. Stay calm. Trust yourself.
+                    </strong>
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ACTION BUTTONS
+        ========================== -->
+        <div style="text-align:center; margin-top:35px;">
+            <a href="/mock-interview"
+               class="action-btn">
+               🎤 Take Final Mock Interview →
+            </a>
+            <br><br>
+            <a href="/readiness"
+               class="action-btn">
+               🎯 View My Readiness →
+            </a>
+            <br><br>
+            <a href="/prepare"
+               class="action-btn">
+               ← Back to Interview roadmap
+            </a>
+        </div>
+
+    </main>
+    <script>
+
+    const checkboxes = document.querySelectorAll(
+        '.check-item input[type="checkbox"]'
+    );
+
+    const completedCount =
+        document.getElementById("completedCount");
+
+    const totalCount =
+        document.getElementById("totalCount");
+
+
+    function updateProgress() {
+
+        let completed = 0;
+
+        checkboxes.forEach((checkbox, index) => {
+
+            const savedState =
+                localStorage.getItem("finalCheck_" + index);
+
+            if (savedState === "true") {
+                checkbox.checked = true;
+            }
+
+            if (checkbox.checked) {
+                completed++;
+            }
+
+        });
+
+        completedCount.innerText = completed;
+        totalCount.innerText = checkboxes.length;
+
+
+        checkboxes.forEach((checkbox, index) => {
+
+            localStorage.setItem(
+                "finalCheck_" + index,
+                checkbox.checked
+            );
+
+        });
+
+    }
+
+
+    checkboxes.forEach((checkbox) => {
+
+        checkbox.addEventListener("change", updateProgress);
+
+    });
+
+
+    updateProgress();
+
+</script>
+
+</body>
+
+</html>

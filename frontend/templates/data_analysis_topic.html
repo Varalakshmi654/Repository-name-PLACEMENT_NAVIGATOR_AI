@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Data Analysis Learning | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        .learning-card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .learning-card h2 {
+            margin-bottom: 12px;
+        }
+
+        .learning-card p {
+            line-height: 1.7;
+        }
+
+        .example-box {
+            background: #f5f7fb;
+            padding: 18px;
+            border-radius: 12px;
+            margin-top: 18px;
+            line-height: 1.7;
+        }
+
+        .practice-box {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 14px;
+            background: #f8fafc;
+        }
+
+        .practice-btn {
+            margin-top: 12px;
+            padding: 11px 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .answer-box {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            background: #eef6ff;
+            line-height: 1.7;
+        }
+
+        pre {
+            background: #111827;
+            color: white;
+            padding: 18px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+
+        .topic-navigation {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .topic-navigation a {
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 10px;
+            background: #f1f5f9;
+        }
+
+        .check-list {
+            padding-left: 20px;
+            line-height: 2;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎯 Placement Navigator <span>AI</span>
+        </div>
+
+        <a href="/data-analysis" class="back-link">
+            ← Back to Data Analysis
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="roadmap-container">
+
+
+        <!-- HEADER -->
+
+        <section class="page-header">
+
+            <div class="page-badge">
+                📊 Data Analysis Learning Module
+            </div>
+
+            <h1>
+                Learn Data Analysis Step-by-Step
+            </h1>
+
+            <p>
+                Understand concepts, work with real datasets,
+                discover insights and prepare for Data Analyst interviews.
+            </p>
+
+        </section>
+
+
+        <!-- TOPIC NAVIGATION -->
+
+        <div class="topic-navigation">
+
+            <a href="#basics">01 Basics</a>
+
+            <a href="#cleaning">02 Cleaning</a>
+
+            <a href="#eda">03 EDA</a>
+
+            <a href="#python">04 Python</a>
+
+            <a href="#visualization">05 Visualization</a>
+
+            <a href="#insights">06 Insights</a>
+
+            <a href="#case-studies">07 Case Studies</a>
+
+        </div>
+
+
+        <!-- =========================
+             01 BASICS
+        ========================== -->
+
+        <section id="basics"
+                 class="learning-card">
+
+            <div class="round-label">
+                01 · FOUNDATION
+            </div>
+
+            <h2>
+                📊 What is Data Analysis?
+            </h2>
+
+            <p>
+                Data Analysis is the process of collecting,
+                cleaning, transforming and examining data to
+                discover useful information and support decisions.
+            </p>
+
+
+            <div class="example-box">
+
+                <strong>Simple Example</strong>
+
+                <p>
+                    Imagine a company has sales data for one year.
+                    A Data Analyst can analyze that data to find:
+                </p>
+
+                <ul class="check-list">
+
+                    <li>Which product sells the most?</li>
+
+                    <li>Which month has the highest sales?</li>
+
+                    <li>Which region performs best?</li>
+
+                    <li>Where are sales decreasing?</li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="example-box">
+
+                <strong>🔄 Data Analysis Lifecycle</strong>
+
+                <p>
+                    Collect Data → Clean Data → Explore Data →
+                    Analyze Data → Visualize Data → Communicate Insights
+                </p>
+
+            </div>
+
+
+            <div class="practice-box">
+
+                <strong>🎤 Interview Question</strong>
+
+                <p>
+                    What is Data Analysis?
+                </p>
+
+                <button class="practice-btn"
+                        onclick="showAnswer('answer1')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer1"
+                     class="answer-box">
+
+                    Data Analysis is the process of examining,
+                    cleaning and transforming data to identify
+                    useful patterns and insights that help in
+                    decision making.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             02 CLEANING
+        ========================== -->
+
+        <section id="cleaning"
+                 class="learning-card">
+
+            <div class="round-label">
+                02 · DATA PREPARATION
+            </div>
+
+            <h2>
+                🧹 Data Cleaning
+            </h2>
+
+            <p>
+                Data cleaning is the process of identifying and
+                correcting problems in raw data before performing
+                analysis.
+            </p>
+
+
+            <div class="example-box">
+
+                <strong>Common Data Quality Problems</strong>
+
+                <ul class="check-list">
+
+                    <li>Missing values</li>
+
+                    <li>Duplicate records</li>
+
+                    <li>Incorrect data types</li>
+
+                    <li>Invalid values</li>
+
+                    <li>Inconsistent formats</li>
+
+                    <li>Outliers</li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="example-box">
+
+                <strong>🐍 Example using Pandas</strong>
+
+                <pre>
+import pandas as pd
+
+df = pd.read_csv("sales.csv")
+
+df.drop_duplicates(inplace=True)
+
+df = df.dropna()
+                </pre>
+
+            </div>
+
+
+            <div class="practice-box">
+
+                <strong>🧪 Scenario</strong>
+
+                <p>
+                    Your dataset contains duplicate customer
+                    records. What would you do?
+                </p>
+
+                <button class="practice-btn"
+                        onclick="showAnswer('answer2')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer2"
+                     class="answer-box">
+
+                    First I would identify which columns define
+                    a duplicate record. Then I would remove
+                    duplicate records while keeping the original
+                    dataset as a backup.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             03 EDA
+        ========================== -->
+
+        <section id="eda"
+                 class="learning-card">
+
+            <div class="round-label">
+                03 · EXPLORATORY ANALYSIS
+            </div>
+
+            <h2>
+                🔍 Exploratory Data Analysis
+            </h2>
+
+            <p>
+                Exploratory Data Analysis, or EDA, is used to
+                understand the structure of a dataset and discover
+                patterns, relationships and unusual values.
+            </p>
+
+
+            <div class="example-box">
+
+                <strong>Important Measures</strong>
+
+                <p>
+                    <strong>Mean:</strong>
+                    Average value of the data.
+                </p>
+
+                <p>
+                    <strong>Median:</strong>
+                    Middle value after sorting the data.
+                </p>
+
+                <p>
+                    <strong>Mode:</strong>
+                    Most frequently occurring value.
+                </p>
+
+                <p>
+                    <strong>Correlation:</strong>
+                    Measures the relationship between variables.
+                </p>
+
+            </div>
+
+
+            <div class="example-box">
+
+                <strong>🐍 Pandas Example</strong>
+
+                <pre>
+df.describe()
+
+df["salary"].mean()
+
+df["age"].median()
+
+df["department"].value_counts()
+                </pre>
+
+            </div>
+
+
+            <div class="practice-box">
+
+                <strong>🎤 Interview Question</strong>
+
+                <p>
+                    Why is EDA important?
+                </p>
+
+                <button class="practice-btn"
+                        onclick="showAnswer('answer3')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer3"
+                     class="answer-box">
+
+                    EDA helps us understand the dataset before
+                    building models or making decisions. It helps
+                    identify patterns, missing values, outliers
+                    and relationships between variables.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             04 PYTHON
+        ========================== -->
+
+        <section id="python"
+                 class="learning-card">
+
+            <div class="round-label">
+                04 · PYTHON ANALYTICS
+            </div>
+
+            <h2>
+                🐍 Python for Data Analysis
+            </h2>
+
+            <p>
+                Python is widely used for data analysis because
+                libraries such as Pandas and NumPy make data
+                manipulation and numerical analysis easier.
+            </p>
+
+
+            <div class="example-box">
+
+                <strong>Important Libraries</strong>
+
+                <ul class="check-list">
+
+                    <li>
+                        <strong>Pandas</strong> –
+                        Data manipulation and analysis
+                    </li>
+
+                    <li>
+                        <strong>NumPy</strong> –
+                        Numerical operations
+                    </li>
+
+                    <li>
+                        <strong>Matplotlib</strong> –
+                        Data visualization
+                    </li>
+
+                    <li>
+                        <strong>Seaborn</strong> –
+                        Statistical visualization
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="example-box">
+
+                <strong>📄 Reading a CSV File</strong>
+
+                <pre>
+import pandas as pd
+
+df = pd.read_csv("employees.csv")
+
+print(df.head())
+                </pre>
+
+            </div>
+
+
+            <div class="example-box">
+
+                <strong>🔎 Filtering Data</strong>
+
+                <pre>
+high_salary = df[df["salary"] > 50000]
+
+print(high_salary)
+                </pre>
+
+            </div>
+
+
+            <div class="practice-box">
+
+                <strong>💡 Interview Tip</strong>
+
+                <p>
+                    Don't just say "I know Pandas."
+                    Explain how you used Pandas to clean,
+                    filter, group and analyze a dataset.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             05 VISUALIZATION
+        ========================== -->
+
+        <section id="visualization"
+                 class="learning-card">
+
+            <div class="round-label">
+                05 · DATA VISUALIZATION
+            </div>
+
+            <h2>
+                📈 Data Visualization
+            </h2>
+
+            <p>
+                Data visualization converts data into charts and
+                graphs so that patterns and trends can be understood
+                quickly.
+            </p>
+
+
+            <div class="example-box">
+
+                <strong>📊 Choosing the Right Chart</strong>
+
+                <p>
+                    <strong>Bar Chart:</strong>
+                    Compare categories.
+                </p>
+
+                <p>
+                    <strong>Line Chart:</strong>
+                    Show trends over time.
+                </p>
+
+                <p>
+                    <strong>Pie Chart:</strong>
+                    Show proportions of a whole.
+                </p>
+
+                <p>
+                    <strong>Histogram:</strong>
+                    Understand distribution of numeric data.
+                </p>
+
+                <p>
+                    <strong>Scatter Plot:</strong>
+                    Examine relationships between two variables.
+                </p>
+
+            </div>
+
+
+            <div class="example-box">
+
+                <strong>Example</strong>
+
+                <p>
+                    If you want to compare sales across five
+                    products, a Bar Chart would be a suitable choice.
+                </p>
+
+                <p>
+                    If you want to show monthly sales for one year,
+                    a Line Chart would usually be more suitable.
+                </p>
+
+            </div>
+
+
+            <div class="practice-box">
+
+                <strong>🎤 Interview Question</strong>
+
+                <p>
+                    Which chart would you use to show a monthly
+                    sales trend?
+                </p>
+
+                <button class="practice-btn"
+                        onclick="showAnswer('answer5')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer5"
+                     class="answer-box">
+
+                    A Line Chart is suitable because it clearly
+                    shows how values change over time.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             06 BUSINESS INSIGHTS
+        ========================== -->
+
+        <section id="insights"
+                 class="learning-card">
+
+            <div class="round-label">
+                06 · BUSINESS ANALYTICS
+            </div>
+
+            <h2>
+                💼 Turning Data into Business Insights
+            </h2>
+
+            <p>
+                A Data Analyst should not stop after creating
+                charts. The important step is explaining what
+                the data means and how it can support decisions.
+            </p>
+
+
+            <div class="example-box">
+
+                <strong>Example</strong>
+
+                <p>
+                    Suppose analysis shows that sales decreased
+                    by 20% in one region during the last quarter.
+                </p>
+
+                <p>
+                    A useful insight could be:
+                </p>
+
+                <p>
+                    "Sales in Region A decreased significantly
+                    during the last quarter. The company should
+                    investigate customer demand, pricing and
+                    competition in that region."
+                </p>
+
+            </div>
+
+
+            <div class="example-box">
+
+                <strong>📌 Important Business Concepts</strong>
+
+                <ul class="check-list">
+
+                    <li>KPI</li>
+
+                    <li>Sales Performance</li>
+
+                    <li>Customer Behaviour</li>
+
+                    <li>Trends</li>
+
+                    <li>Business Recommendations</li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="practice-box">
+
+                <strong>🎤 Interview Question</strong>
+
+                <p>
+                    What is a KPI?
+                </p>
+
+                <button class="practice-btn"
+                        onclick="showAnswer('answer6')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer6"
+                     class="answer-box">
+
+                    KPI stands for Key Performance Indicator.
+                    It is a measurable value used to evaluate
+                    the performance or progress of a business
+                    objective.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             07 CASE STUDIES
+        ========================== -->
+
+        <section id="case-studies"
+                 class="learning-card">
+
+            <div class="round-label">
+                07 · PRACTICAL ANALYSIS
+            </div>
+
+            <h2>
+                🧪 Data Analysis Case Studies
+            </h2>
+
+            <p>
+                Case studies help you practice applying your
+                technical knowledge to realistic business problems.
+            </p>
+
+
+            <div class="example-box">
+
+                <strong>📊 Case Study 1 — Sales Analysis</strong>
+
+                <p>
+                    A company provides a dataset containing:
+                </p>
+
+                <p>
+                    Product · Region · Month · Sales · Profit
+                </p>
+
+                <p>
+                    Your task is to identify the best-performing
+                    product, highest-sales region and monthly trend.
+                </p>
+
+            </div>
+
+
+            <div class="example-box">
+
+                <strong>👥 Case Study 2 — Customer Analysis</strong>
+
+                <p>
+                    Analyze customer data to identify customer
+                    segments, purchase patterns and high-value
+                    customers.
+                </p>
+
+            </div>
+
+
+            <div class="example-box">
+
+                <strong>👨‍💼 Case Study 3 — Employee Analysis</strong>
+
+                <p>
+                    Analyze employee information to understand
+                    department performance, salary patterns and
+                    employee distribution.
+                </p>
+
+            </div>
+
+
+            <div class="practice-box">
+
+                <strong>🎤 Interview Scenario</strong>
+
+                <p>
+                    Your manager gives you a new dataset and asks
+                    you to find useful insights. What would you do first?
+                </p>
+
+                <button class="practice-btn"
+                        onclick="showAnswer('answer7')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer7"
+                     class="answer-box">
+
+                    First, I would understand the business problem
+                    and inspect the dataset. Then I would check the
+                    data types, missing values and duplicates.
+                    After cleaning the data, I would perform EDA,
+                    visualize important patterns and finally
+                    communicate the key insights and recommendations.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FINAL INTERVIEW TIP
+        ========================== -->
+
+        <section class="readiness-card"
+                 style="margin-top:35px;">
+
+            <div class="readiness-left">
+
+                <h2>
+                    💡 Data Analyst Interview Tip
+                </h2>
+
+                <p>
+                    When answering interview questions, follow this
+                    simple structure:
+                    <strong>Problem → Data → Analysis → Insight → Recommendation.</strong>
+                </p>
+
+            </div>
+
+        </section>
+        <div style="text-align:center; margin-top:30px;">
+            <a href="/data-analysis-interview"
+            class="action-btn">
+            🎤 Start Interview Practice →
+        </a>
+        <br><br>
+        <a href="/complete/data-analysis"
+        class="action-btn">
+        ✓ Mark Data Analysis Completed
+    </a>
+</div>
+</main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        function showAnswer(id) {
+
+            const answer =
+                document.getElementById(id);
+
+            if (answer.style.display === "block") {
+
+                answer.style.display = "none";
+
+            } else {
+
+                answer.style.display = "block";
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

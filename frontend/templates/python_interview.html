@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Python Interview Questions | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        .question-card {
+            background: white;
+            border-radius: 18px;
+            padding: 24px;
+            margin-bottom: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .question-number {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            opacity: 0.65;
+        }
+
+        .answer-box {
+            display: none;
+            margin-top: 18px;
+            padding: 18px;
+            border-radius: 12px;
+            background: #f3f4f6;
+            line-height: 1.7;
+        }
+
+        .code-box {
+            background: #111827;
+            color: white;
+            padding: 18px;
+            border-radius: 12px;
+            margin-top: 15px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            margin: 0;
+            font-family: Consolas, monospace;
+            line-height: 1.6;
+        }
+
+        .practice-card {
+            background: white;
+            border-radius: 18px;
+            padding: 26px;
+            margin-bottom: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .option-btn {
+            display: block;
+            width: 100%;
+            padding: 13px 16px;
+            margin: 10px 0;
+            text-align: left;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: white;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .result-box {
+            display: none;
+            margin-top: 18px;
+            padding: 16px;
+            border-radius: 12px;
+            background: #f3f4f6;
+            font-weight: 600;
+        }
+
+        .complete-box {
+            text-align: center;
+            background: white;
+            border-radius: 18px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .completed-message {
+            display: none;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎯 Placement Navigator <span>AI</span>
+        </div>
+
+        <a href="/python" class="back-link">
+            ← Back to Python
+        </a>
+
+    </nav>
+
+
+    <main class="roadmap-container">
+
+
+        <!-- HEADER -->
+
+        <section class="page-header">
+
+            <div class="page-badge">
+                🎤 Python Interview Preparation
+            </div>
+
+            <h1>
+                Python Interview Questions
+            </h1>
+
+            <p>
+                Practice theory, coding, scenario and follow-up
+                questions commonly discussed in technical interviews.
+            </p>
+
+        </section>
+
+
+        <!-- OVERVIEW -->
+
+        <section class="readiness-card">
+
+            <div class="readiness-left">
+
+                <h2>
+                    🎯 Your Interview Focus
+                </h2>
+
+                <p>
+                    Don't just memorize answers. Understand the concept,
+                    explain it in simple English and give a small example.
+                </p>
+
+            </div>
+
+            <div class="readiness-score">
+
+                <div class="score-number">
+                    0%
+                </div>
+
+                <div class="score-label">
+                    Practice Complete
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- THEORY QUESTIONS -->
+
+        <h2 class="category-title">
+            📚 01 · Theory Questions
+        </h2>
+
+
+        <div class="question-card">
+
+            <div class="question-number">
+                QUESTION 01
+            </div>
+
+            <h3>
+                What is Python?
+            </h3>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('answer1')">
+
+                Show Answer
+
+            </button>
+
+            <div id="answer1"
+                 class="answer-box">
+
+                Python is a high-level, interpreted programming
+                language known for its simple and readable syntax.
+                It is widely used in web development, data analysis,
+                automation, machine learning and artificial intelligence.
+
+            </div>
+
+        </div>
+
+
+        <div class="question-card">
+
+            <div class="question-number">
+                QUESTION 02
+            </div>
+
+            <h3>
+                What are Python's main data types?
+            </h3>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('answer2')">
+
+                Show Answer
+
+            </button>
+
+            <div id="answer2"
+                 class="answer-box">
+
+                Common Python data types include int, float, str,
+                bool, list, tuple, set and dictionary.
+
+            </div>
+
+        </div>
+
+
+        <div class="question-card">
+
+            <div class="question-number">
+                QUESTION 03
+            </div>
+
+            <h3>
+                What is the difference between a list and a tuple?
+            </h3>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('answer3')">
+
+                Show Answer
+
+            </button>
+
+            <div id="answer3"
+                 class="answer-box">
+
+                A list is mutable, which means its elements can be
+                changed after creation. A tuple is immutable, so its
+                elements cannot normally be changed after creation.
+
+            </div>
+
+        </div>
+
+
+        <div class="question-card">
+
+            <div class="question-number">
+                QUESTION 04
+            </div>
+
+            <h3>
+                What is a dictionary in Python?
+            </h3>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('answer4')">
+
+                Show Answer
+
+            </button>
+
+            <div id="answer4"
+                 class="answer-box">
+
+                A dictionary stores data as key-value pairs.
+
+                <div class="code-box">
+
+<pre>
+student = {
+    "name": "Varalakshmi",
+    "course": "Data Science"
+}
+
+print(student["name"])
+</pre>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="question-card">
+
+            <div class="question-number">
+                QUESTION 05
+            </div>
+
+            <h3>
+                What is the difference between == and = ?
+            </h3>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('answer5')">
+
+                Show Answer
+
+            </button>
+
+            <div id="answer5"
+                 class="answer-box">
+
+                The = operator is used for assignment, while ==
+                is used to compare two values.
+
+            </div>
+
+        </div>
+
+
+        <!-- CODING QUESTIONS -->
+
+        <h2 class="category-title">
+            💻 02 · Coding Questions
+        </h2>
+
+
+        <div class="question-card">
+
+            <div class="question-number">
+                CODING QUESTION 01
+            </div>
+
+            <h3>
+                Write a Python program to check whether a number is even or odd.
+            </h3>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('codeAnswer1')">
+
+                Show Solution
+
+            </button>
+
+            <div id="codeAnswer1"
+                 class="answer-box">
+
+                <div class="code-box">
+
+<pre>
+number = 10
+
+if number % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+</pre>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="question-card">
+
+            <div class="question-number">
+                CODING QUESTION 02
+            </div>
+
+            <h3>
+                Write a Python program to find the largest number in a list.
+            </h3>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('codeAnswer2')">
+
+                Show Solution
+
+            </button>
+
+            <div id="codeAnswer2"
+                 class="answer-box">
+
+                <div class="code-box">
+
+<pre>
+numbers = [10, 25, 7, 40, 18]
+
+largest = max(numbers)
+
+print(largest)
+</pre>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="question-card">
+
+            <div class="question-number">
+                CODING QUESTION 03
+            </div>
+
+            <h3>
+                Write a Python program to reverse a string.
+            </h3>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('codeAnswer3')">
+
+                Show Solution
+
+            </button>
+
+            <div id="codeAnswer3"
+                 class="answer-box">
+
+                <div class="code-box">
+
+<pre>
+text = "Python"
+
+reversed_text = text[::-1]
+
+print(reversed_text)
+</pre>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SCENARIO QUESTIONS -->
+
+        <h2 class="category-title">
+            🧩 03 · Scenario Questions
+        </h2>
+
+
+        <div class="question-card">
+
+            <div class="question-number">
+                SCENARIO 01
+            </div>
+
+            <h3>
+                You have a list containing duplicate values.
+                How would you remove duplicates?
+            </h3>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('scenario1')">
+
+                Show Answer
+
+            </button>
+
+            <div id="scenario1"
+                 class="answer-box">
+
+                One simple approach is to convert the list into
+                a set because a set stores unique values.
+
+                <div class="code-box">
+
+<pre>
+numbers = [1, 2, 2, 3, 3, 4]
+
+unique_numbers = list(set(numbers))
+
+print(unique_numbers)
+</pre>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="question-card">
+
+            <div class="question-number">
+                SCENARIO 02
+            </div>
+
+            <h3>
+                Your program is producing an error.
+                What would you do first?
+            </h3>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('scenario2')">
+
+                Show Answer
+
+            </button>
+
+            <div id="scenario2"
+                 class="answer-box">
+
+                First, I would read the error message carefully,
+                identify the line causing the problem, understand
+                the type of error and then debug the code step by step.
+
+            </div>
+
+        </div>
+
+
+        <div class="question-card">
+
+            <div class="question-number">
+                SCENARIO 03
+            </div>
+
+            <h3>
+                If a loop is running continuously, what would you check?
+            </h3>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('scenario3')">
+
+                Show Answer
+
+            </button>
+
+            <div id="scenario3"
+                 class="answer-box">
+
+                I would check the loop condition and verify whether
+                the variable controlling the condition is being updated.
+                An incorrect condition or missing update can cause
+                an infinite loop.
+
+            </div>
+
+        </div>
+
+
+        <!-- FOLLOW-UP QUESTIONS -->
+
+        <h2 class="category-title">
+            🔎 04 · Follow-up Questions
+        </h2>
+
+
+        <div class="question-card">
+
+            <div class="question-number">
+                FOLLOW-UP 01
+            </div>
+
+            <h3>
+                Why did you choose Python for your project?
+            </h3>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('follow1')">
+
+                Show Sample Answer
+
+            </button>
+
+            <div id="follow1"
+                 class="answer-box">
+
+                I chose Python because it has simple syntax,
+                a large collection of libraries and strong support
+                for data analysis and machine learning. It helped me
+                develop my project efficiently.
+
+            </div>
+
+        </div>
+
+
+        <div class="question-card">
+
+            <div class="question-number">
+                FOLLOW-UP 02
+            </div>
+
+            <h3>
+                Which Python libraries have you used?
+            </h3>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('follow2')">
+
+                Show Sample Answer
+
+            </button>
+
+            <div id="follow2"
+                 class="answer-box">
+
+                I have worked with libraries such as Pandas and
+                NumPy for data processing and analysis, and
+                libraries such as Matplotlib or Plotly for
+                data visualization.
+
+            </div>
+
+        </div>
+
+
+        <!-- MOCK INTERVIEW -->
+
+        <section class="practice-card">
+
+            <h2>
+                🎤 Mini Python Mock Interview
+            </h2>
+
+            <p>
+                Imagine the interviewer asks:
+            </p>
+
+            <h3>
+                "Can you explain the difference between a list,
+                tuple and dictionary?"
+            </h3>
+
+            <p>
+                Try answering aloud before revealing the suggested answer.
+            </p>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('mockAnswer')">
+
+                Show Suggested Answer
+
+            </button>
+
+            <div id="mockAnswer"
+                 class="answer-box">
+
+                A list is an ordered and mutable collection.
+                A tuple is an ordered but immutable collection.
+                A dictionary stores data using key-value pairs.
+                I would choose between them depending on how
+                I need to store and access the data.
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK PRACTICE -->
+
+        <section class="practice-card">
+
+            <h2>
+                🧪 Quick Practice
+            </h2>
+
+            <h3>
+                Which Python data structure stores key-value pairs?
+            </h3>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(false)">
+
+                A. List
+
+            </button>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(false)">
+
+                B. Tuple
+
+            </button>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(true)">
+
+                C. Dictionary
+
+            </button>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(false)">
+
+                D. Set
+
+            </button>
+
+
+            <div id="practiceResult"
+                 class="result-box">
+
+            </div>
+
+        </section>
+
+
+        <!-- COMPLETE -->
+
+        <section class="complete-box">
+
+            <h2>
+                🚀 Finished Python Interview Practice?
+            </h2>
+
+            <p>
+                Mark this section as completed and continue
+                to SQL and Data Analysis preparation.
+            </p>
+
+            <button class="action-btn"
+                    onclick="markCompleted()">
+
+                ✓ Mark as Completed
+
+            </button>
+
+
+            <div id="completedMessage"
+                 class="completed-message">
+
+                🎉 Excellent! Python Interview Preparation completed.
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script>
+
+        function toggleAnswer(id) {
+
+            const answer =
+                document.getElementById(id);
+
+            if (answer.style.display === "block") {
+
+                answer.style.display = "none";
+
+            } else {
+
+                answer.style.display = "block";
+
+            }
+
+        }
+
+
+        function checkAnswer(correct) {
+
+            const result =
+                document.getElementById("practiceResult");
+
+            result.style.display = "block";
+
+            if (correct) {
+
+                result.innerHTML =
+                    "✅ Correct! A dictionary stores data as key-value pairs.";
+
+            } else {
+
+                result.innerHTML =
+                    "❌ Not quite. Think about the Python collection that uses keys and values.";
+
+            }
+
+        }
+
+
+        function markCompleted() {
+
+            const message =
+                document.getElementById("completedMessage");
+
+            message.style.display = "block";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

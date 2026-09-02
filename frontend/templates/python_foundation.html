@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Python Basics | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎯 Placement Navigator <span>AI</span>
+        </div>
+
+        <a href="/python" class="back-link">
+            ← Back to Python
+        </a>
+
+    </nav>
+
+
+    <!-- MAIN -->
+
+    <main class="roadmap-container">
+
+
+        <!-- HEADER -->
+
+        <section class="page-header">
+
+            <div class="page-badge">
+                🐍 Python Foundation
+            </div>
+
+            <h1>
+                Python Basics
+            </h1>
+
+            <p>
+                Build a strong Python foundation before moving
+                to advanced interview concepts.
+            </p>
+
+        </section>
+
+
+        <!-- LEARNING CARD -->
+
+        <section class="readiness-card">
+
+            <div class="readiness-left">
+
+                <h2>
+                    🎯 What You Will Learn
+                </h2>
+
+                <p>
+                    Variables, data types, operators and basic
+                    input/output concepts.
+                </p>
+
+            </div>
+
+            <div class="readiness-score">
+
+                <div class="score-number">
+                    01
+                </div>
+
+                <div class="score-label">
+                    Foundation
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCEPT 1 -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                CONCEPT 01
+            </div>
+
+            <h2>
+                📦 Variables
+            </h2>
+
+            <p>
+                A variable is a name used to store a value in a
+                Python program.
+            </p>
+
+
+            <div class="code-box">
+                <pre>
+name = "Varalakshmi"
+age = 21
+                </pre>
+            </div>
+
+
+            <div class="interview-tip">
+
+                💡 <strong>Interview Tip:</strong>
+
+                Explain that Python variables do not require
+                explicit type declaration.
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCEPT 2 -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                CONCEPT 02
+            </div>
+
+            <h2>
+                🔤 Data Types
+            </h2>
+
+            <p>
+                Python provides different data types to represent
+                different kinds of values.
+            </p>
+
+
+            <div class="topic-list">
+
+                <span class="topic">int</span>
+
+                <span class="topic">float</span>
+
+                <span class="topic">str</span>
+
+                <span class="topic">bool</span>
+
+                <span class="topic">list</span>
+
+                <span class="topic">tuple</span>
+
+                <span class="topic">set</span>
+
+                <span class="topic">dict</span>
+
+            </div>
+
+
+            <div class="code-box">
+
+                <pre>
+age = 21
+price = 99.5
+name = "Python"
+is_ready = True
+                </pre>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCEPT 3 -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                CONCEPT 03
+            </div>
+
+            <h2>
+                ➕ Operators
+            </h2>
+
+            <p>
+                Operators are used to perform operations on values
+                and variables.
+            </p>
+
+
+            <div class="topic-list">
+
+                <span class="topic">Arithmetic</span>
+
+                <span class="topic">Comparison</span>
+
+                <span class="topic">Logical</span>
+
+                <span class="topic">Assignment</span>
+
+            </div>
+
+
+            <div class="code-box">
+
+                <pre>
+a = 10
+b = 5
+
+print(a + b)
+print(a > b)
+                </pre>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCEPT 4 -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                CONCEPT 04
+            </div>
+
+            <h2>
+                ⌨️ Input & Output
+            </h2>
+
+            <p>
+                Python uses <strong>input()</strong> to receive
+                information from the user and <strong>print()</strong>
+                to display output.
+            </p>
+
+
+            <div class="code-box">
+
+                <pre>
+name = input("Enter your name: ")
+
+print("Hello", name)
+                </pre>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTERVIEW QUESTIONS -->
+
+        <section class="question-section">
+
+            <div class="section-title">
+
+                <h2>
+                    🎤 Interview Questions
+                </h2>
+
+                <p>
+                    Practice answering these questions in simple
+                    interview English.
+                </p>
+
+            </div>
+
+
+            <!-- QUESTION 1 -->
+
+            <div class="question-card">
+
+                <h3>
+                    01. What is Python?
+                </h3>
+
+                <button class="answer-btn"
+                        onclick="toggleAnswer('answer1')">
+
+                    Show Answer
+
+                </button>
+
+
+                <div id="answer1"
+                     class="answer-box">
+
+                    Python is a high-level, interpreted and
+                    general-purpose programming language known
+                    for its simple and readable syntax.
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 2 -->
+
+            <div class="question-card">
+
+                <h3>
+                    02. What are variables in Python?
+                </h3>
+
+                <button class="answer-btn"
+                        onclick="toggleAnswer('answer2')">
+
+                    Show Answer
+
+                </button>
+
+
+                <div id="answer2"
+                     class="answer-box">
+
+                    Variables are names used to store values
+                    in a Python program.
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 3 -->
+
+            <div class="question-card">
+
+                <h3>
+                    03. Does Python require variable declaration?
+                </h3>
+
+                <button class="answer-btn"
+                        onclick="toggleAnswer('answer3')">
+
+                    Show Answer
+
+                </button>
+
+
+                <div id="answer3"
+                     class="answer-box">
+
+                    No. Python does not require explicit variable
+                    declaration. The type is determined from the
+                    value assigned to the variable.
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- NEXT STEP -->
+
+        <section class="readiness-card"
+                 style="margin-top: 35px;">
+
+            <div class="readiness-left">
+
+                <h2>
+                    🚀 Ready for the Next Topic?
+                </h2>
+
+                <p>
+                    Once you understand Python basics, move to
+                    Python data structures and problem solving.
+                </p>
+
+            </div>
+
+
+            <a href="/python"
+               class="action-btn">
+
+                Back to Python Topics →
+
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function toggleAnswer(id) {
+
+            const answer =
+                document.getElementById(id);
+
+            if (answer.style.display === "block") {
+
+                answer.style.display = "none";
+
+            } else {
+
+                answer.style.display = "block";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

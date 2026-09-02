@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Excel Interview Practice | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        .question-card {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .question-number {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .question-card h3 {
+            margin-bottom: 18px;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 18px;
+            padding: 18px;
+            border-radius: 12px;
+            background: #f4f7fb;
+            line-height: 1.7;
+        }
+
+        .show-btn {
+            border: none;
+            padding: 11px 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .practice-option {
+            display: block;
+            width: 100%;
+            text-align: left;
+            margin: 10px 0;
+            padding: 13px 16px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: white;
+            cursor: pointer;
+        }
+
+        .practice-option:hover {
+            background: #f3f6fa;
+        }
+
+        .feedback {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .solution {
+            display: none;
+            margin-top: 15px;
+            padding: 18px;
+            background: #f4f7fb;
+            border-radius: 12px;
+        }
+
+        pre {
+            background: #111827;
+            color: white;
+            padding: 16px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎯 Placement Navigator <span>AI</span>
+        </div>
+
+        <a href="/excel" class="back-link">
+            ← Back to Excel
+        </a>
+
+    </nav>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="roadmap-container">
+
+
+        <!-- HEADER -->
+
+        <section class="page-header">
+
+            <div class="page-badge">
+                🎤 Excel Interview Practice
+            </div>
+
+            <h1>
+                Excel Interview Questions
+            </h1>
+
+            <p>
+                Practice common Excel questions and learn how
+                to explain your answers clearly in interviews.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             THEORY QUESTIONS
+        ========================== -->
+
+        <section>
+
+            <div class="section-title">
+
+                <h2>
+                    📚 Theory Questions
+                </h2>
+
+                <p>
+                    Understand the concepts before explaining
+                    them in an interview.
+                </p>
+
+            </div>
+
+
+
+            <!-- QUESTION 01 -->
+
+            <div class="question-card">
+
+                <div class="question-number">
+                    QUESTION 01
+                </div>
+
+                <h3>
+                    What is the difference between a workbook
+                    and a worksheet in Excel?
+                </h3>
+
+                <button class="show-btn"
+                        onclick="showAnswer('answer1')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer1" class="answer">
+
+                    A <strong>workbook</strong> is an Excel file
+                    that can contain multiple worksheets.
+
+                    <br><br>
+
+                    A <strong>worksheet</strong> is an individual
+                    spreadsheet inside the workbook where data
+                    is stored and analyzed.
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUESTION 02 -->
+
+            <div class="question-card">
+
+                <div class="question-number">
+                    QUESTION 02
+                </div>
+
+                <h3>
+                    What is the difference between COUNT,
+                    COUNTA and COUNTBLANK?
+                </h3>
+
+                <button class="show-btn"
+                        onclick="showAnswer('answer2')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer2" class="answer">
+
+                    <strong>COUNT</strong> counts cells containing
+                    numbers.
+
+                    <br><br>
+
+                    <strong>COUNTA</strong> counts non-empty cells.
+
+                    <br><br>
+
+                    <strong>COUNTBLANK</strong> counts empty cells.
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUESTION 03 -->
+
+            <div class="question-card">
+
+                <div class="question-number">
+                    QUESTION 03
+                </div>
+
+                <h3>
+                    What is a Pivot Table?
+                </h3>
+
+                <button class="show-btn"
+                        onclick="showAnswer('answer3')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer3" class="answer">
+
+                    A Pivot Table is an Excel tool used to
+                    summarize, analyze and organize large
+                    datasets quickly.
+
+                    <br><br>
+
+                    It can be used to calculate totals, counts,
+                    averages and compare data across categories.
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUESTION 04 -->
+
+            <div class="question-card">
+
+                <div class="question-number">
+                    QUESTION 04
+                </div>
+
+                <h3>
+                    What is the difference between VLOOKUP
+                    and XLOOKUP?
+                </h3>
+
+                <button class="show-btn"
+                        onclick="showAnswer('answer4')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer4" class="answer">
+
+                    VLOOKUP searches for a value in the first
+                    column of a table and returns a value from
+                    another column.
+
+                    <br><br>
+
+                    XLOOKUP is a more flexible lookup function
+                    that can search in different directions and
+                    provides easier handling of missing values.
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUESTION 05 -->
+
+            <div class="question-card">
+
+                <div class="question-number">
+                    QUESTION 05
+                </div>
+
+                <h3>
+                    What is the difference between sorting
+                    and filtering?
+                </h3>
+
+                <button class="show-btn"
+                        onclick="showAnswer('answer5')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer5" class="answer">
+
+                    <strong>Sorting</strong> changes the order of
+                    data, such as ascending or descending order.
+
+                    <br><br>
+
+                    <strong>Filtering</strong> displays only the
+                    rows that satisfy selected conditions.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SCENARIO QUESTIONS
+        ========================== -->
+
+        <section style="margin-top: 45px;">
+
+            <div class="section-title">
+
+                <h2>
+                    🧠 Scenario Questions
+                </h2>
+
+                <p>
+                    These questions test how you would use Excel
+                    in real workplace situations.
+                </p>
+
+            </div>
+
+
+
+            <div class="question-card">
+
+                <div class="question-number">
+                    SCENARIO 01
+                </div>
+
+                <h3>
+                    You receive a dataset containing duplicate
+                    customer records. How would you clean it?
+                </h3>
+
+                <button class="show-btn"
+                        onclick="showAnswer('scenario1')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="scenario1" class="answer">
+
+                    I would first inspect the dataset and identify
+                    the columns that uniquely identify a customer.
+
+                    <br><br>
+
+                    Then I would use Excel's
+                    <strong>Remove Duplicates</strong> feature
+                    after making a backup of the original data.
+
+                </div>
+
+            </div>
+
+
+
+            <div class="question-card">
+
+                <div class="question-number">
+                    SCENARIO 02
+                </div>
+
+                <h3>
+                    Your manager wants monthly sales by department.
+                    How would you prepare the report?
+                </h3>
+
+                <button class="show-btn"
+                        onclick="showAnswer('scenario2')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="scenario2" class="answer">
+
+                    I would clean and organize the sales data first.
+
+                    <br><br>
+
+                    Then I would create a
+                    <strong>Pivot Table</strong> using department
+                    and month as categories and sales as the value.
+
+                    <br><br>
+
+                    Finally, I would use a suitable chart to
+                    present the results clearly.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PRACTICAL QUESTIONS
+        ========================== -->
+
+        <section style="margin-top: 45px;">
+
+            <div class="section-title">
+
+                <h2>
+                    💻 Practical Excel Questions
+                </h2>
+
+                <p>
+                    Try to solve these before viewing the solution.
+                </p>
+
+            </div>
+
+
+
+            <div class="question-card">
+
+                <div class="question-number">
+                    QUERY 01
+                </div>
+
+                <h3>
+                    Calculate the total sales from cells B2 to B10.
+                </h3>
+
+                <button class="show-btn"
+                        onclick="showSolution('solution1')">
+
+                    Show Solution
+
+                </button>
+
+                <div id="solution1" class="solution">
+
+                    <pre>=SUM(B2:B10)</pre>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="question-card">
+
+                <div class="question-number">
+                    QUERY 02
+                </div>
+
+                <h3>
+                    Calculate the average marks from C2 to C20.
+                </h3>
+
+                <button class="show-btn"
+                        onclick="showSolution('solution2')">
+
+                    Show Solution
+
+                </button>
+
+                <div id="solution2" class="solution">
+
+                    <pre>=AVERAGE(C2:C20)</pre>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="question-card">
+
+                <div class="question-number">
+                    QUERY 03
+                </div>
+
+                <h3>
+                    Count how many employees have a salary
+                    greater than 50000.
+                </h3>
+
+                <button class="show-btn"
+                        onclick="showSolution('solution3')">
+
+                    Show Solution
+
+                </button>
+
+                <div id="solution3" class="solution">
+
+                    <pre>=COUNTIF(B2:B100,">50000")</pre>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             QUICK QUIZ
+        ========================== -->
+
+        <section style="margin-top: 45px;">
+
+            <div class="section-title">
+
+                <h2>
+                    🧪 Quick Excel Quiz
+                </h2>
+
+                <p>
+                    Choose the correct answer.
+                </p>
+
+            </div>
+
+
+            <div class="question-card">
+
+                <div class="question-number">
+                    QUESTION
+                </div>
+
+                <h3>
+                    Which Excel function is commonly used
+                    to find a value from another table?
+                </h3>
+
+
+                <button class="practice-option"
+                        onclick="checkAnswer(this, false)">
+                    A. SUM
+                </button>
+
+
+                <button class="practice-option"
+                        onclick="checkAnswer(this, true)">
+                    B. VLOOKUP
+                </button>
+
+
+                <button class="practice-option"
+                        onclick="checkAnswer(this, false)">
+                    C. COUNT
+                </button>
+
+
+                <button class="practice-option"
+                        onclick="checkAnswer(this, false)">
+                    D. AVERAGE
+                </button>
+
+
+                <div id="quizFeedback"
+                     class="feedback">
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             MINI CHALLENGE
+        ========================== -->
+
+        <section style="margin-top: 45px;">
+
+            <div class="readiness-card">
+
+                <div class="readiness-left">
+
+                    <h2>
+                        🏆 Excel Mini Challenge
+                    </h2>
+
+                    <p>
+                        A company has employee names in column A
+                        and salaries in column B.
+
+                        <br><br>
+
+                        Write an Excel formula to calculate the
+                        average salary of employees.
+                    </p>
+
+
+                    <button class="show-btn"
+                            onclick="showSolution('challengeSolution')">
+
+                        Show Solution
+
+                    </button>
+
+
+                    <div id="challengeSolution"
+                         class="solution">
+
+                        <pre>=AVERAGE(B2:B100)</pre>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             COMPLETION
+        ========================== -->
+
+        <section class="readiness-card"
+                 style="margin-top: 35px;">
+
+            <div class="readiness-left">
+
+                <h2>
+                    🚀 Finished Excel Practice?
+                </h2>
+
+                <p>
+                    Mark this module as completed and continue
+                    with Data Analysis preparation.
+                </p>
+
+                <button class="action-btn"
+                        onclick="completeModule()">
+
+                    ✓ Mark as Completed
+
+                </button>
+
+            </div>
+
+
+            <div class="readiness-score">
+
+                <div class="score-number"
+                     id="completionScore">
+
+                    0%
+
+                </div>
+
+                <div class="score-label">
+                    Completed
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        function showAnswer(id) {
+
+            const element = document.getElementById(id);
+
+            if (element.style.display === "block") {
+
+                element.style.display = "none";
+
+            } else {
+
+                element.style.display = "block";
+
+            }
+
+        }
+
+
+        function showSolution(id) {
+
+            const element = document.getElementById(id);
+
+            if (element.style.display === "block") {
+
+                element.style.display = "none";
+
+            } else {
+
+                element.style.display = "block";
+
+            }
+
+        }
+
+
+        function checkAnswer(button, correct) {
+
+            const feedback =
+                document.getElementById("quizFeedback");
+
+            if (correct) {
+
+                feedback.innerHTML =
+                    "✅ Correct! VLOOKUP is used to find related information from a table.";
+
+            } else {
+
+                feedback.innerHTML =
+                    "❌ Not quite. Try again!";
+
+            }
+
+        }
+
+
+        function completeModule() {
+
+            document.getElementById("completionScore")
+                .innerText = "100%";
+
+            alert(
+                "🎉 Excel Preparation Completed! Great work!"
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

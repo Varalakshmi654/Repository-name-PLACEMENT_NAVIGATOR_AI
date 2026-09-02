@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Statistics Preparation | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        .learning-card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .learning-card h2 {
+            margin-bottom: 12px;
+        }
+
+        .learning-card p {
+            line-height: 1.7;
+        }
+
+        .example-box {
+            background: #f5f7fb;
+            padding: 18px;
+            border-radius: 12px;
+            margin-top: 18px;
+            line-height: 1.7;
+        }
+
+        .practice-box {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 14px;
+            background: #f8fafc;
+        }
+
+        .answer-btn {
+            margin-top: 10px;
+            padding: 11px 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .answer-box {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            background: #eef6ff;
+            line-height: 1.7;
+        }
+
+        .topic-navigation {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .topic-navigation a {
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 10px;
+            background: #f1f5f9;
+        }
+
+        .formula-box {
+            background: #111827;
+            color: white;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-family: monospace;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎯 Placement Navigator <span>AI</span>
+        </div>
+
+        <a href="/technical" class="back-link">
+            ← Back to Technical
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="roadmap-container">
+
+
+        <!-- HEADER -->
+
+        <section class="page-header">
+
+            <div class="page-badge">
+                📈 Statistics Interview Preparation
+            </div>
+
+            <h1>
+                Master Statistics for Your Interview
+            </h1>
+
+            <p>
+                Learn important statistical concepts used in
+                Data Analysis and prepare to explain them
+                confidently in interviews.
+            </p>
+
+        </section>
+
+
+        <!-- INFO -->
+
+        <section class="details-card">
+
+            <div class="detail-item">
+
+                <div class="detail-label">
+                    🎯 Focus
+                </div>
+
+                <div class="detail-value">
+                    Data & Business Analytics
+                </div>
+
+            </div>
+
+            <div class="detail-item">
+
+                <div class="detail-label">
+                    📚 Topics
+                </div>
+
+                <div class="detail-value">
+                    7 Core Topics
+                </div>
+
+            </div>
+
+            <div class="detail-item">
+
+                <div class="detail-label">
+                    🧠 Difficulty
+                </div>
+
+                <div class="detail-value">
+                    Beginner → Intermediate
+                </div>
+
+            </div>
+
+            <div class="detail-item">
+
+                <div class="detail-label">
+                    🎤 Goal
+                </div>
+
+                <div class="detail-value">
+                    Interview Ready
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROGRESS -->
+
+        <section class="readiness-card">
+
+            <div class="readiness-left">
+
+                <h2>
+                    🚀 Your Statistics Progress
+                </h2>
+
+                <p>
+                    Understand the concept, practice the example
+                    and learn how to explain it in an interview.
+                </p>
+
+            </div>
+
+            <div class="readiness-score">
+
+                <div class="score-number">
+                    0%
+                </div>
+
+                <div class="score-label">
+                    Completed
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TOPIC NAVIGATION -->
+
+        <div class="topic-navigation">
+
+            <a href="#mean">01 Mean</a>
+
+            <a href="#median">02 Median</a>
+
+            <a href="#mode">03 Mode</a>
+
+            <a href="#probability">04 Probability</a>
+
+            <a href="#variance">05 Variance</a>
+
+            <a href="#correlation">06 Correlation</a>
+
+            <a href="#outliers">07 Outliers</a>
+
+            <a href="#interview">🎤 Interview</a>
+
+        </div>
+
+
+        <!-- =========================
+             01 MEAN
+        ========================== -->
+
+        <section id="mean" class="learning-card">
+
+            <div class="round-label">
+                01 · CENTRAL TENDENCY
+            </div>
+
+            <h2>
+                📊 Mean
+            </h2>
+
+            <p>
+                Mean is the average value of a set of numbers.
+                It is calculated by adding all values and dividing
+                the total by the number of values.
+            </p>
+
+            <div class="formula-box">
+
+                Mean = Sum of all values / Number of values
+
+            </div>
+
+            <div class="example-box">
+
+                <strong>Example</strong>
+
+                <p>
+                    Data: 10, 20, 30
+                </p>
+
+                <p>
+                    Mean = (10 + 20 + 30) / 3 = 20
+                </p>
+
+            </div>
+
+            <div class="practice-box">
+
+                <strong>🎤 Interview Question</strong>
+
+                <p>
+                    What is mean?
+                </p>
+
+                <button class="answer-btn"
+                        onclick="showAnswer('meanAnswer')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="meanAnswer"
+                     class="answer-box">
+
+                    Mean is the arithmetic average of a set of
+                    numerical values. It is calculated by dividing
+                    the sum of all values by the number of values.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             02 MEDIAN
+        ========================== -->
+
+        <section id="median" class="learning-card">
+
+            <div class="round-label">
+                02 · CENTRAL TENDENCY
+            </div>
+
+            <h2>
+                📍 Median
+            </h2>
+
+            <p>
+                Median is the middle value of a dataset after
+                arranging the values in ascending or descending order.
+            </p>
+
+            <div class="example-box">
+
+                <strong>Example</strong>
+
+                <p>
+                    Data: 10, 20, 30, 40, 50
+                </p>
+
+                <p>
+                    Median = 30
+                </p>
+
+                <p>
+                    If there are an even number of values,
+                    the median is the average of the two middle values.
+                </p>
+
+            </div>
+
+            <div class="practice-box">
+
+                <strong>💡 Interview Tip</strong>
+
+                <p>
+                    Median is often useful when the dataset contains
+                    extreme values or outliers because it is less
+                    affected by them than the mean.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             03 MODE
+        ========================== -->
+
+        <section id="mode" class="learning-card">
+
+            <div class="round-label">
+                03 · CENTRAL TENDENCY
+            </div>
+
+            <h2>
+                🔁 Mode
+            </h2>
+
+            <p>
+                Mode is the value that occurs most frequently
+                in a dataset.
+            </p>
+
+            <div class="example-box">
+
+                <strong>Example</strong>
+
+                <p>
+                    Data: 2, 4, 4, 5, 6
+                </p>
+
+                <p>
+                    Mode = 4
+                </p>
+
+                <p>
+                    Because 4 occurs more frequently than the
+                    other values.
+                </p>
+
+            </div>
+
+            <div class="practice-box">
+
+                <strong>🎤 Interview Question</strong>
+
+                <p>
+                    Can a dataset have more than one mode?
+                </p>
+
+                <button class="answer-btn"
+                        onclick="showAnswer('modeAnswer')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="modeAnswer"
+                     class="answer-box">
+
+                    Yes. A dataset can have two or more values
+                    occurring with the same highest frequency.
+                    Such a dataset can be described as multimodal.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             04 PROBABILITY
+        ========================== -->
+
+        <section id="probability" class="learning-card">
+
+            <div class="round-label">
+                04 · PROBABILITY
+            </div>
+
+            <h2>
+                🎲 Probability Basics
+            </h2>
+
+            <p>
+                Probability measures how likely an event is to happen.
+                Its value ranges from 0 to 1.
+            </p>
+
+            <div class="formula-box">
+
+                Probability = Favorable Outcomes / Total Outcomes
+
+            </div>
+
+            <div class="example-box">
+
+                <strong>Example</strong>
+
+                <p>
+                    A coin has two possible outcomes:
+                    Head and Tail.
+                </p>
+
+                <p>
+                    Probability of getting Head = 1 / 2 = 0.5
+                </p>
+
+            </div>
+
+            <div class="practice-box">
+
+                <strong>🎤 Interview Question</strong>
+
+                <p>
+                    What does probability 0 mean?
+                </p>
+
+                <button class="answer-btn"
+                        onclick="showAnswer('probAnswer')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="probAnswer"
+                     class="answer-box">
+
+                    Probability 0 means the event is impossible
+                    under the given conditions.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             05 VARIANCE
+        ========================== -->
+
+        <section id="variance" class="learning-card">
+
+            <div class="round-label">
+                05 · DISPERSION
+            </div>
+
+            <h2>
+                📐 Variance & Standard Deviation
+            </h2>
+
+            <p>
+                Variance measures how far data values are spread
+                from the mean.
+            </p>
+
+            <p>
+                Standard deviation is the square root of variance
+                and represents the spread of values in the same
+                units as the original data.
+            </p>
+
+            <div class="example-box">
+
+                <strong>Simple Understanding</strong>
+
+                <p>
+                    Low standard deviation → Values are close
+                    to the mean.
+                </p>
+
+                <p>
+                    High standard deviation → Values are more
+                    widely spread.
+                </p>
+
+            </div>
+
+            <div class="practice-box">
+
+                <strong>🎤 Interview Question</strong>
+
+                <p>
+                    What does standard deviation tell us?
+                </p>
+
+                <button class="answer-btn"
+                        onclick="showAnswer('stdAnswer')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="stdAnswer"
+                     class="answer-box">
+
+                    Standard deviation tells us how much the values
+                    in a dataset typically vary around the mean.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             06 CORRELATION
+        ========================== -->
+
+        <section id="correlation" class="learning-card">
+
+            <div class="round-label">
+                06 · RELATIONSHIPS
+            </div>
+
+            <h2>
+                🔗 Correlation
+            </h2>
+
+            <p>
+                Correlation measures the strength and direction
+                of the relationship between two variables.
+            </p>
+
+            <div class="example-box">
+
+                <strong>Types</strong>
+
+                <p>
+                    <strong>Positive Correlation:</strong>
+                    Both variables tend to increase together.
+                </p>
+
+                <p>
+                    <strong>Negative Correlation:</strong>
+                    One variable tends to increase when the
+                    other decreases.
+                </p>
+
+                <p>
+                    <strong>Zero or Weak Correlation:</strong>
+                    Little or no linear relationship.
+                </p>
+
+            </div>
+
+            <div class="practice-box">
+
+                <strong>🎤 Interview Question</strong>
+
+                <p>
+                    Does correlation always mean causation?
+                </p>
+
+                <button class="answer-btn"
+                        onclick="showAnswer('corrAnswer')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="corrAnswer"
+                     class="answer-box">
+
+                    No. Correlation shows that two variables are
+                    associated, but it does not by itself prove
+                    that one variable causes the other.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             07 OUTLIERS
+        ========================== -->
+
+        <section id="outliers" class="learning-card">
+
+            <div class="round-label">
+                07 · DATA QUALITY
+            </div>
+
+            <h2>
+                🚨 Outliers
+            </h2>
+
+            <p>
+                An outlier is a data value that is unusually
+                far from the other observations in a dataset.
+            </p>
+
+            <div class="example-box">
+
+                <strong>Example</strong>
+
+                <p>
+                    Data:
+                    10, 11, 12, 13, 100
+                </p>
+
+                <p>
+                    Here, 100 is much larger than the other
+                    observations and may be considered an outlier.
+                </p>
+
+            </div>
+
+            <div class="example-box">
+
+                <strong>How can we detect outliers?</strong>
+
+                <ul>
+
+                    <li>IQR method</li>
+
+                    <li>Box plot</li>
+
+                    <li>Z-score</li>
+
+                    <li>Domain knowledge</li>
+
+                </ul>
+
+            </div>
+
+            <div class="practice-box">
+
+                <strong>🎤 Interview Question</strong>
+
+                <p>
+                    Should every outlier be removed?
+                </p>
+
+                <button class="answer-btn"
+                        onclick="showAnswer('outlierAnswer')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="outlierAnswer"
+                     class="answer-box">
+
+                    No. First we should investigate why the
+                    outlier exists. It may be a data-entry error,
+                    or it may represent a genuine and important
+                    observation.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             INTERVIEW QUESTIONS
+        ========================== -->
+
+        <section id="interview"
+                 class="learning-card">
+
+            <div class="round-label">
+                08 · INTERVIEW
+            </div>
+
+            <h2>
+                🎤 Statistics Interview Questions
+            </h2>
+
+            <div class="practice-box">
+
+                <strong>QUESTION 01</strong>
+
+                <p>
+                    What is the difference between mean and median?
+                </p>
+
+                <button class="answer-btn"
+                        onclick="showAnswer('q1')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="q1"
+                     class="answer-box">
+
+                    Mean is the average of all values, while
+                    median is the middle value after arranging
+                    the data. Median is generally less affected
+                    by extreme values.
+
+                </div>
+
+            </div>
+
+
+            <div class="practice-box">
+
+                <strong>QUESTION 02</strong>
+
+                <p>
+                    What is the difference between variance
+                    and standard deviation?
+                </p>
+
+                <button class="answer-btn"
+                        onclick="showAnswer('q2')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="q2"
+                     class="answer-box">
+
+                    Variance measures the average squared
+                    deviation from the mean. Standard deviation
+                    is the square root of variance and is expressed
+                    in the same units as the original data.
+
+                </div>
+
+            </div>
+
+
+            <div class="practice-box">
+
+                <strong>QUESTION 03</strong>
+
+                <p>
+                    What is correlation?
+                </p>
+
+                <button class="answer-btn"
+                        onclick="showAnswer('q3')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="q3"
+                     class="answer-box">
+
+                    Correlation measures the strength and direction
+                    of the relationship between two variables.
+
+                </div>
+
+            </div>
+
+
+            <div class="practice-box">
+
+                <strong>QUESTION 04</strong>
+
+                <p>
+                    What is an outlier?
+                </p>
+
+                <button class="answer-btn"
+                        onclick="showAnswer('q4')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="q4"
+                     class="answer-box">
+
+                    An outlier is an observation that is unusually
+                    far from the rest of the data.
+
+                </div>
+
+            </div>
+
+
+            <div class="practice-box">
+
+                <strong>QUESTION 05</strong>
+
+                <p>
+                    Why is statistics important for a Data Analyst?
+                </p>
+
+                <button class="answer-btn"
+                        onclick="showAnswer('q5')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="q5"
+                     class="answer-box">
+
+                    Statistics helps Data Analysts summarize data,
+                    understand variation, identify patterns,
+                    compare groups and make data-driven decisions.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FINAL TIP
+        ========================== -->
+
+        <section class="readiness-card"
+                 style="margin-top:35px;">
+
+            <div class="readiness-left">
+
+                <h2>
+                    💡 Statistics Interview Tip
+                </h2>
+
+                <p>
+                    Don't memorize formulas alone. First understand
+                    what the statistical concept means, then explain
+                    it using a small real-world example.
+                </p>
+
+            </div>
+
+        </section>
+        <div style="text-align:center; margin-top:30px;">
+            <a href="/complete/statistics"
+            class="action-btn">
+            ✓ Mark Statistics Completed
+        </a>
+    </div>
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        function showAnswer(id) {
+
+            const answer =
+                document.getElementById(id);
+
+            if (answer.style.display === "block") {
+
+                answer.style.display = "none";
+
+            } else {
+
+                answer.style.display = "block";
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

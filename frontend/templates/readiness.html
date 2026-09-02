@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Readiness Score | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        .score-card {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+            margin-bottom: 25px;
+        }
+
+        .score-number {
+            font-size: 65px;
+            font-weight: 800;
+            margin: 20px 0;
+        }
+
+        .module-card {
+            background: white;
+            padding: 22px;
+            border-radius: 16px;
+            margin-bottom: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+        }
+
+        .completed {
+            font-weight: 700;
+        }
+        .success-message {
+            margin-top: 20px;
+            padding: 18px;
+            border-radius: 14px;
+            line-height: 2;
+            background: #f0fdf4;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎯 Placement Navigator <span>AI</span>
+        </div>
+
+        <a href="/prepare" class="back-link">
+            ← Back to Roadmap
+        </a>
+
+    </nav>
+
+
+    <main class="roadmap-container">
+
+
+        <section class="page-header">
+
+            <div class="page-badge">
+                🎯 Readiness Dashboard
+            </div>
+
+            <h1>
+                Your Interview Readiness
+            </h1>
+
+            <p>
+                Track the preparation modules you have completed.
+            </p>
+
+        </section>
+
+
+        <!-- SCORE -->
+         <section class="score-card">
+            <h2>
+                🚀 Overall Readiness
+            </h2>
+            <div class="score-number">
+                {{ score }}%
+            </div>
+            {% if score >= 100 %}
+            <h2>
+                🎉 Interview Ready!
+            </h2>
+            <p>
+                Excellent! You have completed all major
+                preparation areas in your roadmap.
+            </p>
+            <div class="success-message">
+                ✅ Technical Preparation Complete<br>
+                ✅ HR Preparation Complete<br>
+                ✅ Self Introduction Complete<br>
+                ✅ Resume Analysis Complete<br>
+                ✅ Mock Interview Complete
+            </div>
+            {% elif score >= 75 %}
+            <h3>
+                🔥 Almost Ready!
+            </h3>
+            <p>
+                You have made strong progress. Complete the
+                remaining preparation areas before your interview.
+            </p>
+            {% elif score >= 50 %}
+            <h3>
+                📈 Good Progress
+            </h3>
+            <p>
+                Keep practicing and complete the remaining modules
+                to improve your interview readiness.
+            </p>
+            {% else %}
+            <h3>
+                🌱 Keep Preparing
+            </h3>
+            <p>
+                Start with the core preparation modules and
+                gradually build your confidence.
+            </p>
+            {% endif %}
+        </section>
+
+
+        <!-- COMPLETED MODULES -->
+
+        <section>
+
+            <div class="section-title">
+
+                <h2>
+                    ✅ Completed Modules
+                </h2>
+
+            </div>
+
+
+            {% if completed %}
+
+                {% for module in completed %}
+
+                    <div class="module-card">
+
+                        <div class="completed">
+                            ✅ {{ module | replace("-", " ") | title }}
+                        </div>
+
+                    </div>
+
+                {% endfor %}
+
+            {% else %}
+
+                <div class="module-card">
+
+                    No modules completed yet.
+
+                </div>
+
+            {% endif %}
+
+
+        </section>
+
+
+        <!-- PREPARATION -->
+         {% if score >= 100 %}
+         <section class="readiness-card"
+         style="margin-top:30px;">
+         <div class="readiness-left">
+            <h2>
+                🎯 Your Final Preparation Plan
+            </h2>
+            <p>
+                You have completed all major preparation areas.
+                Now focus on quick revision, interview etiquette
+                and staying confident on the interview day.
+            </p>
+        </div>
+    </section>
+    <div style="text-align:center; margin-top:25px;">
+        <a href="/final-plan"
+        class="action-btn">
+        🚀 View Final Preparation Plan →
+    </a>
+</div>
+{% else %}
+<section class="readiness-card"
+         style="margin-top:30px;">
+         <div class="readiness-left">
+            <h2>
+                📚 Keep Preparing
+            </h2>
+            <p>
+                Complete more technical modules, practice your
+                HR answers and finish the mock interview to
+                improve your readiness score.
+            </p>
+        </div>
+    </section>
+    {% endif %}
+
+        <!-- =========================
+         FINAL ACTIONS
+        ========================== -->
+        <div style="text-align:center; margin-top:30px;">
+            <a href="/mock-interview"
+               class="action-btn">
+               🎤 Take Final Mock Interview →
+            </a>
+            <br><br>
+            <a href="/final-plan"
+               class="action-btn">
+               🚀 View Interview Day Checklist →
+            </a>
+            <br><br>
+            <a href="/prepare"
+               class="action-btn">
+               ← Back to Interview Roadmap
+            </a>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Excel Topic | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        .learning-card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .learning-card h2 {
+            margin-bottom: 12px;
+        }
+
+        .learning-card p {
+            line-height: 1.7;
+        }
+
+        .example-box {
+            background: #f5f7fb;
+            padding: 18px;
+            border-radius: 12px;
+            margin-top: 18px;
+        }
+
+        .example-box strong {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        pre {
+            background: #111827;
+            color: white;
+            padding: 18px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+
+        .practice-box {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 14px;
+            background: #f8fafc;
+        }
+
+        .practice-btn {
+            margin-top: 12px;
+            padding: 11px 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .answer-box {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            background: #eef6ff;
+            line-height: 1.6;
+        }
+
+        .topic-navigation {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .topic-navigation a {
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 10px;
+            background: #f1f5f9;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎯 Placement Navigator <span>AI</span>
+        </div>
+
+        <a href="/excel" class="back-link">
+            ← Back to Excel
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="roadmap-container">
+
+
+        <!-- HEADER -->
+
+        <section class="page-header">
+
+            <div class="page-badge">
+                📊 Excel Learning Module
+            </div>
+
+            <h1>
+                Excel Fundamentals
+            </h1>
+
+            <p>
+                Learn Excel concepts step-by-step with examples,
+                practical questions and interview tips.
+            </p>
+
+        </section>
+
+
+        <!-- TOPIC NAVIGATION -->
+
+        <div class="topic-navigation">
+
+            <a href="#basics">01 Basics</a>
+
+            <a href="#formulas">02 Formulas</a>
+
+            <a href="#logical">03 Logical</a>
+
+            <a href="#lookup">04 Lookup</a>
+
+            <a href="#sorting">05 Sorting</a>
+
+            <a href="#pivot">06 Pivot</a>
+
+            <a href="#cleaning">07 Cleaning</a>
+
+        </div>
+
+
+        <!-- =========================
+             01 BASICS
+        ========================== -->
+
+        <section id="basics"
+                 class="learning-card">
+
+            <div class="round-label">
+                01 · FOUNDATION
+            </div>
+
+            <h2>
+                📊 Excel Basics
+            </h2>
+
+            <p>
+                Excel is a spreadsheet application used to store,
+                organize, calculate and analyze data.
+            </p>
+
+            <div class="example-box">
+
+                <strong>Important Concepts</strong>
+
+                <p>
+                    Workbook → Complete Excel file
+                </p>
+
+                <p>
+                    Worksheet → Individual sheet inside a workbook
+                </p>
+
+                <p>
+                    Cell → Intersection of a row and column
+                </p>
+
+                <p>
+                    Row → Horizontal collection of cells
+                </p>
+
+                <p>
+                    Column → Vertical collection of cells
+                </p>
+
+            </div>
+
+            <div class="practice-box">
+
+                <strong>🎤 Interview Question</strong>
+
+                <p>
+                    What is the difference between a workbook
+                    and a worksheet?
+                </p>
+
+                <button class="practice-btn"
+                        onclick="showAnswer('answer1')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer1"
+                     class="answer-box">
+
+                    A workbook is the complete Excel file,
+                    while a worksheet is an individual sheet
+                    inside that workbook.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             02 FORMULAS
+        ========================== -->
+
+        <section id="formulas"
+                 class="learning-card">
+
+            <div class="round-label">
+                02 · FORMULAS
+            </div>
+
+            <h2>
+                🧮 Excel Formulas & Functions
+            </h2>
+
+            <p>
+                Formulas help perform calculations and analyze
+                data quickly.
+            </p>
+
+            <div class="example-box">
+
+                <strong>Common Functions</strong>
+
+                <p>SUM() – Adds values</p>
+
+                <p>AVERAGE() – Calculates average</p>
+
+                <p>MIN() – Finds minimum value</p>
+
+                <p>MAX() – Finds maximum value</p>
+
+                <p>COUNT() – Counts numeric cells</p>
+
+            </div>
+
+            <pre>=SUM(B2:B10)</pre>
+
+            <div class="practice-box">
+
+                <strong>💻 Practice</strong>
+
+                <p>
+                    Write a formula to calculate the total
+                    sales from B2 to B20.
+                </p>
+
+                <button class="practice-btn"
+                        onclick="showAnswer('answer2')">
+
+                    Show Solution
+
+                </button>
+
+                <div id="answer2"
+                     class="answer-box">
+
+                    <strong>=SUM(B2:B20)</strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             03 LOGICAL
+        ========================== -->
+
+        <section id="logical"
+                 class="learning-card">
+
+            <div class="round-label">
+                03 · LOGICAL FUNCTIONS
+            </div>
+
+            <h2>
+                🧠 IF, COUNTIF & SUMIF
+            </h2>
+
+            <p>
+                Logical functions help make decisions and
+                calculate values based on conditions.
+            </p>
+
+            <div class="example-box">
+
+                <strong>IF Example</strong>
+
+                <pre>=IF(B2>=50,"Pass","Fail")</pre>
+
+                This formula checks whether the value in B2
+                is greater than or equal to 50.
+
+            </div>
+
+            <div class="example-box">
+
+                <strong>COUNTIF Example</strong>
+
+                <pre>=COUNTIF(B2:B100,">50")</pre>
+
+                Counts values greater than 50.
+
+            </div>
+
+            <div class="practice-box">
+
+                <strong>🎤 Interview Tip</strong>
+
+                <p>
+                    Explain not only the formula but also
+                    where you would use it in a real dataset.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             04 LOOKUP
+        ========================== -->
+
+        <section id="lookup"
+                 class="learning-card">
+
+            <div class="round-label">
+                04 · LOOKUP
+            </div>
+
+            <h2>
+                🔎 VLOOKUP & XLOOKUP
+            </h2>
+
+            <p>
+                Lookup functions help retrieve information
+                from another table or range.
+            </p>
+
+            <div class="example-box">
+
+                <strong>VLOOKUP Example</strong>
+
+                <pre>=VLOOKUP(A2,E2:G100,3,FALSE)</pre>
+
+            </div>
+
+            <div class="example-box">
+
+                <strong>XLOOKUP Example</strong>
+
+                <pre>=XLOOKUP(A2,E2:E100,G2:G100)</pre>
+
+            </div>
+
+            <div class="practice-box">
+
+                <strong>🎤 Interview Question</strong>
+
+                <p>
+                    Why is XLOOKUP considered more flexible
+                    than VLOOKUP?
+                </p>
+
+                <button class="practice-btn"
+                        onclick="showAnswer('answer4')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer4"
+                     class="answer-box">
+
+                    XLOOKUP provides more flexible lookup
+                    capabilities and can search in different
+                    directions without requiring the lookup
+                    column to be the first column.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             05 SORTING
+        ========================== -->
+
+        <section id="sorting"
+                 class="learning-card">
+
+            <div class="round-label">
+                05 · DATA ANALYSIS
+            </div>
+
+            <h2>
+                ↕️ Sorting & Filtering
+            </h2>
+
+            <p>
+                Sorting changes the order of data, while filtering
+                displays only records matching selected conditions.
+            </p>
+
+            <div class="example-box">
+
+                <strong>Example</strong>
+
+                <p>
+                    You have 1,000 employee records and want to
+                    see only employees from the IT department.
+                </p>
+
+                <p>
+                    Use the Excel <strong>Filter</strong> option
+                    on the Department column.
+                </p>
+
+            </div>
+
+            <div class="practice-box">
+
+                <strong>💡 Interview Tip</strong>
+
+                <p>
+                    Always mention that filtering does not delete
+                    the other records; it temporarily hides
+                    records that do not match the condition.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             06 PIVOT
+        ========================== -->
+
+        <section id="pivot"
+                 class="learning-card">
+
+            <div class="round-label">
+                06 · DATA VISUALIZATION
+            </div>
+
+            <h2>
+                📊 Pivot Tables & Charts
+            </h2>
+
+            <p>
+                Pivot Tables summarize large datasets and help
+                identify patterns and trends.
+            </p>
+
+            <div class="example-box">
+
+                <strong>Example</strong>
+
+                <p>
+                    Suppose a company has sales data containing:
+                </p>
+
+                <p>
+                    Employee · Department · Month · Sales
+                </p>
+
+                <p>
+                    A Pivot Table can summarize total sales
+                    for each department.
+                </p>
+
+            </div>
+
+            <div class="practice-box">
+
+                <strong>🎤 Interview Question</strong>
+
+                <p>
+                    Why would you use a Pivot Table?
+                </p>
+
+                <button class="practice-btn"
+                        onclick="showAnswer('answer6')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer6"
+                     class="answer-box">
+
+                    A Pivot Table is useful for quickly summarizing,
+                    grouping and analyzing large datasets.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             07 CLEANING
+        ========================== -->
+
+        <section id="cleaning"
+                 class="learning-card">
+
+            <div class="round-label">
+                07 · DATA CLEANING
+            </div>
+
+            <h2>
+                🧹 Excel Data Cleaning
+            </h2>
+
+            <p>
+                Data cleaning prepares raw data for accurate
+                analysis.
+            </p>
+
+            <div class="example-box">
+
+                <strong>Common Cleaning Tasks</strong>
+
+                <p>Remove duplicate records</p>
+
+                <p>Handle blank values</p>
+
+                <p>Find & Replace incorrect values</p>
+
+                <p>Use Text to Columns when required</p>
+
+                <p>Standardize inconsistent data</p>
+
+            </div>
+
+            <div class="practice-box">
+
+                <strong>🧪 Scenario</strong>
+
+                <p>
+                    You receive a customer dataset containing
+                    duplicate records. What would you do?
+                </p>
+
+                <button class="practice-btn"
+                        onclick="showAnswer('answer7')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer7"
+                     class="answer-box">
+
+                    First, I would inspect the dataset and
+                    identify which columns define a duplicate.
+                    Then I would use Excel's Remove Duplicates
+                    feature after keeping a backup of the
+                    original dataset.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FINAL TIP
+        ========================== -->
+
+        <section class="readiness-card"
+                 style="margin-top: 35px;">
+
+            <div class="readiness-left">
+
+                <h2>
+                    💡 Excel Interview Tip
+                </h2>
+
+                <p>
+                    Don't just say that you know Excel.
+                    Explain how you used formulas, lookup functions,
+                    Pivot Tables and data-cleaning techniques
+                    to solve a real problem.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- BACK TO INTERVIEW -->
+
+        <div style="text-align:center; margin-top:30px;">
+
+            <a href="/excel-interview"
+               class="action-btn">
+
+                🎤 Practice Excel Interview Questions →
+
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        function showAnswer(id) {
+
+            const answer =
+                document.getElementById(id);
+
+            if (answer.style.display === "block") {
+
+                answer.style.display = "none";
+
+            } else {
+
+                answer.style.display = "block";
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

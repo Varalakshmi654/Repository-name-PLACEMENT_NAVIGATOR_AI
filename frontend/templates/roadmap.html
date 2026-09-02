@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Roadmap | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎯 Placement Navigator <span>AI</span>
+        </div>
+
+        <a href="/prepare" class="back-link">
+            ← Change Details
+        </a>
+
+    </nav>
+
+
+    <!-- =========================================
+         MAIN ROADMAP
+    ========================================== -->
+
+    <main class="roadmap-container">
+
+        <!-- PAGE HEADER -->
+
+        <section class="page-header">
+
+            <div class="page-badge">
+                ✨ Personalized Preparation Plan
+            </div>
+
+            <h1>
+                Your Interview Roadmap
+            </h1>
+
+            <p>
+                We've created a preparation journey based on your
+                company, role, interview date and current level.
+            </p>
+
+        </section>
+
+
+        <!-- =====================================
+             INTERVIEW DETAILS
+        ====================================== -->
+
+        <section class="details-card">
+
+            <div class="detail-item">
+                <div class="detail-label">🏢 Company</div>
+                <div class="detail-value">
+                    {{ company }}
+                </div>
+            </div>
+
+
+            <div class="detail-item">
+                <div class="detail-label">💼 Role</div>
+                <div class="detail-value">
+                    {{ role }}
+                </div>
+            </div>
+
+
+            <div class="detail-item">
+                <div class="detail-label">📅 Interview Date</div>
+                <div class="detail-value">
+                    {{ interview_date }}
+                </div>
+            </div>
+
+
+            <div class="detail-item">
+                <div class="detail-label">📚 Preparation Level</div>
+                <div class="detail-value">
+                    {{ level }}
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             READINESS
+        ====================================== -->
+        <section class="readiness-card">
+            <div class="readiness-left">
+                <h2>
+                    🔥 Your Current Readiness
+                </h2>
+                {% if readiness_score >= 100 %}
+                <p>
+                    🎉 Excellent! You have completed your major preparation areas.
+                    You are ready for the interview.
+                </p>
+                {% elif readiness_score >= 75 %}
+                <p>
+                    🔥 You're almost ready!
+                    Focus on revision, mock interviews and your weak areas.
+                </p>
+                {% elif readiness_score >= 50 %}
+                <p>
+                    📈 Good progress!
+                    Keep practicing and complete the remaining preparation areas.
+                </p>
+                {% else %}
+                <p>
+                    🌱 You're getting started.
+                    Complete the core preparation modules and build your confidence.
+                </p>
+                {% endif %}
+            </div>
+
+            <div class="readiness-score">
+                <div class="score-number">
+                    {{ readiness_score }}%
+                </div>
+                <div class="score-label">
+                    Ready
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             JOURNEY
+        ====================================== -->
+
+        <section>
+
+            <div class="section-title">
+
+                <h2>
+                    🗺️ Your Interview Journey
+                </h2>
+
+                <p>
+                    Complete each stage before moving to the next.
+                </p>
+
+            </div>
+
+
+            <div class="roadmap-list">
+
+
+                <!-- =================================
+                     STEP 1
+                ================================== -->
+
+                <div class="roadmap-card">
+
+                    <div class="roadmap-number">
+                        01
+                    </div>
+
+
+                    <div class="roadmap-content">
+
+                        <div class="round-label">
+                            FIRST ROUND
+                        </div>
+
+                        <h3>
+                            📝 Aptitude & Reasoning
+                        </h3>
+
+                        <p>
+                            Build speed and accuracy in common
+                            aptitude and reasoning areas.
+                        </p>
+
+
+                        <div class="topic-list">
+
+                            <span class="topic">
+                                Number Series
+                            </span>
+
+                            <span class="topic">
+                                Percentages
+                            </span>
+
+                            <span class="topic">
+                                Logical Reasoning
+                            </span>
+
+                            <span class="topic">
+                                Data Interpretation
+                            </span>
+
+                        </div>
+
+
+                        <a href="/aptitude" class="action-btn">
+                            Practice Aptitude →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     STEP 2
+                ================================== -->
+
+                <div class="roadmap-card">
+
+                    <div class="roadmap-number">
+                        02
+                    </div>
+
+
+                    <div class="roadmap-content">
+
+                        <div class="round-label">
+                            TECHNICAL
+                        </div>
+
+                        <h3>
+                            💻 Technical Preparation
+                        </h3>
+
+                        <p>
+                            Strengthen the technical skills required
+                            for your selected role.
+                        </p>
+
+
+                        <div class="topic-list">
+
+                            <span class="topic">
+                                Python
+                            </span>
+
+                            <span class="topic">
+                                SQL
+                            </span>
+
+                            <span class="topic">
+                                Excel
+                            </span>
+
+                            
+                            <span class="topic">
+                                Statistics
+                            </span>
+                            
+                            <span class="topic">
+                                Data Analysis
+                            </span>
+
+
+                        </div>
+
+
+                        <a href="/technical" class="action-btn">
+                            Start Technical Prep →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     STEP 3
+                ================================== -->
+
+                <div class="roadmap-card">
+
+                    <div class="roadmap-number">
+                        03
+                    </div>
+
+
+                    <div class="roadmap-content">
+
+                        <div class="round-label">
+                            HR ROUND
+                        </div>
+
+                        <h3>
+                            🗣️ HR & Communication
+                        </h3>
+
+                        <p>
+                            Learn how to answer HR questions clearly,
+                            confidently and professionally.
+                        </p>
+
+
+                        <div class="topic-list">
+
+                            <span class="topic">
+                                Self Introduction
+                            </span>
+
+                            <span class="topic">
+                                Strengths
+                            </span>
+
+                            <span class="topic">
+                                Weaknesses
+                            </span>
+
+                            <span class="topic">
+                                Why this company?
+                            </span>
+
+                        </div>
+                        <a href="{{ url_for('hr') }}" class="action-btn">
+                            🗣️ Prepare HR Answers →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     STEP 4
+                ================================== -->
+
+                <div class="roadmap-card">
+
+                    <div class="roadmap-number">
+                        04
+                    </div>
+
+
+                    <div class="roadmap-content">
+
+                        <div class="round-label">
+                            PRACTICE
+                        </div>
+
+                        <h3>
+                            🎤 AI Mock Interview
+                        </h3>
+
+                        <p>
+                            Practice a realistic interview and
+                            identify your weak areas.
+                        </p>
+
+
+                        <div class="topic-list">
+
+                            <span class="topic">
+                                Technical Questions
+                            </span>
+
+                            <span class="topic">
+                                HR Questions
+                            </span>
+
+                            <span class="topic">
+                                Communication
+                            </span>
+
+                            <span class="topic">
+                                Confidence
+                            </span>
+
+                        </div>
+                        <a href="{{ url_for('mock_interview') }}" class="action-btn">
+                            🎤 Start Mock Interview →
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     STEP 5
+                ================================== -->
+
+                <div class="roadmap-card">
+
+                    <div class="roadmap-number">
+                        05
+                    </div>
+
+
+                    <div class="roadmap-content">
+
+                        <div class="round-label">
+                            FINAL DAY
+                        </div>
+
+                        <h3>
+                            🚀 Last-Minute Preparation
+                        </h3>
+
+                        <p>
+                            Get a focused final revision plan,
+                            interview tips and confidence boosters.
+                        </p>
+
+
+                        <div class="topic-list">
+
+                            <span class="topic">
+                                Quick Revision
+                            </span>
+
+                            <span class="topic">
+                                HR Questions
+                            </span>
+
+                            <span class="topic">
+                                Interview Etiquette
+                            </span>
+
+                            <span class="topic">
+                                Confidence Tips
+                            </span>
+
+                        </div>
+                        <a href="{{ url_for('final_plan') }}" class="action-btn">
+                            🚀 View Final Plan →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             QUICK ACTIONS
+        ====================================== -->
+
+        <section class="quick-section">
+
+            <div class="section-title">
+
+                <h2>
+                    ⚡ Quick Actions
+                </h2>
+
+                <p>
+                    Jump directly to the preparation area you need.
+                </p>
+
+            </div>
+            <div class="quick-grid">
+                <div class="quick-card">
+                    <div class="quick-icon">
+
+                    </div>
+
+                     <h3>
+                        Analyze My Resume
+                    </h3>
+                    <a href="{{ url_for('resume_analysis') }}"
+                        class="action-btn">
+                        Analyze Resume →
+                    </a>
+                </div>
+            </div>
+
+
+
+                <div class="quick-card">
+                    <div class="quick-icon">
+
+                    </div>
+                    <h3>
+                        Prepare Self Introduction
+                    </h3>
+                    <a href="/self-introduction" class="action-btn">
+                        Prepare Now →
+                    </a>
+                </div>
+
+                <div class="quick-card">
+                    <div class="quick-icon">
+
+                    </div>
+                    <h3>
+                        Practice HR Questions
+                    </h3>
+                        <a href="/hr" class="action-btn">
+                            Practice Now →
+                        </a>
+
+                </div>
+
+                <div class="quick-card">
+                    <div class="quick-icon">
+
+                    </div>
+                    <h3>
+                        Start Mock Interview
+                    </h3>
+                    <a href="/mock-interview" class="action-btn">
+                        Start Practice →
+                    </a>
+                </div>
+            
+                </div>
+                
+                
+   
+
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>

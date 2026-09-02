@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SQL Interview Preparation | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        .topic-detail-card,
+        .question-card,
+        .practice-card,
+        .complete-box {
+            background: white;
+            border-radius: 18px;
+            padding: 26px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .code-box {
+            background: #111827;
+            color: white;
+            padding: 18px;
+            border-radius: 12px;
+            margin-top: 16px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            margin: 0;
+            font-family: Consolas, monospace;
+            line-height: 1.6;
+        }
+
+        .interview-tip,
+        .answer-box {
+            margin-top: 16px;
+            padding: 16px;
+            border-radius: 12px;
+            background: #f3f4f6;
+            line-height: 1.7;
+        }
+
+        .answer-box {
+            display: none;
+        }
+
+        .question-number {
+            font-size: 13px;
+            font-weight: 700;
+            opacity: 0.65;
+            margin-bottom: 8px;
+        }
+
+        .category-title {
+            margin-top: 42px;
+            margin-bottom: 20px;
+        }
+
+        .option-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            text-align: left;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: white;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .result-box {
+            display: none;
+            margin-top: 18px;
+            padding: 16px;
+            border-radius: 12px;
+            background: #f3f4f6;
+            font-weight: 600;
+        }
+
+        .completed-message {
+            display: none;
+            margin-top: 16px;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎯 Placement Navigator <span>AI</span>
+        </div>
+
+        <a href="/python" class="back-link">
+            ← Back to Preparation
+        </a>
+
+    </nav>
+
+
+    <main class="roadmap-container">
+
+
+        <!-- HEADER -->
+
+        <section class="page-header">
+
+            <div class="page-badge">
+                🗄️ SQL Interview Preparation
+            </div>
+
+            <h1>
+                SQL for Data & Business Analyst Roles
+            </h1>
+
+            <p>
+                Learn important SQL concepts, practice queries,
+                and prepare for technical interviews.
+            </p>
+
+        </section>
+
+
+        <!-- OVERVIEW -->
+
+        <section class="readiness-card">
+
+            <div class="readiness-left">
+
+                <h2>
+                    🎯 What You Will Learn
+                </h2>
+
+                <p>
+                    SELECT, WHERE, GROUP BY, aggregate functions,
+                    joins, subqueries, CASE statements and
+                    interview-focused SQL problems.
+                </p>
+
+            </div>
+
+            <div class="readiness-score">
+
+                <div class="score-number">
+                    0%
+                </div>
+
+                <div class="score-label">
+                    Completed
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 01 SQL BASICS -->
+
+        <h2 class="category-title">
+            01 · SQL BASICS
+        </h2>
+
+        <section class="topic-detail-card">
+
+            <h2>
+                🗄️ What is SQL?
+            </h2>
+
+            <p>
+                SQL stands for Structured Query Language.
+                It is used to communicate with relational
+                databases and retrieve, insert, update and
+                delete data.
+            </p>
+
+            <div class="interview-tip">
+
+                💡 <strong>Interview Tip:</strong>
+
+                Explain SQL in simple words:
+
+                <br><br>
+
+                <strong>
+                    "SQL is used to store, retrieve and manipulate
+                    data in relational databases."
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- 02 SELECT -->
+
+        <h2 class="category-title">
+            02 · SELECT & WHERE
+        </h2>
+
+        <section class="topic-detail-card">
+
+            <h2>
+                🔎 SELECT Statement
+            </h2>
+
+            <p>
+                SELECT is used to retrieve data from a table.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+SELECT name, age
+FROM students;
+</pre>
+
+            </div>
+
+
+            <h3>
+                WHERE Clause
+            </h3>
+
+            <p>
+                WHERE filters rows based on a condition.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+SELECT *
+FROM students
+WHERE age > 20;
+</pre>
+
+            </div>
+
+        </section>
+
+
+        <!-- 03 ORDER BY -->
+
+        <h2 class="category-title">
+            03 · ORDER BY
+        </h2>
+
+        <section class="topic-detail-card">
+
+            <h2>
+                ↕️ Sorting Data
+            </h2>
+
+            <p>
+                ORDER BY is used to sort query results.
+                ASC sorts in ascending order and DESC sorts
+                in descending order.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+SELECT *
+FROM students
+ORDER BY age DESC;
+</pre>
+
+            </div>
+
+        </section>
+
+
+        <!-- 04 GROUP BY -->
+
+        <h2 class="category-title">
+            04 · GROUP BY & AGGREGATE FUNCTIONS
+        </h2>
+
+        <section class="topic-detail-card">
+
+            <h2>
+                📊 Aggregate Functions
+            </h2>
+
+            <p>
+                Common aggregate functions include:
+            </p>
+
+            <p>
+                <strong>
+                    COUNT() · SUM() · AVG() · MIN() · MAX()
+                </strong>
+            </p>
+
+            <div class="code-box">
+
+<pre>
+SELECT department,
+       COUNT(*) AS total_students
+FROM students
+GROUP BY department;
+</pre>
+
+            </div>
+
+            <div class="interview-tip">
+
+                💡 <strong>Remember:</strong>
+
+                GROUP BY creates groups of rows so that
+                aggregate functions can be applied to each group.
+
+            </div>
+
+        </section>
+
+
+        <!-- 05 JOINS -->
+
+        <h2 class="category-title">
+            05 · JOINS
+        </h2>
+
+        <section class="topic-detail-card">
+
+            <h2>
+                🔗 SQL Joins
+            </h2>
+
+            <p>
+                Joins are used to combine related data
+                from multiple tables.
+            </p>
+
+            <p>
+                Common joins:
+            </p>
+
+            <p>
+                <strong>
+                    INNER JOIN · LEFT JOIN · RIGHT JOIN · FULL JOIN
+                </strong>
+            </p>
+
+            <div class="code-box">
+
+<pre>
+SELECT
+    students.name,
+    departments.department_name
+
+FROM students
+
+INNER JOIN departments
+ON students.department_id
+   = departments.department_id;
+</pre>
+
+            </div>
+
+            <div class="interview-tip">
+
+                💡 <strong>Interview Tip:</strong>
+
+                INNER JOIN returns matching records from both
+                tables.
+
+                <br><br>
+
+                LEFT JOIN keeps all rows from the left table
+                and matching rows from the right table.
+
+            </div>
+
+        </section>
+
+
+        <!-- 06 SUBQUERY -->
+
+        <h2 class="category-title">
+            06 · SUBQUERIES
+        </h2>
+
+        <section class="topic-detail-card">
+
+            <h2>
+                🔍 Subquery
+            </h2>
+
+            <p>
+                A subquery is a query written inside another query.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+SELECT name, salary
+FROM employees
+WHERE salary >
+(
+    SELECT AVG(salary)
+    FROM employees
+);
+</pre>
+
+            </div>
+
+            <div class="interview-tip">
+
+                💡 This query finds employees whose salary
+                is greater than the average salary.
+
+            </div>
+
+        </section>
+
+
+        <!-- 07 CASE -->
+
+        <h2 class="category-title">
+            07 · CASE STATEMENT
+        </h2>
+
+        <section class="topic-detail-card">
+
+            <h2>
+                🧠 CASE
+            </h2>
+
+            <p>
+                CASE allows conditional logic inside SQL queries.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+SELECT
+    name,
+    marks,
+
+    CASE
+        WHEN marks >= 90 THEN 'Excellent'
+        WHEN marks >= 60 THEN 'Good'
+        ELSE 'Needs Improvement'
+    END AS result
+
+FROM students;
+</pre>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTERVIEW QUESTIONS -->
+
+        <h2 class="category-title">
+            🎤 08 · SQL INTERVIEW QUESTIONS
+        </h2>
+
+
+        <div class="question-card">
+
+            <div class="question-number">
+                QUESTION 01
+            </div>
+
+            <h3>
+                What is the difference between WHERE and HAVING?
+            </h3>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('answer1')">
+
+                Show Answer
+
+            </button>
+
+            <div id="answer1"
+                 class="answer-box">
+
+                WHERE filters individual rows before grouping.
+                HAVING filters groups after GROUP BY is applied.
+
+            </div>
+
+        </div>
+
+
+        <div class="question-card">
+
+            <div class="question-number">
+                QUESTION 02
+            </div>
+
+            <h3>
+                What is a primary key?
+            </h3>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('answer2')">
+
+                Show Answer
+
+            </button>
+
+            <div id="answer2"
+                 class="answer-box">
+
+                A primary key uniquely identifies each row
+                in a table. A table has one primary key,
+                which can consist of one or more columns.
+
+            </div>
+
+        </div>
+
+
+        <div class="question-card">
+
+            <div class="question-number">
+                QUESTION 03
+            </div>
+
+            <h3>
+                What is a foreign key?
+            </h3>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('answer3')">
+
+                Show Answer
+
+            </button>
+
+            <div id="answer3"
+                 class="answer-box">
+
+                A foreign key is a column or set of columns
+                that references a key in another table,
+                commonly used to establish relationships
+                between tables.
+
+            </div>
+
+        </div>
+
+
+        <div class="question-card">
+
+            <div class="question-number">
+                QUESTION 04
+            </div>
+
+            <h3>
+                What is the difference between DELETE and TRUNCATE?
+            </h3>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('answer4')">
+
+                Show Answer
+
+            </button>
+
+            <div id="answer4"
+                 class="answer-box">
+
+                DELETE removes selected rows and can use a WHERE
+                condition. TRUNCATE removes all rows from a table
+                and is generally used when the entire table data
+                needs to be cleared.
+
+            </div>
+
+        </div>
+
+
+        <div class="question-card">
+
+            <div class="question-number">
+                QUESTION 05
+            </div>
+
+            <h3>
+                What is the difference between INNER JOIN and LEFT JOIN?
+            </h3>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('answer5')">
+
+                Show Answer
+
+            </button>
+
+            <div id="answer5"
+                 class="answer-box">
+
+                INNER JOIN returns rows where matching data exists
+                in both tables. LEFT JOIN returns all rows from
+                the left table and matching rows from the right table.
+
+            </div>
+
+        </div>
+
+
+        <!-- SQL CODING -->
+
+        <h2 class="category-title">
+            💻 09 · SQL CODING PRACTICE
+        </h2>
+
+
+        <div class="question-card">
+
+            <div class="question-number">
+                QUERY 01
+            </div>
+
+            <h3>
+                Find all employees whose salary is greater than 50,000.
+            </h3>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('query1')">
+
+                Show Solution
+
+            </button>
+
+            <div id="query1"
+                 class="answer-box">
+
+                <div class="code-box">
+
+<pre>
+SELECT *
+FROM employees
+WHERE salary > 50000;
+</pre>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="question-card">
+
+            <div class="question-number">
+                QUERY 02
+            </div>
+
+            <h3>
+                Find the average salary of employees.
+            </h3>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('query2')">
+
+                Show Solution
+
+            </button>
+
+            <div id="query2"
+                 class="answer-box">
+
+                <div class="code-box">
+
+<pre>
+SELECT AVG(salary)
+FROM employees;
+</pre>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="question-card">
+
+            <div class="question-number">
+                QUERY 03
+            </div>
+
+            <h3>
+                Count the number of employees in each department.
+            </h3>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('query3')">
+
+                Show Solution
+
+            </button>
+
+            <div id="query3"
+                 class="answer-box">
+
+                <div class="code-box">
+
+<pre>
+SELECT department,
+       COUNT(*) AS employee_count
+
+FROM employees
+
+GROUP BY department;
+</pre>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUICK PRACTICE -->
+
+        <section class="practice-card">
+
+            <h2>
+                🧪 10 · QUICK SQL PRACTICE
+            </h2>
+
+            <h3>
+                Which SQL clause is used to filter rows?
+            </h3>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(false)">
+
+                A. GROUP BY
+
+            </button>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(true)">
+
+                B. WHERE
+
+            </button>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(false)">
+
+                C. ORDER BY
+
+            </button>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(false)">
+
+                D. JOIN
+
+            </button>
+
+
+            <div id="practiceResult"
+                 class="result-box">
+
+            </div>
+
+        </section>
+
+
+        <!-- MINI CHALLENGE -->
+
+        <section class="practice-card">
+
+            <h2>
+                🏆 SQL Mini Challenge
+            </h2>
+
+            <p>
+                Try to write the query yourself before
+                looking at the solution.
+            </p>
+
+            <h3>
+                Find the names of employees whose salary
+                is greater than 60,000.
+            </h3>
+
+            <button class="action-btn"
+                    onclick="toggleAnswer('challengeAnswer')">
+
+                Show Solution
+
+            </button>
+
+
+            <div id="challengeAnswer"
+                 class="answer-box">
+
+                <div class="code-box">
+
+<pre>
+SELECT name
+FROM employees
+WHERE salary > 60000;
+</pre>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMPLETE -->
+
+        <section class="complete-box">
+
+            <h2>
+                🚀 Finished SQL Preparation?
+            </h2>
+
+            <p>
+                Mark this module as completed and continue
+                with Excel and Data Analysis preparation.
+            </p>
+            <a href="/complete/sql"
+            class="action-btn">
+            ✓ Mark as Completed
+        </a>
+
+            <div id="completedMessage"
+                 class="completed-message">
+
+                🎉 Excellent! SQL Preparation completed.
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script>
+
+        function toggleAnswer(id) {
+
+            const answer =
+                document.getElementById(id);
+
+            if (answer.style.display === "block") {
+
+                answer.style.display = "none";
+
+            } else {
+
+                answer.style.display = "block";
+
+            }
+
+        }
+
+
+        function checkAnswer(correct) {
+
+            const result =
+                document.getElementById("practiceResult");
+
+            result.style.display = "block";
+
+            if (correct) {
+
+                result.innerHTML =
+                    "✅ Correct! WHERE is used to filter rows based on a condition.";
+
+            } else {
+
+                result.innerHTML =
+                    "❌ Not quite. WHERE is the clause used to filter rows.";
+
+            }
+
+        }
+
+
+        function markCompleted() {
+
+            const message =
+                document.getElementById("completedMessage");
+
+            message.style.display = "block";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

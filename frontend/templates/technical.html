@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Technical Preparation | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎯 Placement Navigator <span>AI</span>
+        </div>
+
+        <a href="/prepare" class="back-link">
+            ← Back to Roadmap
+        </a>
+
+    </nav>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main class="roadmap-container">
+
+
+        <!-- HEADER -->
+
+        <section class="page-header">
+
+            <div class="page-badge">
+                💻 Technical Interview Preparation
+            </div>
+
+            <h1>
+                Master Your Technical Round
+            </h1>
+
+            <p>
+                Strengthen the technical skills required for your
+                selected role and prepare for real interview questions.
+            </p>
+
+        </section>
+
+
+        <!-- ROLE CARD -->
+
+        <section class="details-card">
+
+            <div class="detail-item">
+
+                <div class="detail-label">
+                    💼 Target Role
+                </div>
+
+                <div class="detail-value">
+                    {{ role or "Your Selected Role" }}
+                </div>
+
+            </div>
+
+
+            <div class="detail-item">
+
+                <div class="detail-label">
+                    🏢 Company
+                </div>
+
+                <div class="detail-value">
+                    {{ company or "Selected Company" }}
+                </div>
+
+            </div>
+
+
+            <div class="detail-item">
+
+                <div class="detail-label">
+                    🎯 Preparation Mode
+                </div>
+
+                <div class="detail-value">
+                    Interview Focused
+                </div>
+
+            </div>
+
+
+            <div class="detail-item">
+
+                <div class="detail-label">
+                    📚 Topics
+                </div>
+
+                <div class="detail-value">
+                    6 Core Areas
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             PROGRESS
+        ========================================== -->
+
+        <section class="readiness-card">
+
+            <div class="readiness-left">
+
+                <h2>
+                    🚀 Technical Readiness
+                </h2>
+
+                <p>
+                    Complete each topic and practice interview
+                    questions to improve your technical confidence.
+                </p>
+
+            </div>
+
+
+            <div class="readiness-score">
+
+                <div class="score-number">
+                    35%
+                </div>
+
+                <div class="score-label">
+                    Prepared
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             TOPICS
+        ========================================== -->
+
+        <section>
+
+            <div class="section-title">
+
+                <h2>
+                    🧠 Core Technical Areas
+                </h2>
+
+                <p>
+                    Learn the concept → practice questions →
+                    prepare for interview.
+                </p>
+
+            </div>
+
+
+            <div class="roadmap-list">
+
+
+                <!-- PYTHON -->
+
+                <div class="roadmap-card">
+
+                    <div class="roadmap-number">
+                        01
+                    </div>
+
+
+                    <div class="roadmap-content">
+
+                        <div class="round-label">
+                            PROGRAMMING
+                        </div>
+
+                        <h3>
+                            🐍 Python
+                        </h3>
+
+                        <p>
+                            Prepare important Python concepts
+                            commonly discussed in technical interviews.
+                        </p>
+
+
+                        <div class="topic-list">
+
+                            <span class="topic">Variables</span>
+
+                            <span class="topic">Data Types</span>
+
+                            <span class="topic">Functions</span>
+
+                            <span class="topic">OOP</span>
+
+                            <span class="topic">Lists & Dictionaries</span>
+
+                        </div>
+
+
+                        <a href="/python" class="action-btn">
+                            Learn Python →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SQL -->
+
+                <div class="roadmap-card">
+
+                    <div class="roadmap-number">
+                        02
+                    </div>
+
+
+                    <div class="roadmap-content">
+
+                        <div class="round-label">
+                            DATABASE
+                        </div>
+
+                        <h3>
+                            🗄️ SQL & DBMS
+                        </h3>
+
+                        <p>
+                            Practice SQL queries and understand
+                            database concepts asked in interviews.
+                        </p>
+
+
+                        <div class="topic-list">
+
+                            <span class="topic">SELECT</span>
+
+                            <span class="topic">JOINs</span>
+
+                            <span class="topic">GROUP BY</span>
+
+                            <span class="topic">Subqueries</span>
+
+                            <span class="topic">DBMS Basics</span>
+
+                        </div>
+
+
+                        <a href="/sql" class="action-btn">
+                            Practice SQL →
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <!-- EXCEL -->
+
+                <div class="roadmap-card">
+
+                    <div class="roadmap-number">
+                        03
+                    </div>
+
+
+                    <div class="roadmap-content">
+
+                        <div class="round-label">
+                            DATA TOOL
+                        </div>
+
+                        <h3>
+                            📊 Excel & Data Analysis
+                        </h3>
+
+                        <p>
+                            Strengthen spreadsheet and data analysis
+                            skills useful for analyst roles.
+                        </p>
+
+
+                        <div class="topic-list">
+
+                            <span class="topic">VLOOKUP</span>
+
+                            <span class="topic">Pivot Tables</span>
+
+                            <span class="topic">Charts</span>
+
+                            <span class="topic">Functions</span>
+
+                            <span class="topic">Data Cleaning</span>
+
+                        </div>
+
+
+                        <a href="/excel" class="action-btn">
+                            Practice Excel →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STATISTICS -->
+
+                <div class="roadmap-card">
+
+                    <div class="roadmap-number">
+                        04
+                    </div>
+
+
+                    <div class="roadmap-content">
+
+                        <div class="round-label">
+                            DATA SCIENCE
+                        </div>
+
+                        <h3>
+                            📈 Statistics
+                        </h3>
+
+                        <p>
+                            Understand the statistical concepts
+                            frequently used in data analysis.
+                        </p>
+
+
+                        <div class="topic-list">
+
+                            <span class="topic">Mean</span>
+
+                            <span class="topic">Median</span>
+
+                            <span class="topic">Mode</span>
+
+                            <span class="topic">Probability</span>
+
+                            <span class="topic">Correlation</span>
+
+                        </div>
+                        <a href="/statistics" class="action-btn">
+                            📈 Study Statistics →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DATA ANALYSIS -->
+
+                <div class="roadmap-card">
+
+                    <div class="roadmap-number">
+                        05
+                    </div>
+
+
+                    <div class="roadmap-content">
+
+                        <div class="round-label">
+                            ANALYTICS
+                        </div>
+
+                        <h3>
+                            🔎 Data Analysis
+                        </h3>
+
+                        <p>
+                            Learn how to approach real-world
+                            business and data problems.
+                        </p>
+
+
+                        <div class="topic-list">
+
+                            <span class="topic">Data Cleaning</span>
+
+                            <span class="topic">EDA</span>
+
+                            <span class="topic">Visualization</span>
+
+                            <span class="topic">Insights</span>
+
+                            <span class="topic">Business Questions</span>
+
+                        </div>
+                        <a href="{{ url_for('data_analysis') }}" class="action-btn">
+                            📊 Learn Data Analysis →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- INTERVIEW QUESTIONS -->
+
+                <div class="roadmap-card">
+
+                    <div class="roadmap-number">
+                        06
+                    </div>
+
+
+                    <div class="roadmap-content">
+
+                        <div class="round-label">
+                            INTERVIEW PRACTICE
+                        </div>
+
+                        <h3>
+                            🎯 Technical Interview Questions
+                        </h3>
+
+                        <p>
+                            Practice realistic technical questions
+                            and understand how to explain your answers.
+                        </p>
+
+
+                        <div class="topic-list">
+
+                            <span class="topic">Concept Questions</span>
+
+                            <span class="topic">Scenario Questions</span>
+
+                            <span class="topic">Project Questions</span>
+
+                            <span class="topic">Follow-ups</span>
+
+                        </div>
+                        <a href="{{ url_for('technical_interview') }}"
+                        class="action-btn">
+                        🎯 Start Technical Practice →
+                    </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             INTERVIEW TIP
+        ========================================== -->
+
+        <section class="readiness-card"
+                 style="margin-top: 35px;">
+
+            <div class="readiness-left">
+
+                <h2>
+                    💡 Interview Tip
+                </h2>
+
+                <p>
+                    Don't just memorize technical answers.
+                    Learn the concept first, then explain it
+                    in your own words with a simple example.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        
+        
+
+
+        function startInterview() {
+
+            alert(
+                "🎤 Technical Interview Practice will start here."
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

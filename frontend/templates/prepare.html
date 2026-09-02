@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Start Preparation | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎯 Placement Navigator <span>AI</span>
+        </div>
+
+        <a href="/" class="back-link">
+            ← Back to Home
+        </a>
+
+    </nav>
+
+
+    <main class="prepare-page">
+
+        <div class="prepare-card">
+
+            <div class="prepare-badge">
+                🚀 Step 1 of 5
+            </div>
+
+            <h1>
+                Tell us about your interview
+            </h1>
+
+            <p class="prepare-subtitle">
+                Give us a few details and we'll create a
+                personalized preparation roadmap for you.
+            </p>
+
+
+            <form method="POST"
+                  action="/create-roadmap">
+
+
+                <!-- Company -->
+
+                <div class="form-group">
+
+                    <label for="company">
+                        🏢 Company
+                    </label>
+
+                    <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        placeholder="e.g. TCS, Accenture, Wipro"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Role -->
+
+                <div class="form-group">
+
+                    <label for="role">
+                        💼 Job Role
+                    </label>
+
+                    <select id="role"
+                            name="role"
+                            required>
+
+                        <option value="">
+                            Select your role
+                        </option>
+
+                        <option value="Data Analyst">
+                            Data Analyst
+                        </option>
+
+                        <option value="Data Scientist">
+                            Data Scientist
+                        </option>
+
+                        <option value="Software Developer">
+                            Software Developer
+                        </option>
+
+                        <option value="Python Developer">
+                            Python Developer
+                        </option>
+
+                        <option value="Business Analyst">
+                            Business Analyst
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Interview Date -->
+
+                <div class="form-group">
+
+                    <label for="interview_date">
+                        📅 Interview Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="interview_date"
+                        name="interview_date"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Preparation Level -->
+
+                <div class="form-group">
+
+                    <label>
+                        📚 Current Preparation Level
+                    </label>
+
+
+                    <div class="level-options">
+
+                        <label class="level-card">
+
+                            <input
+                                type="radio"
+                                name="level"
+                                value="Beginner"
+                                required
+                            >
+
+                            <span>
+                                🌱
+                                <strong>Beginner</strong>
+                                <small>
+                                    I don't know where to start
+                                </small>
+                            </span>
+
+                        </label>
+
+
+                        <label class="level-card">
+
+                            <input
+                                type="radio"
+                                name="level"
+                                value="Intermediate"
+                            >
+
+                            <span>
+                                📖
+                                <strong>Intermediate</strong>
+                                <small>
+                                    I know the basics
+                                </small>
+                            </span>
+
+                        </label>
+
+
+                        <label class="level-card">
+
+                            <input
+                                type="radio"
+                                name="level"
+                                value="Advanced"
+                            >
+
+                            <span>
+                                🚀
+                                <strong>Advanced</strong>
+                                <small>
+                                    I need final preparation
+                                </small>
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn roadmap-btn">
+
+                    Build My Preparation Roadmap →
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

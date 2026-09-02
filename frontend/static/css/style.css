@@ -1,0 +1,1200 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    height: 72px;
+    background: #0b1324;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #27d6d0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #dbe3f0;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #27d6d0;
+}
+
+.login-btn {
+    background: #27d6d0;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.roadmap-container {
+    width: 88%;
+    max-width: 1200px;
+    margin: 45px auto;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #52627a;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.back-link:hover {
+    color: #16aaa5;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.page-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.page-badge {
+    display: inline-block;
+    background: #e5fbfa;
+    color: #109c98;
+    padding: 7px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    color: #101828;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #667085;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   INTERVIEW DETAILS CARD
+========================================= */
+
+.details-card {
+    background: white;
+    border-radius: 18px;
+    padding: 28px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.07);
+    border: 1px solid #e7ebf2;
+    margin-bottom: 30px;
+}
+
+.detail-item {
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.detail-label {
+    color: #7b8798;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.detail-value {
+    color: #172033;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   READINESS CARD
+========================================= */
+
+.readiness-card {
+    background: linear-gradient(135deg, #0d172b, #182944);
+    color: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 38px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.readiness-left h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.readiness-left p {
+    color: #c6d0df;
+}
+
+.readiness-score {
+    text-align: center;
+    min-width: 150px;
+}
+
+.score-number {
+    font-size: 45px;
+    font-weight: 800;
+    color: #27d6d0;
+}
+
+.score-label {
+    color: #d5deea;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   JOURNEY TITLE
+========================================= */
+
+.section-title {
+    margin-bottom: 22px;
+}
+
+.section-title h2 {
+    font-size: 27px;
+    color: #101828;
+}
+
+.section-title p {
+    color: #667085;
+}
+
+
+/* =========================================
+   ROADMAP CARDS
+========================================= */
+
+.roadmap-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.roadmap-card {
+    background: white;
+    border: 1px solid #e5e9f0;
+    border-radius: 18px;
+    padding: 26px;
+    display: flex;
+    gap: 22px;
+    box-shadow: 0 7px 25px rgba(15, 23, 42, 0.06);
+    transition: 0.3s ease;
+}
+
+.roadmap-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.10);
+}
+
+.roadmap-number {
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    border-radius: 15px;
+    background: #e7fbfa;
+    color: #079c98;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.roadmap-content {
+    flex: 1;
+}
+
+.round-label {
+    font-size: 12px;
+    color: #7b8798;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+}
+
+.roadmap-content h3 {
+    font-size: 22px;
+    color: #172033;
+    margin-bottom: 5px;
+}
+
+.roadmap-content p {
+    color: #667085;
+    margin-bottom: 14px;
+}
+
+.topic-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 17px;
+}
+
+.topic {
+    background: #f1f4f8;
+    color: #445166;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   ACTION BUTTON
+========================================= */
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #17b9b4;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 9px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.action-btn:hover {
+    background: #109b97;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   QUICK ACTIONS
+========================================= */
+
+.quick-section {
+    margin-top: 45px;
+}
+
+.quick-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.quick-card {
+    background: white;
+    border: 1px solid #e5e9f0;
+    border-radius: 15px;
+    padding: 22px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.quick-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+}
+
+.quick-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.quick-card h3 {
+    font-size: 15px;
+    color: #273449;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .details-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quick-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: auto;
+        padding: 18px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .roadmap-container {
+        width: 92%;
+    }
+
+    .page-header h1 {
+        font-size: 30px;
+    }
+
+    .details-card {
+        grid-template-columns: 1fr;
+    }
+
+    .readiness-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .roadmap-card {
+        flex-direction: column;
+    }
+
+    .quick-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================================
+   HOME PAGE
+========================================= */
+
+.hero {
+    min-height: calc(100vh - 72px);
+    padding: 80px 7% 70px;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(39, 214, 208, 0.12), transparent 30%),
+        linear-gradient(180deg, #f7fbff 0%, #eef5fb 100%);
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 9px 18px;
+    border-radius: 30px;
+    background: #e7fbfa;
+    color: #0c9995;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.12;
+    color: #101828;
+    margin-bottom: 22px;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    display: block;
+    color: #17b9b4;
+}
+
+.hero p {
+    max-width: 780px;
+    margin: 0 auto;
+    color: #5d6b82;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 13px 24px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.primary-btn {
+    background: #17b9b4;
+    color: white;
+    box-shadow: 0 8px 20px rgba(23, 185, 180, 0.22);
+}
+
+.primary-btn:hover {
+    background: #109b97;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: white;
+    color: #172033;
+    border: 1px solid #d9e2ec;
+}
+
+.secondary-btn:hover {
+    border-color: #17b9b4;
+    color: #109b97;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   HOME FEATURE SECTION
+========================================= */
+
+.feature-grid {
+    width: 100%;
+    max-width: 1200px;
+    margin: 70px auto 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #e3e9f1;
+    border-radius: 18px;
+    padding: 25px 20px;
+    text-align: center;
+    min-height: 220px;
+    box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.10);
+    border-color: #cbeeed;
+}
+
+.feature-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 16px;
+    border-radius: 16px;
+    background: #e9fbfa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.feature-card h3 {
+    font-size: 17px;
+    color: #172033;
+    margin-bottom: 9px;
+}
+
+.feature-card p {
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+
+/* =========================================
+   HOME BOTTOM CTA
+========================================= */
+
+.bottom-section {
+    padding: 75px 20px;
+    text-align: center;
+    background: white;
+    border-top: 1px solid #e7ebf2;
+}
+
+.bottom-section h2 {
+    font-size: 34px;
+    color: #101828;
+    margin-bottom: 12px;
+}
+
+.bottom-section p {
+    max-width: 620px;
+    margin: 0 auto;
+    color: #667085;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   HOME RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .feature-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .hero {
+        padding: 60px 5% 50px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+    }
+
+    .feature-card {
+        min-height: auto;
+    }
+
+    .bottom-section h2 {
+        font-size: 28px;
+    }
+}
+/* =========================================
+   PREPARE PAGE
+========================================= */
+
+.prepare-page {
+    min-height: calc(100vh - 72px);
+    padding: 60px 20px 80px;
+    background:
+        radial-gradient(circle at 85% 15%, rgba(39, 214, 208, 0.10), transparent 28%),
+        linear-gradient(180deg, #f7fbff 0%, #eef5fb 100%);
+}
+
+.prepare-card {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 42px;
+    box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+}
+
+.prepare-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 30px;
+    background: #e7fbfa;
+    color: #109c98;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.prepare-card h1 {
+    font-size: 40px;
+    line-height: 1.15;
+    color: #101828;
+    margin-bottom: 12px;
+}
+
+.prepare-subtitle {
+    color: #667085;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group > label {
+    display: block;
+    margin-bottom: 9px;
+    color: #172033;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group select {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    border: 1px solid #d7dee8;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #172033;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="date"]:focus,
+.form-group select:focus {
+    border-color: #17b9b4;
+    box-shadow: 0 0 0 3px rgba(23, 185, 180, 0.12);
+}
+
+
+/* =========================================
+   PREPARATION LEVELS
+========================================= */
+
+.level-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.level-card {
+    position: relative;
+    display: block;
+    padding: 18px;
+    background: #f8fafc;
+    border: 1px solid #e1e7ef;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.level-card:hover {
+    border-color: #17b9b4;
+    transform: translateY(-2px);
+}
+
+.level-card input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.level-card span {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.level-card strong {
+    color: #172033;
+    font-size: 15px;
+}
+
+.level-card small {
+    color: #6b778c;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.level-card:has(input:checked) {
+    background: #eafcfb;
+    border-color: #17b9b4;
+    box-shadow: 0 0 0 2px rgba(23, 185, 180, 0.10);
+}
+
+
+/* =========================================
+   ROADMAP BUTTON
+========================================= */
+
+.roadmap-btn {
+    width: 100%;
+    min-height: 52px;
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   PREPARE PAGE RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .prepare-page {
+        padding: 35px 15px 60px;
+    }
+
+    .prepare-card {
+        padding: 28px 20px;
+    }
+
+    .prepare-card h1 {
+        font-size: 32px;
+    }
+
+    .level-options {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================================
+   APTITUDE PAGE
+========================================= */
+
+.aptitude-page {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 45px 0 70px;
+}
+
+.aptitude-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.roadmap-badge {
+    display: inline-block;
+    background: #e7fbfa;
+    color: #109c98;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.aptitude-header h1 {
+    font-size: 42px;
+    color: #101828;
+    margin-bottom: 10px;
+}
+
+.aptitude-header p {
+    color: #667085;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   APTITUDE STATS
+========================================= */
+
+.aptitude-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 38px;
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid #e3e9f1;
+    border-radius: 16px;
+    padding: 22px;
+    text-align: center;
+    box-shadow: 0 7px 24px rgba(15, 23, 42, 0.06);
+}
+
+.stat-card > span {
+    display: block;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.stat-card small {
+    display: block;
+    color: #7b8798;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.stat-card strong {
+    font-size: 24px;
+    color: #172033;
+}
+
+
+/* =========================================
+   TOPIC SECTION
+========================================= */
+
+.topic-section {
+    margin-bottom: 32px;
+}
+
+.section-heading {
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    font-size: 27px;
+    color: #101828;
+    margin-bottom: 5px;
+}
+
+.section-heading p {
+    color: #667085;
+}
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.topic-btn {
+    border: 1px solid #e1e7ef;
+    background: white;
+    border-radius: 16px;
+    padding: 22px 15px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.25s ease;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
+}
+
+.topic-btn:hover {
+    transform: translateY(-4px);
+    border-color: #17b9b4;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.09);
+}
+
+.topic-btn strong {
+    display: block;
+    color: #172033;
+    font-size: 15px;
+    margin-top: 7px;
+}
+
+.topic-btn small {
+    display: block;
+    color: #7b8798;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+
+/* =========================================
+   PRACTICE CARD
+========================================= */
+
+.practice-card {
+    background: white;
+    border: 1px solid #e3e9f1;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
+}
+
+.practice-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 18px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #edf0f4;
+}
+
+.practice-label {
+    color: #17a7a3;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+#selectedTopic {
+    color: #52627a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#questionArea {
+    text-align: center;
+    padding: 25px 10px;
+}
+
+#questionArea h2 {
+    color: #172033;
+    margin-bottom: 8px;
+}
+
+#questionArea p {
+    color: #667085;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   QUIZ AREA
+========================================= */
+
+#quizArea {
+    padding-top: 10px;
+}
+
+.question-number {
+    display: inline-block;
+    background: #eafcfb;
+    color: #109c98;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+#questionText {
+    color: #172033;
+    font-size: 23px;
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+
+.options-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+    margin-bottom: 22px;
+}
+
+.option-btn {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #dce3eb;
+    background: #f8fafc;
+    border-radius: 12px;
+    color: #172033;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    transition: 0.2s ease;
+}
+
+.option-btn:hover {
+    border-color: #17b9b4;
+    background: #edfafa;
+}
+
+.option-btn.correct {
+    background: #dcfce7;
+    border-color: #22c55e;
+    color: #166534;
+}
+
+.option-btn.wrong {
+    background: #fee2e2;
+    border-color: #ef4444;
+    color: #991b1b;
+}
+
+
+/* =========================================
+   RESULT
+========================================= */
+
+#resultArea {
+    text-align: center;
+    padding: 25px;
+}
+
+.result-icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#resultArea h2 {
+    color: #172033;
+    margin-bottom: 10px;
+}
+
+#resultText {
+    color: #667085;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   TIPS
+========================================= */
+
+.tips-section {
+    margin-top: 35px;
+}
+
+.tips-section > h2 {
+    font-size: 27px;
+    color: #101828;
+    margin-bottom: 20px;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.tip-card {
+    background: white;
+    border: 1px solid #e3e9f1;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 7px 22px rgba(15, 23, 42, 0.05);
+}
+
+.tip-card strong {
+    display: block;
+    color: #172033;
+    margin-bottom: 8px;
+}
+
+.tip-card p {
+    color: #667085;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   APTITUDE RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .aptitude-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .topic-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tips-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .aptitude-page {
+        width: 92%;
+        padding: 30px 0 50px;
+    }
+
+    .aptitude-header h1 {
+        font-size: 32px;
+    }
+
+    .aptitude-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .topic-grid,
+    .options-container,
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .practice-card {
+        padding: 20px;
+    }
+
+    .practice-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #questionText {
+        font-size: 19px;
+    }
+}

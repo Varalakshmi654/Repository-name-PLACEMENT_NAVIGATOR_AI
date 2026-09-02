@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Mock Interview | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        .mock-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .interview-box {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+            margin-bottom: 25px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: #e5e7eb;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 15px 0 25px;
+        }
+
+        .progress-fill {
+            width: 20%;
+            height: 100%;
+            background: #111827;
+            transition: width 0.3s ease;
+        }
+
+        .question-label {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .question-text {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 150px;
+            padding: 15px;
+            border: 1px solid #d1d5db;
+            border-radius: 12px;
+            resize: vertical;
+            font-size: 16px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        .mock-btn {
+            padding: 12px 22px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 700;
+            margin-top: 15px;
+        }
+
+        .feedback {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 14px;
+            background: #f5f7fb;
+            line-height: 1.7;
+        }
+
+        .score-card {
+            display: none;
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+            text-align: center;
+        }
+
+        .final-score {
+            font-size: 55px;
+            font-weight: 800;
+            margin: 15px 0;
+        }
+
+        .result-section {
+            text-align: left;
+            margin-top: 25px;
+        }
+
+        .result-section h3 {
+            margin-bottom: 8px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎯 Placement Navigator <span>AI</span>
+        </div>
+
+        <a href="/prepare" class="back-link">
+            ← Back to Roadmap
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="roadmap-container">
+
+
+        <!-- HEADER -->
+
+        <section class="page-header mock-header">
+
+            <div class="page-badge">
+                🎤 AI Mock Interview
+            </div>
+
+            <h1>
+                Test Your Interview Readiness
+            </h1>
+
+            <p>
+                Answer realistic HR, technical and project questions
+                just like a real interview.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             PROGRESS
+        ========================== -->
+
+        <div class="interview-box">
+
+            <strong>
+                Interview Progress
+            </strong>
+
+            <div class="progress-bar">
+
+                <div id="progressFill"
+                     class="progress-fill">
+                </div>
+
+            </div>
+
+            <span id="progressText">
+                Question 1 of 5
+            </span>
+
+        </div>
+
+
+        <!-- =========================
+             QUESTION AREA
+        ========================== -->
+
+        <div id="interviewArea"
+             class="interview-box">
+
+            <div class="question-label">
+                INTERVIEWER
+            </div>
+
+            <div id="question"
+                 class="question-text">
+                Tell me about yourself.
+            </div>
+
+
+            <textarea id="answer"
+                      placeholder="Type your answer here...">
+            </textarea>
+
+
+            <button class="mock-btn"
+                    onclick="submitAnswer()">
+
+                Submit Answer →
+
+            </button>
+
+
+            <div id="feedback"
+                 class="feedback">
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             FINAL RESULT
+        ========================== -->
+
+        <div id="scoreCard"
+             class="score-card">
+
+            <div class="page-badge">
+                🏆 Interview Completed
+            </div>
+
+            <h1>
+                Your Readiness Result
+            </h1>
+
+            <div id="finalScore"
+                 class="final-score">
+                0%
+            </div>
+
+            <p>
+                Overall Interview Readiness
+            </p>
+
+
+            <div class="result-section">
+
+                <h3>
+                    💪 Strong Areas
+                </h3>
+
+                <p>
+                    Communication, willingness to learn,
+                    basic technical understanding.
+                </p>
+
+            </div>
+
+
+            <div class="result-section">
+
+                <h3>
+                    ⚠️ Areas to Improve
+                </h3>
+
+                <p>
+                    Practice answering technical questions
+                    clearly and give specific examples.
+                </p>
+
+            </div>
+
+
+            <div class="result-section">
+
+                <h3>
+                    📈 Recommendation
+                </h3>
+
+                <p>
+                    Revise Python, SQL, Excel, Statistics and
+                    Data Analysis concepts before your interview.
+                </p>
+
+            </div>
+
+
+            <div style="margin-top:30px;">
+
+                <a href="/technical"
+                   class="action-btn">
+
+                    Review Technical Preparation
+
+                </a>
+
+                <br><br>
+                <a href="/complete/mock-interview"
+                class="action-btn">
+                ✓ Mark Mock Interview Completed
+            </a>
+
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+    const questions = [
+
+        {
+            type: "HR",
+            text: "Tell me about yourself.",
+            keywords: [
+                "name",
+                "education",
+                "skill",
+                "project"
+            ]
+        },
+
+        {
+            type: "TECHNICAL",
+            text: "What is the difference between a list and a tuple in Python?",
+            keywords: [
+                "list",
+                "tuple",
+                "mutable",
+                "immutable"
+            ]
+        },
+
+        {
+            type: "SQL",
+            text: "What is the difference between WHERE and HAVING in SQL?",
+            keywords: [
+                "where",
+                "having",
+                "group"
+            ]
+        },
+
+        {
+            type: "PROJECT",
+            text: "Tell me about your project and the problem it solves.",
+            keywords: [
+                "project",
+                "problem",
+                "solution",
+                "technology"
+            ]
+        },
+
+        {
+            type: "SCENARIO",
+            text: "If you receive a dataset with missing values, what would you do?",
+            keywords: [
+                "missing",
+                "clean",
+                "remove",
+                "fill",
+                "analyze"
+            ]
+        }
+
+    ];
+
+
+    let currentQuestion = 0;
+
+    let totalScore = 0;
+
+    let answered = false;
+
+
+    function submitAnswer() {
+
+        if (answered) {
+            return;
+        }
+
+        const answer =
+            document.getElementById("answer")
+                .value
+                .trim()
+                .toLowerCase();
+
+
+        const feedback =
+            document.getElementById("feedback");
+
+
+        if (answer === "") {
+
+            feedback.style.display = "block";
+
+            feedback.innerHTML =
+                "<strong>⚠️ Please answer the question first.</strong>";
+
+            return;
+        }
+
+
+        const question =
+            questions[currentQuestion];
+
+
+        let matchedKeywords = 0;
+
+
+        question.keywords.forEach(function(keyword) {
+
+            if (answer.includes(keyword)) {
+
+                matchedKeywords++;
+
+            }
+
+        });
+
+
+        let points = 0;
+
+
+        if (answer.length >= 120) {
+
+            points += 8;
+
+        } else if (answer.length >= 70) {
+
+            points += 6;
+
+        } else if (answer.length >= 40) {
+
+            points += 4;
+
+        } else if (answer.length >= 20) {
+
+            points += 2;
+
+        }
+
+
+        points += matchedKeywords * 3;
+
+
+        points = Math.min(points, 20);
+
+
+        totalScore += points;
+
+
+        answered = true;
+
+
+        let feedbackText = "";
+
+
+        if (matchedKeywords >= 3 && answer.length >= 70) {
+
+            feedbackText = `
+                <strong>✅ Strong Answer</strong><br><br>
+                You covered the important points clearly.
+                Your answer shows good understanding of the topic.
+                Try to make it even stronger by adding a
+                small real-world example.
+            `;
+
+        } else if (matchedKeywords >= 2 && answer.length >= 40) {
+
+            feedbackText = `
+                <strong>👍 Good Answer</strong><br><br>
+                You mentioned some important points.
+                Add one more explanation or example to make
+                your answer more complete.
+            `;
+
+        } else if (answer.length >= 40) {
+
+            feedbackText = `
+                <strong>💡 Needs More Focus</strong><br><br>
+                Your answer has some detail, but it does not
+                fully address the main points of the question.
+                Try to directly explain the concept and give
+                a relevant example.
+            `;
+
+        } else {
+
+            feedbackText = `
+                <strong>⚠️ Answer Needs Improvement</strong><br><br>
+                Your answer is quite short.
+                Try to explain the concept in more detail and
+                support it with an example.
+            `;
+
+        }
+
+
+        feedback.style.display = "block";
+
+
+        feedback.innerHTML =
+            feedbackText;
+
+
+        if (currentQuestion < questions.length - 1) {
+
+
+            const nextButton =
+                document.createElement("button");
+
+
+            nextButton.className =
+                "mock-btn";
+
+
+            nextButton.innerText =
+                "Next Question →";
+
+
+            nextButton.onclick =
+                nextQuestion;
+
+
+            feedback.appendChild(
+                document.createElement("br")
+            );
+
+
+            feedback.appendChild(
+                nextButton
+            );
+
+
+        } else {
+
+
+            const finishButton =
+                document.createElement("button");
+
+
+            finishButton.className =
+                "mock-btn";
+
+
+            finishButton.innerText =
+                "View My Result →";
+
+
+            finishButton.onclick =
+                showResult;
+
+
+            feedback.appendChild(
+                document.createElement("br")
+            );
+
+
+            feedback.appendChild(
+                finishButton
+            );
+
+        }
+
+    }
+
+
+    function nextQuestion() {
+
+        currentQuestion++;
+
+
+        answered = false;
+
+
+        document.getElementById("question").innerText =
+            questions[currentQuestion].text;
+
+
+        document.querySelector(".question-label").innerText =
+            questions[currentQuestion].type;
+
+
+        document.getElementById("answer").value =
+            "";
+
+
+        document.getElementById("feedback").style.display =
+            "none";
+
+
+        const progress =
+            ((currentQuestion + 1) /
+            questions.length) * 100;
+
+
+        document.getElementById("progressFill").style.width =
+            progress + "%";
+
+
+        document.getElementById("progressText").innerText =
+            "Question " +
+            (currentQuestion + 1) +
+            " of " +
+            questions.length;
+
+    }
+
+
+    function showResult() {
+
+        document.getElementById("interviewArea")
+            .style.display = "none";
+
+
+        document.getElementById("scoreCard")
+            .style.display = "block";
+
+
+        document.getElementById("progressFill")
+            .style.width = "100%";
+
+
+        document.getElementById("progressText")
+            .innerText = "Interview Completed";
+
+
+        const finalPercentage =
+            Math.round(
+                (totalScore /
+                (questions.length * 20)) * 100
+            );
+
+
+        document.getElementById("finalScore")
+            .innerText =
+            finalPercentage + "%";
+
+
+        let recommendation = "";
+
+
+        if (finalPercentage >= 80) {
+
+            recommendation =
+                "Excellent performance. Focus on confidence, examples and interview communication.";
+
+        } else if (finalPercentage >= 60) {
+
+            recommendation =
+                "Good progress. Revise important concepts and improve answer structure.";
+
+        } else if (finalPercentage >= 40) {
+
+            recommendation =
+                "Keep practicing. Focus on understanding concepts and answering with examples.";
+
+        } else {
+
+            recommendation =
+                "You need more preparation. Start with fundamentals and practice speaking your answers.";
+
+        }
+
+
+        const recommendationBox =
+            document.querySelector(
+                "#scoreCard .result-section:nth-of-type(3) p"
+            );
+
+
+        if (recommendationBox) {
+
+            recommendationBox.innerText =
+                recommendation;
+
+        }
+
+    }
+
+</script>

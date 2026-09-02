@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Self Introduction | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        .intro-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .answer-box {
+            background: #f8fafc;
+            padding: 22px;
+            border-radius: 15px;
+            margin-top: 15px;
+            line-height: 1.8;
+        }
+
+        .step {
+            padding: 15px;
+            margin-top: 12px;
+            background: #f8fafc;
+            border-radius: 12px;
+        }
+
+        .practice-box {
+            background: #f1f5f9;
+            padding: 25px;
+            border-radius: 16px;
+            margin-top: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 150px;
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid #cbd5e1;
+            font-size: 15px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        🎯 Placement Navigator <span>AI</span>
+    </div>
+
+    <a href="/prepare" class="back-link">
+        ← Back to Roadmap
+    </a>
+
+</nav>
+
+
+<main class="roadmap-container">
+
+
+    <!-- HEADER -->
+
+    <section class="page-header">
+
+        <div class="page-badge">
+            🗣️ HR Preparation
+        </div>
+
+        <h1>
+            Master Your Self Introduction
+        </h1>
+
+        <p>
+            Learn how to introduce yourself confidently
+            and professionally in an interview.
+        </p>
+
+    </section>
+
+
+    <!-- QUESTION -->
+
+    <section class="intro-card">
+
+        <h2>
+            👋 Tell Me About Yourself
+        </h2>
+
+        <p>
+            This is one of the most common questions asked
+            at the beginning of an interview.
+        </p>
+
+    </section>
+
+
+    <!-- STRUCTURE -->
+
+    <section class="intro-card">
+
+        <h2>
+            🧩 Build Your Answer
+        </h2>
+
+        <div class="step">
+
+            <strong>1️⃣ Introduction</strong>
+
+            <p>
+                Start with your name and educational background.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <strong>2️⃣ Technical Skills</strong>
+
+            <p>
+                Mention the technical skills relevant to the job.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <strong>3️⃣ Project Experience</strong>
+
+            <p>
+                Briefly explain your project and what you learned.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <strong>4️⃣ Strengths</strong>
+
+            <p>
+                Mention one or two professional strengths.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <strong>5️⃣ Career Goal</strong>
+
+            <p>
+                End by explaining what kind of opportunity
+                you are looking for.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SAMPLE ANSWER -->
+
+    <section class="intro-card">
+
+        <h2>
+            💬 Sample Answer
+        </h2>
+
+        <div class="answer-box">
+
+            <p>
+
+                Good morning. My name is Varalakshmi.
+
+                I am currently pursuing my B.Sc in Data Science.
+                I have developed an interest in data analysis
+                and technology.
+
+            </p>
+
+            <p>
+
+                I have learned skills such as Python, SQL,
+                Excel, statistics and data analysis.
+
+                I have also worked on academic projects where
+                I used data to understand problems and generate
+                useful insights.
+
+            </p>
+
+            <p>
+
+                One of my strengths is that I am willing to learn
+                new technologies and improve my skills continuously.
+
+            </p>
+
+            <p>
+
+                I am looking for an opportunity where I can apply
+                my technical knowledge, learn from experienced
+                professionals and contribute to the organization.
+
+                Thank you.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHAT NOT TO SAY -->
+
+    <section class="intro-card">
+
+        <h2>
+            ⚠️ Avoid These Mistakes
+        </h2>
+
+        <ul>
+
+            <li>
+                Don't tell your complete personal history.
+            </li>
+
+            <li>
+                Don't speak for more than 2–3 minutes.
+            </li>
+
+            <li>
+                Don't memorize the answer word-for-word.
+            </li>
+
+            <li>
+                Don't mention irrelevant personal information.
+            </li>
+
+            <li>
+                Don't speak too fast.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- PRACTICE -->
+
+    <section class="intro-card">
+
+        <h2>
+            🎤 Practice Your Introduction
+        </h2>
+
+        <p>
+            Write your answer below and practice saying it
+            naturally during your interview.
+        </p>
+
+
+        <div class="practice-box">
+
+            <textarea
+                placeholder="Write your self introduction here..."></textarea>
+
+            <br><br>
+
+            <button
+                class="action-btn"
+                onclick="checkIntroduction()">
+
+                🤖 Check My Answer →
+
+            </button>
+
+            <div id="feedback"
+                 style="margin-top:20px;">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TIPS -->
+
+    <section class="intro-card">
+
+        <h2>
+            💡 Interview Tips
+        </h2>
+
+        <ul>
+
+            <li>Maintain comfortable eye contact.</li>
+
+            <li>Smile naturally.</li>
+
+            <li>Sit straight and stay relaxed.</li>
+
+            <li>Speak clearly and confidently.</li>
+
+            <li>Keep your answer around 1–2 minutes.</li>
+
+        </ul>
+
+    </section>
+
+
+    <div style="text-align:center; margin-top:30px;">
+        <a href="/complete/self-introduction" class="action-btn">
+            ✓ Mark Self Introduction Completed
+        </a>
+        <br><br>
+
+        <a href="/hr"
+           class="action-btn">
+
+            ❓ Practice HR Questions →
+
+        </a>
+
+        <br><br>
+
+        <a href="/mock-interview"
+           class="action-btn">
+
+            🎤 Start Mock Interview →
+
+        </a>
+
+    </div>
+
+
+</main>
+
+
+<script>
+
+function checkIntroduction() {
+
+    const answer =
+        document.querySelector("textarea").value.trim();
+
+    const feedback =
+        document.getElementById("feedback");
+
+
+    if (answer.length === 0) {
+
+        feedback.innerHTML =
+            "⚠️ Please write your introduction first.";
+
+        return;
+
+    }
+
+
+    if (answer.length < 80) {
+
+        feedback.innerHTML =
+            "⚠️ Your answer is too short. Include your education, technical skills, project experience and career goal.";
+
+        return;
+
+    }
+
+
+    let suggestions = [];
+
+
+    if (!answer.toLowerCase().includes("education") &&
+        !answer.toLowerCase().includes("student") &&
+        !answer.toLowerCase().includes("degree") &&
+        !answer.toLowerCase().includes("b.sc")) {
+
+        suggestions.push(
+            "Mention your educational background."
+        );
+
+    }
+
+
+    if (!answer.toLowerCase().includes("python") &&
+        !answer.toLowerCase().includes("sql") &&
+        !answer.toLowerCase().includes("excel") &&
+        !answer.toLowerCase().includes("skill")) {
+
+        suggestions.push(
+            "Mention your relevant technical skills."
+        );
+
+    }
+
+
+    if (!answer.toLowerCase().includes("project")) {
+
+        suggestions.push(
+            "Briefly mention one project."
+        );
+
+    }
+
+
+    if (suggestions.length === 0) {
+
+        feedback.innerHTML = `
+            <div class="answer-box">
+
+                <strong>✅ Good introduction!</strong>
+
+                <p>
+                    Your answer includes the important areas.
+                    Practice speaking it naturally and confidently.
+                </p>
+
+            </div>
+        `;
+
+    } else {
+
+        feedback.innerHTML = `
+            <div class="answer-box">
+
+                <strong>💡 Suggestions to improve:</strong>
+
+                <ul>
+                    ${suggestions.map(
+                        item => `<li>${item}</li>`
+                    ).join("")}
+                </ul>
+
+            </div>
+        `;
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>

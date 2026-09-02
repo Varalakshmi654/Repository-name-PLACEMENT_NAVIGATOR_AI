@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>HR Interview Preparation | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        .hr-card {
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .question-number {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .hr-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .answer-btn {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 16px;
+            padding: 18px;
+            border-radius: 12px;
+            background: #f5f7fb;
+            line-height: 1.7;
+        }
+
+        .section-title {
+            margin: 35px 0 18px;
+        }
+
+        .tip-card {
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+            margin-top: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎯 Placement Navigator <span>AI</span>
+        </div>
+
+        <a href="/prepare" class="back-link">
+            ← Back to Roadmap
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="roadmap-container">
+
+
+        <!-- HEADER -->
+
+        <section class="page-header">
+
+            <div class="page-badge">
+                🗣️ HR Interview Preparation
+            </div>
+
+            <h1>
+                Prepare for Your HR Round
+            </h1>
+
+            <p>
+                Learn how to answer common HR questions clearly,
+                confidently and professionally.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             HR STRATEGY
+        ========================== -->
+
+        <section class="readiness-card">
+
+            <div class="readiness-left">
+
+                <h2>
+                    💡 How to Answer HR Questions
+                </h2>
+
+                <p>
+                    Understand the question → think for a few seconds
+                    → answer clearly → give a small example when needed.
+                </p>
+
+                <p>
+                    Don't memorize answers word-for-word.
+                    Speak naturally and confidently.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SELF INTRODUCTION
+        ========================== -->
+
+        <h2 class="section-title">
+            👋 Self Introduction
+        </h2>
+
+
+        <div class="hr-card">
+
+            <div class="question-number">
+                QUESTION 01
+            </div>
+
+            <h3>
+                Tell me about yourself.
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q1')">
+
+                Show Sample Answer
+
+            </button>
+
+
+            <div id="q1" class="answer">
+
+                Good morning. My name is Varalakshmi.
+                I am currently pursuing my B.Sc in Data Science.
+                I have developed an interest in data analysis,
+                Python, SQL and Excel.
+
+                <br><br>
+
+                I have worked on academic projects where I learned
+                how to analyze data, build useful applications and
+                present information clearly.
+
+                <br><br>
+
+                I am a quick learner and I enjoy improving my
+                technical and communication skills. I am now looking
+                for an opportunity where I can apply my skills,
+                learn from experienced professionals and contribute
+                to the organization.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             STRENGTHS
+        ========================== -->
+
+        <h2 class="section-title">
+            💪 Strengths
+        </h2>
+
+
+        <div class="hr-card">
+
+            <div class="question-number">
+                QUESTION 02
+            </div>
+
+            <h3>
+                What are your strengths?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q2')">
+
+                Show Sample Answer
+
+            </button>
+
+
+            <div id="q2" class="answer">
+
+                One of my strengths is that I am a quick learner.
+                When I come across something new, I try to understand
+                it and practice it.
+
+                <br><br>
+
+                I am also responsible and willing to take feedback.
+                I believe these qualities help me improve continuously
+                and work effectively with a team.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             WEAKNESS
+        ========================== -->
+
+        <h2 class="section-title">
+            ⚠️ Weakness
+        </h2>
+
+
+        <div class="hr-card">
+
+            <div class="question-number">
+                QUESTION 03
+            </div>
+
+            <h3>
+                What is your weakness?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q3')">
+
+                Show Sample Answer
+
+            </button>
+
+
+            <div id="q3" class="answer">
+
+                Earlier, I sometimes spent too much time trying to
+                make my work perfect. I am improving this by
+                prioritizing tasks, setting time limits and focusing
+                on completing important work efficiently.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             WHY COMPANY
+        ========================== -->
+
+        <h2 class="section-title">
+            🏢 Company Questions
+        </h2>
+
+
+        <div class="hr-card">
+
+            <div class="question-number">
+                QUESTION 04
+            </div>
+
+            <h3>
+                Why do you want to join our company?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q4')">
+
+                Show Sample Answer
+
+            </button>
+
+
+            <div id="q4" class="answer">
+
+                I want to join your company because it provides
+                an opportunity to learn, work on real-world
+                problems and grow professionally.
+
+                <br><br>
+
+                I believe my interest in technology and data,
+                along with my willingness to learn, can help me
+                contribute to the organization.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             WHY HIRE
+        ========================== -->
+
+        <div class="hr-card">
+
+            <div class="question-number">
+                QUESTION 05
+            </div>
+
+            <h3>
+                Why should we hire you?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q5')">
+
+                Show Sample Answer
+
+            </button>
+
+
+            <div id="q5" class="answer">
+
+                I believe you should hire me because I have a strong
+                willingness to learn and improve. I have developed
+                technical skills in areas such as Python, SQL,
+                Excel and Data Analysis.
+
+                <br><br>
+
+                I am also adaptable, responsible and ready to learn
+                from the team. If given the opportunity, I will put
+                in consistent effort to contribute to the organization.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             PROJECT
+        ========================== -->
+
+        <h2 class="section-title">
+            🚀 Project Questions
+        </h2>
+
+
+        <div class="hr-card">
+
+            <div class="question-number">
+                QUESTION 06
+            </div>
+
+            <h3>
+                Tell me about your project.
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q6')">
+
+                Show Sample Answer
+
+            </button>
+
+
+            <div id="q6" class="answer">
+
+                My project is focused on helping students prepare
+                for placement interviews in a structured way.
+
+                <br><br>
+
+                The system guides a student from the placement
+                announcement to interview readiness. It includes
+                company and role selection, preparation roadmaps,
+                technical preparation, resume analysis, interview
+                practice and readiness evaluation.
+
+                <br><br>
+
+                My goal is to make placement preparation more
+                organized and reduce confusion and stress for
+                students.
+
+            </div>
+
+        </div>
+
+
+        <div class="hr-card">
+
+            <div class="question-number">
+                QUESTION 07
+            </div>
+
+            <h3>
+                What challenges did you face while developing your project?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q7')">
+
+                Show Sample Answer
+
+            </button>
+
+
+            <div id="q7" class="answer">
+
+                One of the challenges was connecting different
+                modules and making sure the navigation worked
+                correctly.
+
+                <br><br>
+
+                I solved these problems by testing each module
+                separately, checking Flask routes and templates,
+                and fixing errors step by step.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             CAREER
+        ========================== -->
+
+        <h2 class="section-title">
+            🎯 Career Questions
+        </h2>
+
+
+        <div class="hr-card">
+
+            <div class="question-number">
+                QUESTION 08
+            </div>
+
+            <h3>
+                Where do you see yourself in five years?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q8')">
+
+                Show Sample Answer
+
+            </button>
+
+
+            <div id="q8" class="answer">
+
+                In five years, I want to become a skilled professional
+                with strong technical and problem-solving abilities.
+
+                <br><br>
+
+                I want to take more responsibility, work on challenging
+                projects and contribute meaningfully to the organization
+                while continuously learning new technologies.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             RELOCATION
+        ========================== -->
+
+        <div class="hr-card">
+
+            <div class="question-number">
+                QUESTION 09
+            </div>
+
+            <h3>
+                Are you willing to relocate?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q9')">
+
+                Show Sample Answer
+
+            </button>
+
+
+            <div id="q9" class="answer">
+
+                Yes, I am open to relocation if the opportunity
+                requires it. I see it as a chance to experience
+                a new work environment and grow professionally.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             FAILURE
+        ========================== -->
+
+        <div class="hr-card">
+
+            <div class="question-number">
+                QUESTION 10
+            </div>
+
+            <h3>
+                Tell me about a failure or mistake and what you learned.
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q10')">
+
+                Show Sample Answer
+
+            </button>
+
+
+            <div id="q10" class="answer">
+
+                During a project, I faced situations where some
+                features did not work as expected.
+
+                <br><br>
+
+                Instead of giving up, I learned to break the problem
+                into smaller parts, test each part and identify the
+                actual cause. This taught me the importance of patience,
+                debugging and continuous learning.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             TEAMWORK
+        ========================== -->
+
+        <div class="hr-card">
+
+            <div class="question-number">
+                QUESTION 11
+            </div>
+
+            <h3>
+                Are you comfortable working in a team?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q11')">
+
+                Show Sample Answer
+
+            </button>
+
+
+            <div id="q11" class="answer">
+
+                Yes. I believe teamwork is important because
+                different people can bring different ideas and
+                perspectives.
+
+                <br><br>
+
+                I am comfortable sharing my ideas, listening to
+                others and taking responsibility for my part of
+                the work.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             PRESSURE
+        ========================== -->
+
+        <div class="hr-card">
+
+            <div class="question-number">
+                QUESTION 12
+            </div>
+
+            <h3>
+                How do you handle pressure?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q12')">
+
+                Show Sample Answer
+
+            </button>
+
+
+            <div id="q12" class="answer">
+
+                I try to stay calm and focus on the task instead
+                of worrying about the pressure.
+
+                <br><br>
+
+                I divide the work into smaller tasks, prioritize
+                the important ones and complete them step by step.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             QUESTIONS TO INTERVIEWER
+        ========================== -->
+
+        <h2 class="section-title">
+            ❓ Questions You Can Ask the Interviewer
+        </h2>
+
+
+        <div class="hr-card">
+
+            <h3>
+                Do you have any questions for us?
+            </h3>
+
+            <p>
+                Never simply say "No" if you have a genuine question.
+            </p>
+
+            <div class="answer">
+
+                <p>
+                    "Could you please tell me about the learning
+                    opportunities available for freshers in this role?"
+                </p>
+
+                <p>
+                    "What would success look like for someone in
+                    this role during the first few months?"
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             COMMUNICATION TIPS
+        ========================== -->
+
+        <section class="tip-card">
+
+            <h2>
+                🗣️ HR Communication Tips
+            </h2>
+
+            <p>
+                ✔ Maintain comfortable eye contact.
+            </p>
+
+            <p>
+                ✔ Sit straight and keep your body language relaxed.
+            </p>
+
+            <p>
+                ✔ Speak slowly and clearly.
+            </p>
+
+            <p>
+                ✔ Don't rush when answering.
+            </p>
+
+            <p>
+                ✔ If you don't know something, be honest.
+            </p>
+
+            <p>
+                ✔ Avoid memorizing answers word-for-word.
+            </p>
+
+            <p>
+                ✔ Keep your answers professional and positive.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             NEXT STEP
+        ========================== -->
+
+        <div style="text-align:center; margin-top:30px;">
+            <a href="/complete/hr" class="action-btn">
+                ✓ Mark HR Completed
+            </a>
+            <br><br>
+
+            <a href="/prepare"
+               class="action-btn">
+
+                ← Back to Interview Roadmap
+
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        function showAnswer(id) {
+
+            const answer =
+                document.getElementById(id);
+
+            if (answer.style.display === "block") {
+
+                answer.style.display = "none";
+
+            } else {
+
+                answer.style.display = "block";
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

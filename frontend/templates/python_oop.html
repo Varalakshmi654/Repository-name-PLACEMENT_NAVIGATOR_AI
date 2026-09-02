@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Python OOP | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        .topic-detail-card {
+            background: white;
+            border-radius: 18px;
+            padding: 28px;
+            margin-bottom: 22px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .code-box {
+            background: #111827;
+            color: #f9fafb;
+            padding: 18px;
+            border-radius: 12px;
+            margin-top: 18px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            margin: 0;
+            font-family: Consolas, monospace;
+            line-height: 1.6;
+        }
+
+        .interview-tip {
+            margin-top: 18px;
+            padding: 15px;
+            border-radius: 12px;
+            background: #f3f4f6;
+            line-height: 1.7;
+        }
+
+        .question-card {
+            background: white;
+            padding: 22px;
+            border-radius: 16px;
+            margin-bottom: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+        }
+
+        .question-card h3 {
+            margin-top: 0;
+        }
+
+        .answer-box {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            background: #f3f4f6;
+            line-height: 1.7;
+        }
+
+        .practice-box {
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+            margin-top: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .option-btn {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 13px 16px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: white;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .result-box {
+            display: none;
+            margin-top: 18px;
+            padding: 15px;
+            border-radius: 10px;
+            background: #f3f4f6;
+            font-weight: 600;
+        }
+
+        .complete-box {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            margin-top: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .completed-message {
+            display: none;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎯 Placement Navigator <span>AI</span>
+        </div>
+
+        <a href="/python" class="back-link">
+            ← Back to Python
+        </a>
+
+    </nav>
+
+
+    <main class="roadmap-container">
+
+
+        <!-- HEADER -->
+
+        <section class="page-header">
+
+            <div class="page-badge">
+                💻 Python OOP
+            </div>
+
+            <h1>
+                Object-Oriented Programming in Python
+            </h1>
+
+            <p>
+                Learn the core OOP concepts that are commonly
+                discussed in Python technical interviews.
+            </p>
+
+        </section>
+
+
+        <!-- OVERVIEW -->
+
+        <section class="readiness-card">
+
+            <div class="readiness-left">
+
+                <h2>
+                    🎯 What You Will Learn
+                </h2>
+
+                <p>
+                    Classes, objects, constructors, encapsulation,
+                    inheritance, polymorphism, abstraction and
+                    method overriding.
+                </p>
+
+            </div>
+
+            <div class="readiness-score">
+
+                <div class="score-number">
+                    0%
+                </div>
+
+                <div class="score-label">
+                    Completed
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CLASS & OBJECT -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                01 · OOP FOUNDATION
+            </div>
+
+            <h2>
+                🧱 Class & Object
+            </h2>
+
+            <p>
+                A class is a blueprint for creating objects.
+                An object is an instance of a class.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+class Student:
+
+    def display(self):
+        print("Data Science Student")
+
+
+student1 = Student()
+
+student1.display()
+</pre>
+
+            </div>
+
+            <div class="interview-tip">
+
+                💡 <strong>Interview Tip:</strong>
+
+                A simple way to remember it:
+
+                <br><br>
+
+                <strong>
+                    Class = Blueprint
+                </strong>
+
+                <br>
+
+                <strong>
+                    Object = Real instance created from that blueprint
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONSTRUCTOR -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                02 · INITIALIZATION
+            </div>
+
+            <h2>
+                🏗️ Constructor — __init__()
+            </h2>
+
+            <p>
+                The <strong>__init__()</strong> method is commonly
+                used to initialize an object's attributes when
+                an object is created.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+class Student:
+
+    def __init__(self, name, course):
+
+        self.name = name
+        self.course = course
+
+
+student1 = Student(
+    "Varalakshmi",
+    "Data Science"
+)
+
+print(student1.name)
+print(student1.course)
+</pre>
+
+            </div>
+
+            <div class="interview-tip">
+
+                💡 <strong>Interview Tip:</strong>
+
+                If asked about <strong>__init__()</strong>, explain
+                that it is used to initialize object attributes
+                when an object is created.
+
+            </div>
+
+        </section>
+
+
+        <!-- ENCAPSULATION -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                03 · OOP PRINCIPLE
+            </div>
+
+            <h2>
+                🔒 Encapsulation
+            </h2>
+
+            <p>
+                Encapsulation means keeping data and the methods
+                that operate on that data together inside a class
+                and controlling how the data is accessed.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+class Student:
+
+    def __init__(self):
+
+        self.__marks = 90
+
+    def get_marks(self):
+
+        return self.__marks
+
+
+student = Student()
+
+print(student.get_marks())
+</pre>
+
+            </div>
+
+            <div class="interview-tip">
+
+                💡 <strong>Interview Tip:</strong>
+
+                The double underscore is commonly used for
+                name-mangled attributes in Python.
+
+            </div>
+
+        </section>
+
+
+        <!-- INHERITANCE -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                04 · OOP PRINCIPLE
+            </div>
+
+            <h2>
+                🌳 Inheritance
+            </h2>
+
+            <p>
+                Inheritance allows a child class to reuse
+                attributes and methods of a parent class.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+class Person:
+
+    def speak(self):
+
+        print("I can speak")
+
+
+class Student(Person):
+
+    def study(self):
+
+        print("I can study")
+
+
+student = Student()
+
+student.speak()
+student.study()
+</pre>
+
+            </div>
+
+            <div class="interview-tip">
+
+                💡 <strong>Remember:</strong>
+
+                Parent class → Base class
+
+                <br>
+
+                Child class → Derived class
+
+            </div>
+
+        </section>
+
+
+        <!-- POLYMORPHISM -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                05 · OOP PRINCIPLE
+            </div>
+
+            <h2>
+                🔄 Polymorphism
+            </h2>
+
+            <p>
+                Polymorphism means the same interface or method
+                name can behave differently for different objects.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+class Dog:
+
+    def sound(self):
+
+        print("Bark")
+
+
+class Cat:
+
+    def sound(self):
+
+        print("Meow")
+
+
+for animal in [Dog(), Cat()]:
+
+    animal.sound()
+</pre>
+
+            </div>
+
+            <div class="interview-tip">
+
+                💡 <strong>Interview Tip:</strong>
+
+                Think:
+
+                <strong>
+                    One method → Different behavior
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABSTRACTION -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                06 · OOP PRINCIPLE
+            </div>
+
+            <h2>
+                🎭 Abstraction
+            </h2>
+
+            <p>
+                Abstraction focuses on showing the essential
+                functionality while hiding unnecessary implementation
+                details.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+from abc import ABC, abstractmethod
+
+
+class Vehicle(ABC):
+
+    @abstractmethod
+    def start(self):
+        pass
+
+
+class Car(Vehicle):
+
+    def start(self):
+
+        print("Car started")
+
+
+car = Car()
+
+car.start()
+</pre>
+
+            </div>
+
+            <div class="interview-tip">
+
+                💡 <strong>Interview Tip:</strong>
+
+                In Python, abstraction can be implemented using
+                the <strong>abc</strong> module and abstract methods.
+
+            </div>
+
+        </section>
+
+
+        <!-- METHOD OVERRIDING -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                07 · INHERITANCE
+            </div>
+
+            <h2>
+                🔁 Method Overriding
+            </h2>
+
+            <p>
+                Method overriding happens when a child class
+                provides its own implementation of a method
+                already defined in the parent class.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+class Parent:
+
+    def show(self):
+
+        print("Parent method")
+
+
+class Child(Parent):
+
+    def show(self):
+
+        print("Child method")
+
+
+obj = Child()
+
+obj.show()
+</pre>
+
+            </div>
+
+        </section>
+
+
+        <!-- OOP QUICK COMPARISON -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                🧠 QUICK REVISION
+            </div>
+
+            <h2>
+                Four Pillars of OOP
+            </h2>
+
+            <div class="topic-list">
+
+                <span class="topic">
+                    🔒 Encapsulation
+                </span>
+
+                <span class="topic">
+                    🌳 Inheritance
+                </span>
+
+                <span class="topic">
+                    🔄 Polymorphism
+                </span>
+
+                <span class="topic">
+                    🎭 Abstraction
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTERVIEW QUESTIONS -->
+
+        <section>
+
+            <div class="section-title">
+
+                <h2>
+                    🎤 OOP Interview Questions
+                </h2>
+
+                <p>
+                    Practice answering these questions clearly
+                    in interview English.
+                </p>
+
+            </div>
+
+
+            <!-- Q1 -->
+
+            <div class="question-card">
+
+                <h3>
+                    01. What is OOP?
+                </h3>
+
+                <button class="action-btn"
+                        onclick="toggleAnswer('answer1')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer1"
+                     class="answer-box">
+
+                    OOP stands for Object-Oriented Programming.
+                    It is a programming approach that organizes
+                    software around objects and classes.
+
+                </div>
+
+            </div>
+
+
+            <!-- Q2 -->
+
+            <div class="question-card">
+
+                <h3>
+                    02. What is the difference between a class and an object?
+                </h3>
+
+                <button class="action-btn"
+                        onclick="toggleAnswer('answer2')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer2"
+                     class="answer-box">
+
+                    A class is a blueprint used to create objects.
+                    An object is an instance of a class.
+
+                </div>
+
+            </div>
+
+
+            <!-- Q3 -->
+
+            <div class="question-card">
+
+                <h3>
+                    03. What is inheritance?
+                </h3>
+
+                <button class="action-btn"
+                        onclick="toggleAnswer('answer3')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer3"
+                     class="answer-box">
+
+                    Inheritance allows a child class to reuse
+                    attributes and methods from a parent class.
+
+                </div>
+
+            </div>
+
+
+            <!-- Q4 -->
+
+            <div class="question-card">
+
+                <h3>
+                    04. What is polymorphism?
+                </h3>
+
+                <button class="action-btn"
+                        onclick="toggleAnswer('answer4')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer4"
+                     class="answer-box">
+
+                    Polymorphism allows the same method or interface
+                    to behave differently depending on the object.
+
+                </div>
+
+            </div>
+
+
+            <!-- Q5 -->
+
+            <div class="question-card">
+
+                <h3>
+                    05. What are the four pillars of OOP?
+                </h3>
+
+                <button class="action-btn"
+                        onclick="toggleAnswer('answer5')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer5"
+                     class="answer-box">
+
+                    The four commonly discussed pillars are
+                    Encapsulation, Inheritance, Polymorphism
+                    and Abstraction.
+
+                </div>
+
+            </div>
+
+
+            <!-- Q6 -->
+
+            <div class="question-card">
+
+                <h3>
+                    06. What is the use of __init__()?
+                </h3>
+
+                <button class="action-btn"
+                        onclick="toggleAnswer('answer6')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer6"
+                     class="answer-box">
+
+                    The __init__() method is commonly used to
+                    initialize an object's attributes when the
+                    object is created.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRACTICE -->
+
+        <section class="practice-box">
+
+            <div class="section-title">
+
+                <h2>
+                    🧪 Quick Practice
+                </h2>
+
+                <p>
+                    Test your OOP knowledge.
+                </p>
+
+            </div>
+
+
+            <h3>
+                Which OOP concept allows a child class to
+                reuse features of a parent class?
+            </h3>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(false)">
+
+                A. Encapsulation
+
+            </button>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(true)">
+
+                B. Inheritance
+
+            </button>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(false)">
+
+                C. Abstraction
+
+            </button>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(false)">
+
+                D. Compilation
+
+            </button>
+
+
+            <div id="practiceResult"
+                 class="result-box">
+
+            </div>
+
+        </section>
+
+
+        <!-- COMPLETE -->
+
+        <section class="complete-box">
+
+            <h2>
+                🚀 Finished Python OOP?
+            </h2>
+
+            <p>
+                Mark this module as completed and continue
+                your technical interview preparation.
+            </p>
+
+
+            <button class="action-btn"
+                    onclick="markCompleted()">
+
+                ✓ Mark as Completed
+
+            </button>
+
+
+            <div id="completedMessage"
+                 class="completed-message">
+
+                🎉 Great job! Python OOP completed.
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script>
+
+        function toggleAnswer(id) {
+
+            const answer =
+                document.getElementById(id);
+
+            if (answer.style.display === "block") {
+
+                answer.style.display = "none";
+
+            } else {
+
+                answer.style.display = "block";
+
+            }
+
+        }
+
+
+        function checkAnswer(correct) {
+
+            const result =
+                document.getElementById("practiceResult");
+
+            result.style.display = "block";
+
+            if (correct) {
+
+                result.innerHTML =
+                    "✅ Correct! Inheritance allows a child class to reuse features of a parent class.";
+
+            } else {
+
+                result.innerHTML =
+                    "❌ Not quite. Think about the OOP concept used for parent-child relationships.";
+
+            }
+
+        }
+
+
+        function markCompleted() {
+
+            const message =
+                document.getElementById("completedMessage");
+
+            message.style.display = "block";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

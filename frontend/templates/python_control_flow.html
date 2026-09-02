@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Python Control Flow | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        .topic-detail-card {
+            background: white;
+            border-radius: 18px;
+            padding: 28px;
+            margin-bottom: 22px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .code-box {
+            background: #111827;
+            color: #f9fafb;
+            padding: 18px;
+            border-radius: 12px;
+            margin-top: 18px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            margin: 0;
+            font-family: Consolas, monospace;
+            line-height: 1.6;
+        }
+
+        .interview-tip {
+            margin-top: 18px;
+            padding: 15px;
+            border-radius: 12px;
+            background: #f3f4f6;
+            line-height: 1.7;
+        }
+
+        .question-card {
+            background: white;
+            padding: 22px;
+            border-radius: 16px;
+            margin-bottom: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+        }
+
+        .answer-box {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            background: #f3f4f6;
+            line-height: 1.7;
+        }
+
+        .practice-box {
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+            margin-top: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .option-btn {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 13px 16px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: white;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .result-box {
+            display: none;
+            margin-top: 18px;
+            padding: 15px;
+            border-radius: 10px;
+            background: #f3f4f6;
+            font-weight: 600;
+        }
+
+        .complete-box {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            margin-top: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .completed-message {
+            display: none;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎯 Placement Navigator <span>AI</span>
+        </div>
+
+        <a href="/python" class="back-link">
+            ← Back to Python
+        </a>
+
+    </nav>
+
+
+    <main class="roadmap-container">
+
+
+        <!-- HEADER -->
+
+        <section class="page-header">
+
+            <div class="page-badge">
+                🔀 Python Control Flow
+            </div>
+
+            <h1>
+                Conditions & Loops
+            </h1>
+
+            <p>
+                Learn how Python makes decisions and repeats
+                operations using conditions and loops.
+            </p>
+
+        </section>
+
+
+        <!-- OVERVIEW -->
+
+        <section class="readiness-card">
+
+            <div class="readiness-left">
+
+                <h2>
+                    🎯 What You Will Learn
+                </h2>
+
+                <p>
+                    if, elif, else, for loops, while loops,
+                    break and continue statements.
+                </p>
+
+            </div>
+
+            <div class="readiness-score">
+
+                <div class="score-number">
+                    0%
+                </div>
+
+                <div class="score-label">
+                    Completed
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- IF ELSE -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                01 · DECISION MAKING
+            </div>
+
+            <h2>
+                🔀 if / elif / else
+            </h2>
+
+            <p>
+                Conditional statements allow a program to make
+                decisions based on whether a condition is true
+                or false.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+marks = 85
+
+if marks >= 90:
+
+    print("Excellent")
+
+elif marks >= 60:
+
+    print("Good")
+
+else:
+
+    print("Needs Improvement")
+</pre>
+
+            </div>
+
+            <div class="interview-tip">
+
+                💡 <strong>Interview Tip:</strong>
+
+                Use <strong>if</strong> for the first condition,
+                <strong>elif</strong> for additional conditions,
+                and <strong>else</strong> when none of the previous
+                conditions are true.
+
+            </div>
+
+        </section>
+
+
+        <!-- FOR LOOP -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                02 · LOOPING
+            </div>
+
+            <h2>
+                🔁 for Loop
+            </h2>
+
+            <p>
+                A for loop is used to iterate over items in a
+                sequence such as a list, string or range.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+numbers = [10, 20, 30, 40]
+
+for number in numbers:
+
+    print(number)
+</pre>
+
+            </div>
+
+            <div class="interview-tip">
+
+                💡 <strong>Interview Tip:</strong>
+
+                Use a for loop when you want to iterate through
+                a known sequence or collection.
+
+            </div>
+
+        </section>
+
+
+        <!-- WHILE LOOP -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                03 · LOOPING
+            </div>
+
+            <h2>
+                🔄 while Loop
+            </h2>
+
+            <p>
+                A while loop repeatedly executes a block of code
+                as long as its condition remains true.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+count = 1
+
+while count <= 5:
+
+    print(count)
+
+    count += 1
+</pre>
+
+            </div>
+
+            <div class="interview-tip">
+
+                💡 <strong>Interview Tip:</strong>
+
+                A while loop is useful when the number of iterations
+                depends on a condition.
+
+            </div>
+
+        </section>
+
+
+        <!-- BREAK -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                04 · LOOP CONTROL
+            </div>
+
+            <h2>
+                🛑 break
+            </h2>
+
+            <p>
+                The break statement immediately stops the loop.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+for number in range(1, 10):
+
+    if number == 5:
+
+        break
+
+    print(number)
+</pre>
+
+            </div>
+
+            <div class="interview-tip">
+
+                💡 <strong>Remember:</strong>
+
+                <strong>break → completely exits the loop.</strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTINUE -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                05 · LOOP CONTROL
+            </div>
+
+            <h2>
+                ⏭️ continue
+            </h2>
+
+            <p>
+                The continue statement skips the current iteration
+                and moves to the next iteration.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+for number in range(1, 6):
+
+    if number == 3:
+
+        continue
+
+    print(number)
+</pre>
+
+            </div>
+
+            <div class="interview-tip">
+
+                💡 <strong>Remember:</strong>
+
+                <strong>
+                    continue → skips the current iteration.
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- RANGE -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                06 · USEFUL FUNCTION
+            </div>
+
+            <h2>
+                🔢 range()
+            </h2>
+
+            <p>
+                The range() function generates a sequence of numbers
+                and is commonly used with loops.
+            </p>
+
+            <div class="code-box">
+
+<pre>
+for i in range(1, 6):
+
+    print(i)
+</pre>
+
+            </div>
+
+            <div class="interview-tip">
+
+                💡 <strong>Interview Tip:</strong>
+
+                Remember that the stop value in
+                <strong>range(start, stop)</strong>
+                is not included.
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK COMPARISON -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                🧠 QUICK REVISION
+            </div>
+
+            <h2>
+                Control Flow Cheat Sheet
+            </h2>
+
+            <div class="topic-list">
+
+                <span class="topic">
+                    if → condition
+                </span>
+
+                <span class="topic">
+                    elif → another condition
+                </span>
+
+                <span class="topic">
+                    else → fallback
+                </span>
+
+                <span class="topic">
+                    for → sequence iteration
+                </span>
+
+                <span class="topic">
+                    while → condition-based loop
+                </span>
+
+                <span class="topic">
+                    break → stop loop
+                </span>
+
+                <span class="topic">
+                    continue → skip iteration
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTERVIEW QUESTIONS -->
+
+        <section>
+
+            <div class="section-title">
+
+                <h2>
+                    🎤 Control Flow Interview Questions
+                </h2>
+
+                <p>
+                    Practice explaining these concepts clearly
+                    in interview English.
+                </p>
+
+            </div>
+
+
+            <!-- Q1 -->
+
+            <div class="question-card">
+
+                <h3>
+                    01. What is the difference between if and elif?
+                </h3>
+
+                <button class="action-btn"
+                        onclick="toggleAnswer('answer1')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer1"
+                     class="answer-box">
+
+                    The if statement checks the first condition.
+                    The elif statement allows us to check additional
+                    conditions when the previous condition is false.
+
+                </div>
+
+            </div>
+
+
+            <!-- Q2 -->
+
+            <div class="question-card">
+
+                <h3>
+                    02. What is the difference between for and while loops?
+                </h3>
+
+                <button class="action-btn"
+                        onclick="toggleAnswer('answer2')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer2"
+                     class="answer-box">
+
+                    A for loop is commonly used to iterate over a
+                    sequence, while a while loop continues executing
+                    as long as its condition is true.
+
+                </div>
+
+            </div>
+
+
+            <!-- Q3 -->
+
+            <div class="question-card">
+
+                <h3>
+                    03. What is the difference between break and continue?
+                </h3>
+
+                <button class="action-btn"
+                        onclick="toggleAnswer('answer3')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer3"
+                     class="answer-box">
+
+                    Break completely terminates the loop.
+                    Continue skips the current iteration and moves
+                    to the next iteration.
+
+                </div>
+
+            </div>
+
+
+            <!-- Q4 -->
+
+            <div class="question-card">
+
+                <h3>
+                    04. What is range() used for?
+                </h3>
+
+                <button class="action-btn"
+                        onclick="toggleAnswer('answer4')">
+
+                    Show Answer
+
+                </button>
+
+                <div id="answer4"
+                     class="answer-box">
+
+                    The range() function generates a sequence of
+                    numbers and is frequently used with for loops.
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- PRACTICE -->
+
+        <section class="practice-box">
+
+            <div class="section-title">
+
+                <h2>
+                    🧪 Quick Practice
+                </h2>
+
+                <p>
+                    Test your understanding.
+                </p>
+
+            </div>
+
+
+            <h3>
+                Which statement skips the current iteration
+                and continues with the next iteration?
+            </h3>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(false)">
+
+                A. break
+
+            </button>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(true)">
+
+                B. continue
+
+            </button>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(false)">
+
+                C. stop
+
+            </button>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(false)">
+
+                D. exit
+
+            </button>
+
+
+            <div id="practiceResult"
+                 class="result-box">
+
+            </div>
+
+        </section>
+
+
+        <!-- COMPLETE -->
+
+        <section class="complete-box">
+
+            <h2>
+                🚀 Finished Control Flow?
+            </h2>
+
+            <p>
+                Mark this module as completed and continue
+                your Python interview preparation.
+            </p>
+
+
+            <button class="action-btn"
+                    onclick="markCompleted()">
+
+                ✓ Mark as Completed
+
+            </button>
+
+
+            <div id="completedMessage"
+                 class="completed-message">
+
+                🎉 Great job! Control Flow completed.
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script>
+
+        function toggleAnswer(id) {
+
+            const answer =
+                document.getElementById(id);
+
+            if (answer.style.display === "block") {
+
+                answer.style.display = "none";
+
+            } else {
+
+                answer.style.display = "block";
+
+            }
+
+        }
+
+
+        function checkAnswer(correct) {
+
+            const result =
+                document.getElementById("practiceResult");
+
+            result.style.display = "block";
+
+            if (correct) {
+
+                result.innerHTML =
+                    "✅ Correct! continue skips the current iteration and moves to the next one.";
+
+            } else {
+
+                result.innerHTML =
+                    "❌ Not quite. Remember: break stops the loop, while continue skips one iteration.";
+
+            }
+
+        }
+
+
+        function markCompleted() {
+
+            const message =
+                document.getElementById("completedMessage");
+
+            message.style.display = "block";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

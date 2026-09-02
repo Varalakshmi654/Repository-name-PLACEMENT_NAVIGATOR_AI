@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Python Functions | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        .topic-detail-card {
+            background: white;
+            border-radius: 18px;
+            padding: 28px;
+            margin-bottom: 22px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .code-box {
+            background: #111827;
+            color: #f9fafb;
+            padding: 18px;
+            border-radius: 12px;
+            margin-top: 18px;
+            overflow-x: auto;
+        }
+
+        .code-box pre {
+            margin: 0;
+            font-family: Consolas, monospace;
+            line-height: 1.6;
+        }
+
+        .interview-tip {
+            margin-top: 18px;
+            padding: 15px;
+            border-radius: 12px;
+            background: #f3f4f6;
+            line-height: 1.6;
+        }
+
+        .question-card {
+            background: white;
+            padding: 22px;
+            border-radius: 16px;
+            margin-bottom: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+        }
+
+        .question-card h3 {
+            margin-top: 0;
+        }
+
+        .answer-box {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            background: #f3f4f6;
+            line-height: 1.7;
+        }
+
+        .practice-box {
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+            margin-top: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .option-btn {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 13px 16px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: white;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .result-box {
+            display: none;
+            margin-top: 18px;
+            padding: 15px;
+            border-radius: 10px;
+            background: #f3f4f6;
+            font-weight: 600;
+        }
+
+        .complete-box {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            margin-top: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .completed-message {
+            display: none;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎯 Placement Navigator <span>AI</span>
+        </div>
+
+        <a href="/python" class="back-link">
+            ← Back to Python
+        </a>
+
+    </nav>
+
+
+    <main class="roadmap-container">
+
+
+        <!-- HEADER -->
+
+        <section class="page-header">
+
+            <div class="page-badge">
+                ⚙️ Python Functions & Modules
+            </div>
+
+            <h1>
+                Master Functions in Python
+            </h1>
+
+            <p>
+                Learn how to write reusable Python code and
+                prepare for common functions-related interview questions.
+            </p>
+
+        </section>
+
+
+        <!-- OVERVIEW -->
+
+        <section class="readiness-card">
+
+            <div class="readiness-left">
+
+                <h2>
+                    🎯 What You Will Learn
+                </h2>
+
+                <p>
+                    Functions, parameters, arguments, return values,
+                    default arguments, *args, **kwargs, lambda
+                    functions and modules.
+                </p>
+
+            </div>
+
+            <div class="readiness-score">
+
+                <div class="score-number">
+                    0%
+                </div>
+
+                <div class="score-label">
+                    Completed
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             01 FUNCTIONS
+        ========================================== -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                01 · FOUNDATION
+            </div>
+
+            <h2>
+                ⚙️ What is a Function?
+            </h2>
+
+            <p>
+                A function is a reusable block of code that performs
+                a specific task. Functions help us avoid repeating
+                the same code multiple times.
+            </p>
+
+
+            <div class="code-box">
+
+<pre>
+def greet():
+    print("Hello, Varalakshmi!")
+
+greet()
+</pre>
+
+            </div>
+
+
+            <div class="interview-tip">
+
+                💡 <strong>Interview Tip:</strong>
+
+                In an interview, you can say:
+
+                <br><br>
+
+                <strong>
+                    "A function is a reusable block of code designed
+                    to perform a specific task."
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             02 PARAMETERS
+        ========================================== -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                02 · PARAMETERS
+            </div>
+
+            <h2>
+                📥 Parameters & Arguments
+            </h2>
+
+            <p>
+                Parameters are variables defined in a function.
+                Arguments are the actual values passed to the function
+                when it is called.
+            </p>
+
+
+            <div class="code-box">
+
+<pre>
+def greet(name):
+    print("Hello", name)
+
+greet("Varalakshmi")
+</pre>
+
+            </div>
+
+
+            <div class="interview-tip">
+
+                💡 <strong>Remember:</strong>
+
+                Parameter → variable in function definition.
+
+                <br>
+
+                Argument → actual value passed during function call.
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             03 RETURN
+        ========================================== -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                03 · OUTPUT
+            </div>
+
+            <h2>
+                🔄 Return Statement
+            </h2>
+
+            <p>
+                The return statement sends a value back from
+                a function to the place where the function was called.
+            </p>
+
+
+            <div class="code-box">
+
+<pre>
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+
+print(result)
+</pre>
+
+            </div>
+
+
+            <div class="interview-tip">
+
+                💡 <strong>Interview Tip:</strong>
+
+                A function can use <strong>return</strong> when
+                we want to send the calculated result back to
+                the caller.
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             04 DEFAULT ARGUMENTS
+        ========================================== -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                04 · FUNCTION ARGUMENTS
+            </div>
+
+            <h2>
+                🎯 Default Arguments
+            </h2>
+
+            <p>
+                A default argument allows a function parameter
+                to have a predefined value when no value is supplied.
+            </p>
+
+
+            <div class="code-box">
+
+<pre>
+def greet(name="Student"):
+    print("Hello", name)
+
+greet()
+
+greet("Varalakshmi")
+</pre>
+
+            </div>
+
+
+            <div class="interview-tip">
+
+                💡 <strong>Interview Tip:</strong>
+
+                Default arguments make functions flexible because
+                the caller does not always have to provide a value.
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             05 ARGS KWARGS
+        ========================================== -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                05 · ADVANCED ARGUMENTS
+            </div>
+
+            <h2>
+                📚 *args & **kwargs
+            </h2>
+
+            <p>
+                <strong>*args</strong> allows a function to receive
+                multiple positional arguments, while
+                <strong>**kwargs</strong> allows multiple keyword
+                arguments.
+            </p>
+
+
+            <div class="code-box">
+
+<pre>
+def total(*numbers):
+
+    return sum(numbers)
+
+print(total(10, 20, 30))
+</pre>
+
+            </div>
+
+
+            <div class="code-box">
+
+<pre>
+def student(**details):
+
+    print(details)
+
+student(
+    name="Varalakshmi",
+    course="Data Science"
+)
+</pre>
+
+            </div>
+
+
+            <div class="interview-tip">
+
+                💡 <strong>Interview Tip:</strong>
+
+                Remember:
+
+                <br><br>
+
+                <strong>*args → multiple positional arguments</strong>
+
+                <br>
+
+                <strong>**kwargs → multiple keyword arguments</strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             06 LAMBDA
+        ========================================== -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                06 · SHORT FUNCTIONS
+            </div>
+
+            <h2>
+                ⚡ Lambda Functions
+            </h2>
+
+            <p>
+                A lambda function is a small anonymous function
+                written using the <strong>lambda</strong> keyword.
+            </p>
+
+
+            <div class="code-box">
+
+<pre>
+square = lambda x: x * x
+
+print(square(5))
+</pre>
+
+            </div>
+
+
+            <div class="interview-tip">
+
+                💡 <strong>Interview Tip:</strong>
+
+                Lambda functions are useful when a small function
+                is needed for a short operation.
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             07 MODULES
+        ========================================== -->
+
+        <section class="topic-detail-card">
+
+            <div class="round-label">
+                07 · CODE ORGANIZATION
+            </div>
+
+            <h2>
+                📦 Modules
+            </h2>
+
+            <p>
+                A module is a Python file containing functions,
+                variables or classes that can be reused in another
+                Python program.
+            </p>
+
+
+            <div class="code-box">
+
+<pre>
+import math
+
+result = math.sqrt(25)
+
+print(result)
+</pre>
+
+            </div>
+
+
+            <div class="interview-tip">
+
+                💡 <strong>Interview Tip:</strong>
+
+                Modules help organize code and allow us to
+                reuse functionality across different programs.
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             INTERVIEW QUESTIONS
+        ========================================== -->
+
+        <section>
+
+            <div class="section-title">
+
+                <h2>
+                    🎤 Functions Interview Questions
+                </h2>
+
+                <p>
+                    Practice explaining these answers in simple
+                    professional English.
+                </p>
+
+            </div>
+
+
+            <!-- QUESTION 1 -->
+
+            <div class="question-card">
+
+                <h3>
+                    01. What is a function in Python?
+                </h3>
+
+                <button class="action-btn"
+                        onclick="toggleAnswer('answer1')">
+
+                    Show Answer
+
+                </button>
+
+
+                <div id="answer1"
+                     class="answer-box">
+
+                    A function is a reusable block of code that
+                    performs a specific task. It improves code
+                    reusability and reduces repetition.
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 2 -->
+
+            <div class="question-card">
+
+                <h3>
+                    02. What is the difference between parameters and arguments?
+                </h3>
+
+                <button class="action-btn"
+                        onclick="toggleAnswer('answer2')">
+
+                    Show Answer
+
+                </button>
+
+
+                <div id="answer2"
+                     class="answer-box">
+
+                    A parameter is a variable defined in the function
+                    definition, while an argument is the actual value
+                    passed to the function during the function call.
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 3 -->
+
+            <div class="question-card">
+
+                <h3>
+                    03. What is the use of the return statement?
+                </h3>
+
+                <button class="action-btn"
+                        onclick="toggleAnswer('answer3')">
+
+                    Show Answer
+
+                </button>
+
+
+                <div id="answer3"
+                     class="answer-box">
+
+                    The return statement sends a value from the
+                    function back to the caller.
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 4 -->
+
+            <div class="question-card">
+
+                <h3>
+                    04. What are *args and **kwargs?
+                </h3>
+
+                <button class="action-btn"
+                        onclick="toggleAnswer('answer4')">
+
+                    Show Answer
+
+                </button>
+
+
+                <div id="answer4"
+                     class="answer-box">
+
+                    *args allows a function to accept multiple
+                    positional arguments.
+
+                    <br><br>
+
+                    **kwargs allows a function to accept multiple
+                    keyword arguments.
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 5 -->
+
+            <div class="question-card">
+
+                <h3>
+                    05. What is a lambda function?
+                </h3>
+
+                <button class="action-btn"
+                        onclick="toggleAnswer('answer5')">
+
+                    Show Answer
+
+                </button>
+
+
+                <div id="answer5"
+                     class="answer-box">
+
+                    A lambda function is a small anonymous function
+                    written using the lambda keyword.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             PRACTICE
+        ========================================== -->
+
+        <section class="practice-box">
+
+            <div class="section-title">
+
+                <h2>
+                    🧪 Quick Practice
+                </h2>
+
+                <p>
+                    Test your understanding.
+                </p>
+
+            </div>
+
+
+            <h3>
+                Which keyword is used to define a function in Python?
+            </h3>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(this, false)">
+
+                A. function
+
+            </button>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(this, true)">
+
+                B. def
+
+            </button>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(this, false)">
+
+                C. fun
+
+            </button>
+
+
+            <button class="option-btn"
+                    onclick="checkAnswer(this, false)">
+
+                D. define
+
+            </button>
+
+
+            <div id="practiceResult"
+                 class="result-box">
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             COMPLETE
+        ========================================== -->
+
+        <section class="complete-box">
+
+            <h2>
+                🚀 Finished Functions & Modules?
+            </h2>
+
+            <p>
+                Mark this topic as completed and continue
+                your Python interview preparation.
+            </p>
+
+
+            <button class="action-btn"
+                    onclick="markCompleted()">
+
+                ✓ Mark as Completed
+
+            </button>
+
+
+            <div id="completedMessage"
+                 class="completed-message">
+
+                🎉 Great job! Functions & Modules completed.
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function toggleAnswer(id) {
+
+            const answer =
+                document.getElementById(id);
+
+            if (answer.style.display === "block") {
+
+                answer.style.display = "none";
+
+            } else {
+
+                answer.style.display = "block";
+
+            }
+
+        }
+
+
+        function checkAnswer(button, correct) {
+
+            const result =
+                document.getElementById("practiceResult");
+
+            result.style.display = "block";
+
+            if (correct) {
+
+                result.innerHTML =
+                    "✅ Correct! The 'def' keyword is used to define a function.";
+
+            } else {
+
+                result.innerHTML =
+                    "❌ Not correct. Try again! Look for the Python keyword used to define functions.";
+
+            }
+
+        }
+
+
+        function markCompleted() {
+
+            const message =
+                document.getElementById("completedMessage");
+
+            message.style.display = "block";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

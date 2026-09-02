@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Aptitude Preparation | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎯 Placement Navigator <span>AI</span>
+        </div>
+
+        <a href="/prepare" class="back-link">
+            ← Back
+        </a>
+
+    </nav>
+
+
+    <!-- MAIN -->
+
+    <main class="aptitude-page">
+
+
+        <!-- HEADER -->
+
+        <section class="aptitude-header">
+
+            <div class="roadmap-badge">
+                📝 First Round Preparation
+            </div>
+
+            <h1>
+                Aptitude & Reasoning
+            </h1>
+
+            <p>
+                Build speed, accuracy and confidence
+                before your placement assessment.
+            </p>
+
+        </section>
+
+
+        <!-- STATS -->
+
+        <section class="aptitude-stats">
+
+            <div class="stat-card">
+
+                <span>🎯</span>
+
+                <small>
+                    Questions
+                </small>
+
+                <strong id="questionCount">
+                    10
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>⏱️</span>
+
+                <small>
+                    Time
+                </small>
+
+                <strong id="timer">
+                    05:00
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>🏆</span>
+
+                <small>
+                    Score
+                </small>
+
+                <strong id="score">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>📈</span>
+
+                <small>
+                    Accuracy
+                </small>
+
+                <strong id="accuracy">
+                    0%
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- TOPICS -->
+
+        <section class="topic-section">
+
+            <div class="section-heading">
+
+                <h2>
+                    Choose a Topic
+                </h2>
+
+                <p>
+                    Select an area you want to practice.
+                </p>
+
+            </div>
+
+
+            <div class="topic-grid">
+
+                <button class="topic-btn"
+                        onclick="selectTopic('Number Series')">
+
+                    🔢
+
+                    <strong>
+                        Number Series
+                    </strong>
+
+                    <small>
+                        Patterns & sequences
+                    </small>
+
+                </button>
+
+
+                <button class="topic-btn"
+                        onclick="selectTopic('Percentages')">
+
+                    📊
+
+                    <strong>
+                        Percentages
+                    </strong>
+
+                    <small>
+                        Profit, loss & percentages
+                    </small>
+
+                </button>
+
+
+                <button class="topic-btn"
+                        onclick="selectTopic('Logical Reasoning')">
+
+                    🧠
+
+                    <strong>
+                        Logical Reasoning
+                    </strong>
+
+                    <small>
+                        Logic & problem solving
+                    </small>
+
+                </button>
+
+
+                <button class="topic-btn"
+                        onclick="selectTopic('Data Interpretation')">
+
+                    📈
+
+                    <strong>
+                        Data Interpretation
+                    </strong>
+
+                    <small>
+                        Tables & charts
+                    </small>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRACTICE AREA -->
+
+        <section class="practice-card">
+
+            <div class="practice-top">
+
+                <span class="practice-label">
+                    ⚡ QUICK PRACTICE
+                </span>
+
+                <span id="selectedTopic">
+                    Select a topic
+                </span>
+
+            </div>
+
+
+            <div id="questionArea">
+
+                <h2>
+                    Ready to test yourself?
+                </h2>
+
+                <p>
+                    Choose a topic above to start your
+                    aptitude practice.
+                </p>
+
+                <button class="primary-btn"
+                        onclick="startQuiz()">
+
+                    Start Practice →
+
+                </button>
+
+            </div>
+
+
+            <!-- QUESTION -->
+
+            <div id="quizArea"
+                 style="display:none;">
+
+                <div class="question-number"
+                     id="questionNumber">
+
+                    Question 1 of 10
+
+                </div>
+
+
+                <h2 id="questionText">
+                    Question will appear here
+                </h2>
+
+
+                <div id="options"
+                     class="options-container">
+                </div>
+
+
+                <button class="primary-btn"
+                        onclick="nextQuestion()">
+
+                    Next Question →
+
+                </button>
+
+            </div>
+
+
+            <!-- RESULT -->
+
+            <div id="resultArea"
+                 style="display:none;">
+
+                <div class="result-icon">
+                    🎉
+                </div>
+
+                <h2>
+                    Practice Complete!
+                </h2>
+
+                <p id="resultText">
+                </p>
+
+                <button class="primary-btn"
+                        onclick="location.reload()">
+
+                    Practice Again →
+
+                </button>
+                <br><br>
+                <a href="/complete/aptitude"
+                class="action-btn">
+                ✓ Mark Aptitude Completed
+            </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- PREPARATION TIPS -->
+
+        <section class="tips-section">
+
+            <h2>
+                💡 Aptitude Tips
+            </h2>
+
+
+            <div class="tips-grid">
+
+                <div class="tip-card">
+
+                    <strong>
+                        ⚡ Speed
+                    </strong>
+
+                    <p>
+                        Don't spend too much time on one question.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <strong>
+                        🎯 Accuracy
+                    </strong>
+
+                    <p>
+                        Avoid guessing when negative marking exists.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <strong>
+                        🧠 Shortcuts
+                    </strong>
+
+                    <p>
+                        Learn percentage, ratio and calculation shortcuts.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <strong>
+                        🔁 Practice
+                    </strong>
+
+                    <p>
+                        Practice regularly to improve your speed.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        let selectedTopic = "";
+        let currentQuestion = 0;
+        let score = 0;
+        let answered = false;
+
+        const questions = [
+
+            {
+                question: "What comes next? 2, 4, 8, 16, ?",
+                options: ["20", "24", "32", "36"],
+                answer: 2
+            },
+
+            {
+                question: "What is 20% of 250?",
+                options: ["40", "50", "60", "75"],
+                answer: 1
+            },
+
+            {
+                question: "If A is taller than B and B is taller than C, who is shortest?",
+                options: ["A", "B", "C", "Cannot say"],
+                answer: 2
+            },
+
+            {
+                question: "What comes next? 5, 10, 15, 20, ?",
+                options: ["22", "25", "30", "35"],
+                answer: 1
+            },
+
+            {
+                question: "A product costs ₹500. What is 10% of its price?",
+                options: ["₹25", "₹40", "₹50", "₹60"],
+                answer: 2
+            },
+
+            {
+                question: "Which number is divisible by 5?",
+                options: ["23", "37", "45", "62"],
+                answer: 2
+            },
+
+            {
+                question: "What is 15 + 25 × 2?",
+                options: ["80", "65", "55", "40"],
+                answer: 1
+            },
+
+            {
+                question: "Find the missing number: 3, 6, 9, 12, ?",
+                options: ["13", "14", "15", "18"],
+                answer: 2
+            },
+
+            {
+                question: "If today is Monday, what day will it be after 3 days?",
+                options: ["Tuesday", "Wednesday", "Thursday", "Friday"],
+                answer: 2
+            },
+
+            {
+                question: "Which is the largest?",
+                options: ["0.25", "0.5", "0.75", "0.65"],
+                answer: 2
+            }
+
+        ];
+
+
+        function selectTopic(topic) {
+
+            selectedTopic = topic;
+
+            document.getElementById("selectedTopic").innerText = topic;
+
+        }
+
+
+        function startQuiz() {
+
+            if (selectedTopic === "") {
+
+                alert("Please select a topic first.");
+
+                return;
+
+            }
+
+            currentQuestion = 0;
+
+            score = 0;
+
+            answered = false;
+
+            document.getElementById("questionArea").style.display = "none";
+
+            document.getElementById("quizArea").style.display = "block";
+
+            document.getElementById("resultArea").style.display = "none";
+
+            showQuestion();
+
+        }
+
+
+        function showQuestion() {
+
+            const q = questions[currentQuestion];
+
+            document.getElementById("questionNumber").innerText =
+                "Question " + (currentQuestion + 1) + " of " + questions.length;
+
+            document.getElementById("questionText").innerText =
+                q.question;
+
+            const optionsContainer =
+                document.getElementById("options");
+
+            optionsContainer.innerHTML = "";
+
+            answered = false;
+
+
+            q.options.forEach((option, index) => {
+
+                const button =
+                    document.createElement("button");
+
+                button.className = "option-btn";
+
+                button.innerText = option;
+
+                button.onclick = function () {
+
+                    checkAnswer(index, button);
+
+                };
+
+                optionsContainer.appendChild(button);
+
+            });
+
+        }
+
+
+        function checkAnswer(index, button) {
+
+            if (answered) {
+                return;
+            }
+
+            answered = true;
+
+            const correctAnswer =
+                questions[currentQuestion].answer;
+
+            if (index === correctAnswer) {
+
+                button.classList.add("correct");
+
+                score++;
+
+            } else {
+
+                button.classList.add("wrong");
+
+            }
+
+            document.getElementById("score").innerText =
+                score;
+
+            const accuracy =
+                Math.round(
+                    (score / (currentQuestion + 1)) * 100
+                );
+
+            document.getElementById("accuracy").innerText =
+                accuracy + "%";
+
+        }
+
+
+        function nextQuestion() {
+
+            if (!answered) {
+
+                alert("Please select an answer.");
+
+                return;
+
+            }
+
+            currentQuestion++;
+
+            if (currentQuestion >= questions.length) {
+
+                finishQuiz();
+
+            } else {
+
+                showQuestion();
+
+            }
+
+        }
+
+
+        function finishQuiz() {
+
+            document.getElementById("quizArea").style.display =
+                "none";
+
+            document.getElementById("resultArea").style.display =
+                "block";
+
+            document.getElementById("resultText").innerText =
+                "You scored " + score +
+                " out of " + questions.length +
+                ". Keep practicing to improve your readiness!";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

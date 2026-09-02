@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Technical Interview Practice | Placement Navigator AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+
+        .interview-card {
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+            margin-bottom: 22px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .question-number {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .interview-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .answer-btn {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 16px;
+            padding: 18px;
+            border-radius: 12px;
+            background: #f5f7fb;
+            line-height: 1.7;
+        }
+
+        .category-title {
+            margin: 35px 0 18px;
+        }
+
+        .tip-card {
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+            margin-top: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        pre {
+            background: #111827;
+            color: white;
+            padding: 18px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🎯 Placement Navigator <span>AI</span>
+        </div>
+
+        <a href="/technical" class="back-link">
+            ← Back to Technical
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="roadmap-container">
+
+
+        <!-- HEADER -->
+
+        <section class="page-header">
+
+            <div class="page-badge">
+                🎯 Technical Interview Practice
+            </div>
+
+            <h1>
+                Prepare for Your Technical Round
+            </h1>
+
+            <p>
+                Practice Python, SQL, Excel, Statistics and
+                Data Analysis questions and learn how to explain
+                your answers confidently.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             STRATEGY
+        ========================== -->
+
+        <section class="readiness-card">
+
+            <div class="readiness-left">
+
+                <h2>
+                    🚀 Interview Answer Strategy
+                </h2>
+
+                <p>
+                    First explain the concept → give a simple
+                    example → mention where you would use it →
+                    connect it with your project if possible.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PYTHON
+        ========================== -->
+
+        <h2 class="category-title">
+            🐍 Python Questions
+        </h2>
+
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 01
+            </div>
+
+            <h3>
+                What is Python and why is it useful for Data Analysis?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q1')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q1" class="answer">
+
+                Python is a high-level programming language that
+                is widely used for Data Analysis because libraries
+                such as Pandas and NumPy make data manipulation
+                and numerical analysis easier.
+
+            </div>
+
+        </div>
+
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 02
+            </div>
+
+            <h3>
+                What is the difference between a list and a tuple?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q2')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q2" class="answer">
+
+                A list is mutable, meaning its elements can be
+                changed after creation. A tuple is immutable,
+                meaning its elements cannot normally be changed
+                after creation.
+
+            </div>
+
+        </div>
+
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 03
+            </div>
+
+            <h3>
+                What is Object-Oriented Programming?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q3')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q3" class="answer">
+
+                Object-Oriented Programming is a programming
+                approach based on objects and classes. Important
+                concepts include encapsulation, inheritance,
+                polymorphism and abstraction.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             SQL
+        ========================== -->
+
+        <h2 class="category-title">
+            🗄️ SQL Questions
+        </h2>
+
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 04
+            </div>
+
+            <h3>
+                What is SQL?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q4')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q4" class="answer">
+
+                SQL stands for Structured Query Language.
+                It is used to communicate with relational
+                databases and perform operations such as
+                retrieving, inserting, updating and deleting data.
+
+            </div>
+
+        </div>
+
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 05
+            </div>
+
+            <h3>
+                What is the difference between WHERE and HAVING?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q5')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q5" class="answer">
+
+                WHERE filters individual rows before grouping,
+                while HAVING filters groups after GROUP BY has
+                been applied.
+
+            </div>
+
+        </div>
+
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 06
+            </div>
+
+            <h3>
+                What is the difference between INNER JOIN and LEFT JOIN?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q6')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q6" class="answer">
+
+                INNER JOIN returns rows where matching records
+                exist in both tables. LEFT JOIN returns all rows
+                from the left table and matching rows from the
+                right table.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             EXCEL
+        ========================== -->
+
+        <h2 class="category-title">
+            📊 Excel Questions
+        </h2>
+
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 07
+            </div>
+
+            <h3>
+                What is VLOOKUP?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q7')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q7" class="answer">
+
+                VLOOKUP searches for a value in the first column
+                of a selected table and returns a corresponding
+                value from another column in that table.
+
+            </div>
+
+        </div>
+
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 08
+            </div>
+
+            <h3>
+                What is a Pivot Table?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q8')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q8" class="answer">
+
+                A Pivot Table is an Excel feature used to summarize,
+                group and analyze large amounts of data quickly.
+
+            </div>
+
+        </div>
+
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 09
+            </div>
+
+            <h3>
+                How can Excel be used for data cleaning?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q9')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q9" class="answer">
+
+                Excel can be used to remove duplicates, handle
+                blanks, standardize values, use Find & Replace,
+                split data using Text to Columns and correct
+                formatting issues.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             STATISTICS
+        ========================== -->
+
+        <h2 class="category-title">
+            📈 Statistics Questions
+        </h2>
+
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 10
+            </div>
+
+            <h3>
+                What is the difference between mean and median?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q10')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q10" class="answer">
+
+                Mean is the average of all values, while median
+                is the middle value after arranging the data.
+                Median is generally less affected by extreme
+                values.
+
+            </div>
+
+        </div>
+
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 11
+            </div>
+
+            <h3>
+                What is standard deviation?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q11')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q11" class="answer">
+
+                Standard deviation measures how much values in
+                a dataset typically vary around the mean.
+
+            </div>
+
+        </div>
+
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 12
+            </div>
+
+            <h3>
+                What is correlation?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q12')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q12" class="answer">
+
+                Correlation measures the strength and direction
+                of the relationship between two variables.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             DATA ANALYSIS
+        ========================== -->
+
+        <h2 class="category-title">
+            🔎 Data Analysis Questions
+        </h2>
+
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 13
+            </div>
+
+            <h3>
+                What is the Data Analysis process?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q13')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q13" class="answer">
+
+                A typical Data Analysis process includes
+                understanding the problem, collecting data,
+                cleaning data, exploring the data, analyzing it,
+                visualizing results and communicating insights.
+
+            </div>
+
+        </div>
+
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                QUESTION 14
+            </div>
+
+            <h3>
+                What would you do if a dataset contains missing values?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q14')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q14" class="answer">
+
+                I would first identify the amount and pattern of
+                missing data. Then I would understand why the data
+                is missing and decide whether to remove records or
+                fill the missing values using an appropriate method.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             SCENARIO
+        ========================== -->
+
+        <h2 class="category-title">
+            🧠 Scenario Questions
+        </h2>
+
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                SCENARIO 01
+            </div>
+
+            <h3>
+                Your manager says that sales have decreased.
+                How would you find the reason?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q15')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q15" class="answer">
+
+                First, I would understand the business problem.
+                Then I would compare sales across different
+                time periods, products, regions and customer
+                segments. I would identify significant changes,
+                visualize the findings and provide possible
+                business recommendations.
+
+            </div>
+
+        </div>
+
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                SCENARIO 02
+            </div>
+
+            <h3>
+                You receive a new dataset. What would you do first?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q16')">
+
+                Show Answer
+
+            </button>
+
+            <div id="q16" class="answer">
+
+                First, I would understand the business objective.
+                Then I would inspect the dataset, check columns,
+                data types, missing values and duplicates before
+                starting the analysis.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             PROJECT QUESTIONS
+        ========================== -->
+
+        <h2 class="category-title">
+            🚀 Project Questions
+        </h2>
+
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                PROJECT QUESTION 01
+            </div>
+
+            <h3>
+                Tell me about your project.
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q17')">
+
+                Show Sample Answer
+
+            </button>
+
+            <div id="q17" class="answer">
+
+                My project focuses on solving a real-world problem
+                using data and technology. I worked on the project
+                from data preparation and analysis to creating an
+                interactive user experience. My main focus was to
+                understand the problem, organize the data, generate
+                useful insights and present the results clearly.
+
+            </div>
+
+        </div>
+
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                PROJECT QUESTION 02
+            </div>
+
+            <h3>
+                What challenges did you face in your project?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q18')">
+
+                Show Sample Answer
+
+            </button>
+
+            <div id="q18" class="answer">
+
+                One challenge was organizing the project into
+                separate modules and making sure the different
+                components worked together correctly. I solved
+                these issues by testing each module separately,
+                checking errors carefully and improving the
+                structure step by step.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             FOLLOW UP QUESTIONS
+        ========================== -->
+
+        <h2 class="category-title">
+            🔄 Follow-up Questions
+        </h2>
+
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                FOLLOW-UP 01
+            </div>
+
+            <h3>
+                Why did you choose this technology?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q19')">
+
+                Show Sample Answer
+
+            </button>
+
+            <div id="q19" class="answer">
+
+                I selected the technology because it is suitable
+                for the project requirements, has useful libraries
+                and allowed me to develop the required functionality
+                efficiently.
+
+            </div>
+
+        </div>
+
+
+        <div class="interview-card">
+
+            <div class="question-number">
+                FOLLOW-UP 02
+            </div>
+
+            <h3>
+                If you had more time, what would you improve?
+            </h3>
+
+            <button class="answer-btn"
+                    onclick="showAnswer('q20')">
+
+                Show Sample Answer
+
+            </button>
+
+            <div id="q20" class="answer">
+
+                I would improve the system by adding more real-world
+                datasets, stronger personalization, better analytics
+                and additional testing. I would also improve the
+                user experience based on feedback from students.
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             FINAL TIP
+        ========================== -->
+
+        <section class="tip-card">
+
+            <h2>
+                💡 Technical Interview Tip
+            </h2>
+
+            <p>
+                Don't memorize every answer word-for-word.
+                Understand the concept and explain it naturally.
+            </p>
+
+            <p>
+                A strong answer usually follows:
+            </p>
+
+            <p>
+                <strong>
+                    Definition → Explanation → Example → Real-world Usage
+                </strong>
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             NEXT STEP
+        ========================== -->
+
+        <div style="text-align:center; margin-top:30px;">
+
+            <a href="/technical"
+               class="action-btn">
+
+                ← Back to Technical Preparation
+
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        function showAnswer(id) {
+
+            const answer =
+                document.getElementById(id);
+
+            if (answer.style.display === "block") {
+
+                answer.style.display = "none";
+
+            } else {
+
+                answer.style.display = "block";
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
